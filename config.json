@@ -1,9 +1,7 @@
 {
   "brands": [
     "apple",
-    "microsoft",
-    "lenovo",
-    "dell"
+    "microsoft"
   ],
   "customKeywords": [],
   "cpuBrands": [
@@ -13,6 +11,5 @@
   "minRamGB": 16,
   "minStorageGB": 256,
   "checkIntervalMinutes": 30,
-  "lastCheckedAt": "2026-07-14T21:19:01.633Z",
-  "forceCheck": false
+  "lastCheckedAt": "2026-07-14T21:19:01.633Z"
 }
