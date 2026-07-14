@@ -1,8 +1,11 @@
 {
-  "brands": ["apple", "microsoft"],
+  "brands": [
+    "apple",
+    "microsoft"
+  ],
   "customKeywords": [],
   "minRamGB": 0,
   "minStorageGB": 0,
   "checkIntervalMinutes": 120,
-  "lastCheckedAt": null
+  "lastCheckedAt": "2026-07-14T05:10:08.308Z"
 }
