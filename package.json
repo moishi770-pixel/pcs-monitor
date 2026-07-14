@@ -1,0 +1,15 @@
+{
+  "name": "pcs-monitor",
+  "version": "1.0.0",
+  "description": "עוקב מלאי עבור PCs for People - מתריע כשמופיע מחשב טוב (Apple/Microsoft)",
+  "type": "module",
+  "main": "check.js",
+  "scripts": {
+    "check": "node check.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.13"
+  }
+}
