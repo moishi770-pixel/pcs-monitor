@@ -3,19 +3,36 @@ import * as cheerio from 'cheerio';
 import fs from 'fs';
 import nodemailer from 'nodemailer';
 
-// ====== הגדרות - כאן אפשר לשנות מה "מחשב טוב" מבחינתך ======
 const CATEGORIES = {
   desktop: 3,
   laptop: 4,
 };
 
-// מילות מפתח שאם מופיעות בשם המוצר - זה נחשב "טוב" ומצדיק התראה
-const KEYWORDS = ['apple', 'macbook', 'imac', 'microsoft', 'surface'];
-
 const SEEN_FILE = 'seen.json';
+const CONFIG_FILE = 'config.json';
 const BASE_URL = 'https://pcsrefurbished.com';
 
-// ====== שליפת מוצרים מקטגוריה מסוימת ======
+function loadConfig() {
+  const defaults = {
+    brands: ['apple', 'microsoft'],
+    customKeywords: [],
+    minRamGB: 0,
+    minStorageGB: 0,
+    checkIntervalMinutes: 120,
+    lastCheckedAt: null,
+  };
+  try {
+    const fileConfig = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+    return { ...defaults, ...fileConfig };
+  } catch {
+    return defaults;
+  }
+}
+
+function saveConfig(config) {
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+}
+
 async function fetchCategoryProducts(categoryId) {
   const url = `${BASE_URL}/sales/categorySales.aspx?categoryID=${categoryId}`;
   const res = await fetch(url, {
@@ -28,7 +45,6 @@ async function fetchCategoryProducts(categoryId) {
   const html = await res.text();
   const $ = cheerio.load(html);
 
-  // ממפים לפי productID - כל מוצר מופיע בכמה קישורים (תמונה, שם, מחיר)
   const productsById = {};
 
   $('a[href*="productPage"]').each((_, el) => {
@@ -57,13 +73,42 @@ async function fetchCategoryProducts(categoryId) {
   return Object.values(productsById).filter((p) => p.name);
 }
 
-// ====== בדיקה אם מוצר מתאים למילות המפתח שלנו ======
-function isGoodDeal(product) {
-  const name = product.name.toLowerCase();
-  return KEYWORDS.some((kw) => name.includes(kw));
+function extractSpecs(name) {
+  let ramGB = null;
+  let storageGB = null;
+
+  const ramMatch = name.match(/(\d+)\s*GB\s*RAM/i);
+  if (ramMatch) ramGB = parseInt(ramMatch[1], 10);
+
+  const storageMatchGB = name.match(/(\d+)\s*GB\s*(SSD|HDD|NVME|EMMC)/i);
+  const storageMatchTB = name.match(/(\d+)\s*TB\s*(SSD|HDD|NVME|EMMC)/i);
+  if (storageMatchTB) {
+    storageGB = parseInt(storageMatchTB[1], 10) * 1024;
+  } else if (storageMatchGB) {
+    storageGB = parseInt(storageMatchGB[1], 10);
+  }
+
+  return { ramGB, storageGB };
 }
 
-// ====== טעינת/שמירת קובץ מצב (מה כבר ראינו) ======
+function isGoodDeal(product, config) {
+  const name = product.name.toLowerCase();
+  const keywords = [...(config.brands || []), ...(config.customKeywords || [])].map((k) =>
+    k.toLowerCase()
+  );
+
+  if (keywords.length === 0) return false;
+  const keywordMatch = keywords.some((kw) => kw && name.includes(kw));
+  if (!keywordMatch) return false;
+
+  const { ramGB, storageGB } = extractSpecs(product.name);
+
+  const ramOk = !config.minRamGB || ramGB === null || ramGB >= config.minRamGB;
+  const storageOk = !config.minStorageGB || storageGB === null || storageGB >= config.minStorageGB;
+
+  return ramOk && storageOk;
+}
+
 function loadSeen() {
   try {
     return JSON.parse(fs.readFileSync(SEEN_FILE, 'utf8'));
@@ -76,7 +121,6 @@ function saveSeen(seen) {
   fs.writeFileSync(SEEN_FILE, JSON.stringify(seen, null, 2));
 }
 
-// ====== שליחת התראה בווטסאפ דרך CallMeBot ======
 async function sendWhatsApp(message) {
   const phone = process.env.CALLMEBOT_PHONE;
   const apikey = process.env.CALLMEBOT_APIKEY;
@@ -95,7 +139,6 @@ async function sendWhatsApp(message) {
   }
 }
 
-// ====== שליחת התראה במייל דרך Gmail ======
 async function sendEmail(subject, message) {
   const user = process.env.GMAIL_USER;
   const pass = process.env.GMAIL_APP_PASSWORD;
@@ -109,20 +152,26 @@ async function sendEmail(subject, message) {
     auth: { user, pass },
   });
   try {
-    await transporter.sendMail({
-      from: user,
-      to,
-      subject,
-      text: message,
-    });
+    await transporter.sendMail({ from: user, to, subject, text: message });
     console.log('מייל נשלח בהצלחה');
   } catch (err) {
     console.error('שגיאה בשליחת מייל:', err.message);
   }
 }
 
-// ====== ריצה ראשית ======
 async function main() {
+  const config = loadConfig();
+
+  const now = Date.now();
+  const lastRun = config.lastCheckedAt ? new Date(config.lastCheckedAt).getTime() : 0;
+  const intervalMs = (config.checkIntervalMinutes || 120) * 60 * 1000;
+
+  if (now - lastRun < intervalMs) {
+    const minutesLeft = Math.round((intervalMs - (now - lastRun)) / 60000);
+    console.log(`עדיין לא הגיע הזמן לבדיקה הבאה (נשארו כ-${minutesLeft} דקות). מדלגים.`);
+    return;
+  }
+
   const seen = loadSeen();
   const newGoodDeals = [];
 
@@ -133,7 +182,7 @@ async function main() {
     for (const product of products) {
       if (!seen[product.id]) {
         seen[product.id] = { name: product.name, firstSeen: new Date().toISOString() };
-        if (isGoodDeal(product)) {
+        if (isGoodDeal(product, config)) {
           newGoodDeals.push(product);
         }
       }
@@ -142,14 +191,15 @@ async function main() {
 
   saveSeen(seen);
 
+  config.lastCheckedAt = new Date().toISOString();
+  saveConfig(config);
+
   if (newGoodDeals.length === 0) {
     console.log('אין מוצרים חדשים מתאימים הפעם.');
     return;
   }
 
-  const lines = newGoodDeals.map(
-    (p) => `${p.name} - ${p.price || 'מחיר לא זמין'}\n${p.url}`
-  );
+  const lines = newGoodDeals.map((p) => `${p.name} - ${p.price || 'מחיר לא זמין'}\n${p.url}`);
   const message = `🖥️ נמצאו מחשבים חדשים ב-PCs for People:\n\n${lines.join('\n\n')}`;
 
   console.log(message);
