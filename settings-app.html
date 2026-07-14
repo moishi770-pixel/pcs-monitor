@@ -409,4 +409,174 @@ async function loadConfig(silent) {
     state.cpuBrands = content.cpuBrands || [];
     state.minCpuTier = content.minCpuTier || 0;
     state.minRamGB = content.minRamGB || 0;
-  
+    state.minStorageGB = content.minStorageGB || 0;
+    state.checkIntervalMinutes = content.checkIntervalMinutes || 120;
+    state.lastCheckedAt = content.lastCheckedAt || null;
+    renderAll();
+    await storageSet(REPO_KEY, creds.repoPath);
+    await storageSet(TOKEN_KEY, creds.token);
+    document.getElementById('repoLabel').textContent = creds.repoPath;
+    document.getElementById('connectionCompact').dataset.hasConn = 'true';
+    document.getElementById('connectionCard').style.display = 'none';
+    document.getElementById('connectionCompact').style.display = 'flex';
+    document.getElementById('gearBtn').classList.remove('active');
+    if (!silent) showStatus('ההגדרות נטענו בהצלחה ✓', 'success');
+    else document.getElementById('status').className = 'toast';
+  } catch (err) {
+    showStatus(err.message, 'error');
+  }
+}
+
+async function saveConfig() {
+  const creds = getRepoAndToken();
+  if (!creds) return;
+  showStatus('שומר הגדרות...', 'loading');
+  state.customKeywords = document.getElementById('customKeywords').value.split(',').map(s => s.trim()).filter(Boolean);
+  try {
+    if (!currentSha) {
+      const { sha } = await fetchConfigFile(creds.repoPath, creds.token);
+      currentSha = sha;
+    }
+    let lastCheckedAt = state.lastCheckedAt;
+    try {
+      const { content } = await fetchConfigFile(creds.repoPath, creds.token);
+      lastCheckedAt = content.lastCheckedAt || null;
+    } catch {}
+
+    const newConfig = {
+      brands: state.brands, customKeywords: state.customKeywords, cpuBrands: state.cpuBrands,
+      minCpuTier: state.minCpuTier, minRamGB: state.minRamGB, minStorageGB: state.minStorageGB,
+      checkIntervalMinutes: state.checkIntervalMinutes, lastCheckedAt,
+    };
+
+    const body = { message: 'עדכון הגדרות מדף הניהול', content: btoa(unescape(encodeURIComponent(JSON.stringify(newConfig, null, 2)))) };
+    if (currentSha) body.sha = currentSha;
+
+    const putRes = await fetch(`https://api.github.com/repos/${creds.repoPath}/contents/config.json`, {
+      method: 'PUT',
+      headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    if (!putRes.ok) {
+      const errData = await putRes.json().catch(() => ({}));
+      throw new Error('שגיאה בשמירה: ' + putRes.status + ' - ' + (errData.message || ''));
+    }
+    const putData = await putRes.json();
+    currentSha = putData.content.sha;
+    state.lastCheckedAt = lastCheckedAt;
+    await storageSet(REPO_KEY, creds.repoPath);
+    await storageSet(TOKEN_KEY, creds.token);
+    updateStatusStrip();
+    showStatus('ההגדרות נשמרו בהצלחה! ✓', 'success');
+  } catch (err) {
+    showStatus(err.message, 'error');
+  }
+}
+
+function showRunStatus(msg, type) {
+  const el = document.getElementById('runStatus');
+  el.textContent = msg;
+  el.className = 'toast ' + type;
+}
+
+async function runNow() {
+  const creds = getRepoAndToken();
+  if (!creds) { showRunStatus('קודם צריך להתחבר ל-GitHub (למעלה)', 'error'); return; }
+
+  const btn = document.getElementById('runNowBtn');
+  btn.disabled = true;
+  showRunStatus('מפעיל בדיקה ידנית...', 'loading');
+
+  try {
+    // שלב 1: מסמנים ב-config.json שרוצים לדלג על בדיקת התדירות בהרצה הקרובה
+    const { sha, content } = await fetchConfigFile(creds.repoPath, creds.token);
+    content.forceCheck = true;
+    const body = {
+      message: 'הרצה ידנית מהדשבורד',
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
+      sha,
+    };
+    const putRes = await fetch(`https://api.github.com/repos/${creds.repoPath}/contents/config.json`, {
+      method: 'PUT',
+      headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    if (!putRes.ok) throw new Error('לא הצלחתי לסמן בדיקה ידנית (בדוק הרשאת Contents)');
+    currentSha = (await putRes.json()).content.sha;
+
+    // שלב 2: מפעילים את ה-workflow עצמו
+    showRunStatus('מריץ את הסקריפט ב-GitHub...', 'loading');
+    const dispatchRes = await fetch(
+      `https://api.github.com/repos/${creds.repoPath}/actions/workflows/check.yml/dispatches`,
+      {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ref: 'main' }),
+      }
+    );
+    if (!dispatchRes.ok) {
+      throw new Error('לא הצלחתי להפעיל את ה-workflow - צריך להוסיף למפתח הגישה הרשאת "Actions: Read and write"');
+    }
+
+    // שלב 3: בודקים כל כמה שניות אם ההרצה הסתיימה
+    showRunStatus('הבדיקה רצה כרגע... (זה לוקח בערך 15-20 שניות)', 'loading');
+    await pollRunStatus(creds);
+  } catch (err) {
+    showRunStatus(err.message, 'error');
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function pollRunStatus(creds) {
+  const startedAt = Date.now();
+  const maxWaitMs = 90000;
+
+  // רגע לפני שנתחיל לבדוק, נותנים ל-GitHub זמן "לקלוט" את ההפעלה
+  await new Promise((r) => setTimeout(r, 4000));
+
+  while (Date.now() - startedAt < maxWaitMs) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${creds.repoPath}/actions/runs?per_page=1`,
+        { headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json' } }
+      );
+      if (res.ok) {
+        const data = await res.json();
+        const run = data.workflow_runs && data.workflow_runs[0];
+        if (run) {
+          if (run.status === 'completed') {
+            if (run.conclusion === 'success') {
+              showRunStatus('הבדיקה הושלמה בהצלחה ✓', 'success');
+            } else {
+              showRunStatus('הבדיקה נכשלה - בדוק ב-Actions בגיטהאב', 'error');
+            }
+            await loadConfig(true);
+            return;
+          }
+        }
+      }
+    } catch {}
+    await new Promise((r) => setTimeout(r, 3000));
+  }
+  showRunStatus('זה לוקח יותר מהרגיל - תבדוק בטאב Actions בגיטהאב', 'error');
+}
+
+async function init() {
+  renderAll();
+  const repo = await storageGet(REPO_KEY);
+  const tok = await storageGet(TOKEN_KEY);
+  if (repo && tok) {
+    document.getElementById('repoPath').value = repo;
+    document.getElementById('token').value = tok;
+    await loadConfig(true);
+  } else {
+    document.getElementById('connectionCard').style.display = 'block';
+    document.getElementById('connectionCompact').style.display = 'none';
+  }
+}
+init();
+</script>
+
+</body>
+</html>
