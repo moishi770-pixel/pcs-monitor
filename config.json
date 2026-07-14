@@ -12,5 +12,6 @@
   "minRamGB": 16,
   "minStorageGB": 256,
   "checkIntervalMinutes": 30,
-  "lastCheckedAt": null
+  "lastCheckedAt": null,
+  "forceCheck": true
 }
