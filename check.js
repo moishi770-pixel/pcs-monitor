@@ -16,10 +16,13 @@ function loadConfig() {
   const defaults = {
     brands: ['apple', 'microsoft'],
     customKeywords: [],
+    cpuBrands: [],
+    minCpuTier: 0,
     minRamGB: 0,
     minStorageGB: 0,
     checkIntervalMinutes: 120,
     lastCheckedAt: null,
+    forceCheck: false,
   };
   try {
     const fileConfig = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
@@ -33,6 +36,12 @@ function saveConfig(config) {
   fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
 }
 
+function resolveUrl(src) {
+  if (!src) return null;
+  if (src.startsWith('http')) return src;
+  return `${BASE_URL}${src.startsWith('/') ? '' : '/'}${src}`;
+}
+
 async function fetchCategoryProducts(categoryId) {
   const url = `${BASE_URL}/sales/categorySales.aspx?categoryID=${categoryId}`;
   const res = await fetch(url, {
@@ -44,7 +53,6 @@ async function fetchCategoryProducts(categoryId) {
   }
   const html = await res.text();
   const $ = cheerio.load(html);
-
   const productsById = {};
 
   $('a[href*="productPage"]').each((_, el) => {
@@ -59,7 +67,8 @@ async function fetchCategoryProducts(categoryId) {
         id,
         name: '',
         price: '',
-        url: href.startsWith('http') ? href : `${BASE_URL}${href.startsWith('/') ? '' : '/'}${href}`,
+        image: null,
+        url: resolveUrl(href),
       };
     }
 
@@ -67,6 +76,14 @@ async function fetchCategoryProducts(categoryId) {
       productsById[id].price = text;
     } else if (text.length > 3 && !productsById[id].name) {
       productsById[id].name = text;
+    }
+
+    if (!productsById[id].image) {
+      const imgEl = $(el).find('img').first();
+      if (imgEl.length) {
+        const src = imgEl.attr('src') || imgEl.attr('data-src');
+        if (src) productsById[id].image = resolveUrl(src);
+      }
     }
   });
 
@@ -88,7 +105,19 @@ function extractSpecs(name) {
     storageGB = parseInt(storageMatchGB[1], 10);
   }
 
-  return { ramGB, storageGB };
+  let cpuBrand = null;
+  let cpuTier = null;
+  if (/ryzen/i.test(name)) cpuBrand = 'amd';
+  else if (/\bi[3579]\b|intel|core/i.test(name)) cpuBrand = 'intel';
+  else if (/\bm[1-4]\b|apple silicon/i.test(name)) cpuBrand = 'apple';
+
+  const intelMatch = name.match(/i([3579])/i);
+  const ryzenMatch = name.match(/ryzen\D{0,4}([3579])/i);
+  if (intelMatch) cpuTier = parseInt(intelMatch[1], 10);
+  else if (ryzenMatch) cpuTier = parseInt(ryzenMatch[1], 10);
+  else if (/\bm[1-4]\b/i.test(name)) cpuTier = 9;
+
+  return { ramGB, storageGB, cpuBrand, cpuTier };
 }
 
 function isGoodDeal(product, config) {
@@ -101,12 +130,15 @@ function isGoodDeal(product, config) {
   const keywordMatch = keywords.some((kw) => kw && name.includes(kw));
   if (!keywordMatch) return false;
 
-  const { ramGB, storageGB } = extractSpecs(product.name);
+  const { ramGB, storageGB, cpuBrand, cpuTier } = extractSpecs(product.name);
 
   const ramOk = !config.minRamGB || ramGB === null || ramGB >= config.minRamGB;
   const storageOk = !config.minStorageGB || storageGB === null || storageGB >= config.minStorageGB;
+  const cpuBrandOk =
+    !(config.cpuBrands && config.cpuBrands.length) || cpuBrand === null || config.cpuBrands.includes(cpuBrand);
+  const cpuTierOk = !config.minCpuTier || cpuTier === null || cpuTier >= config.minCpuTier;
 
-  return ramOk && storageOk;
+  return ramOk && storageOk && cpuBrandOk && cpuTierOk;
 }
 
 function loadSeen() {
@@ -139,7 +171,7 @@ async function sendWhatsApp(message) {
   }
 }
 
-async function sendEmail(subject, message) {
+async function sendEmail(subject, textMessage, products) {
   const user = process.env.GMAIL_USER;
   const pass = process.env.GMAIL_APP_PASSWORD;
   const to = process.env.NOTIFY_EMAIL || user;
@@ -151,8 +183,26 @@ async function sendEmail(subject, message) {
     service: 'gmail',
     auth: { user, pass },
   });
+
+  const htmlCards = products
+    .map(
+      (p) => `
+      <div style="border:1px solid #e2e4ea;border-radius:12px;padding:14px;margin-bottom:14px;font-family:sans-serif;">
+        ${p.image ? `<img src="${p.image}" alt="${p.name}" style="max-width:100%;border-radius:8px;margin-bottom:10px;" />` : ''}
+        <div style="font-weight:600;font-size:15px;">${p.name}</div>
+        <div style="color:#b5691f;font-weight:600;margin:4px 0;">${p.price || 'מחיר לא זמין'}</div>
+        <a href="${p.url}" style="color:#2563eb;">לצפייה במוצר באתר</a>
+      </div>`
+    )
+    .join('');
+
+  const html = `<div dir="rtl" style="max-width:480px;">
+    <h2 style="font-family:sans-serif;">🖥️ נמצאו מחשבים חדשים ב-PCs for People</h2>
+    ${htmlCards}
+  </div>`;
+
   try {
-    await transporter.sendMail({ from: user, to, subject, text: message });
+    await transporter.sendMail({ from: user, to, subject, text: textMessage, html });
     console.log('מייל נשלח בהצלחה');
   } catch (err) {
     console.error('שגיאה בשליחת מייל:', err.message);
@@ -166,10 +216,13 @@ async function main() {
   const lastRun = config.lastCheckedAt ? new Date(config.lastCheckedAt).getTime() : 0;
   const intervalMs = (config.checkIntervalMinutes || 120) * 60 * 1000;
 
-  if (now - lastRun < intervalMs) {
+  if (!config.forceCheck && now - lastRun < intervalMs) {
     const minutesLeft = Math.round((intervalMs - (now - lastRun)) / 60000);
     console.log(`עדיין לא הגיע הזמן לבדיקה הבאה (נשארו כ-${minutesLeft} דקות). מדלגים.`);
     return;
+  }
+  if (config.forceCheck) {
+    console.log('בדיקה ידנית הופעלה מהדשבורד - מדלגים על בדיקת התדירות.');
   }
 
   const seen = loadSeen();
@@ -181,7 +234,11 @@ async function main() {
 
     for (const product of products) {
       if (!seen[product.id]) {
-        seen[product.id] = { name: product.name, firstSeen: new Date().toISOString() };
+        seen[product.id] = {
+          name: product.name,
+          image: product.image,
+          firstSeen: new Date().toISOString(),
+        };
         if (isGoodDeal(product, config)) {
           newGoodDeals.push(product);
         }
@@ -192,6 +249,7 @@ async function main() {
   saveSeen(seen);
 
   config.lastCheckedAt = new Date().toISOString();
+  config.forceCheck = false;
   saveConfig(config);
 
   if (newGoodDeals.length === 0) {
@@ -204,7 +262,7 @@ async function main() {
 
   console.log(message);
   await sendWhatsApp(message);
-  await sendEmail('נמצא מחשב טוב ב-PCs for People!', message);
+  await sendEmail('נמצא מחשב טוב ב-PCs for People!', message, newGoodDeals);
 }
 
 main().catch((err) => {
