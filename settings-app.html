@@ -8,81 +8,82 @@
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Assistant:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #f2f3f6;
-    --panel: #ffffff;
-    --panel-raised: #f7f8fb;
-    --border: #e1e3ea;
-    --border-soft: #ebedf2;
-    --text: #1a1d27;
-    --muted: #6b7180;
-    --faint: #a1a6b3;
-    --copper: #b5691f;
-    --copper-bright: #d9822f;
-    --copper-dim: rgba(181, 105, 31, 0.08);
-    --copper-dim-strong: rgba(181, 105, 31, 0.14);
-    --led-green: #16a34a;
-    --led-red: #dc2626;
+    --bg: #f2f3f6; --panel: #ffffff; --panel-raised: #f7f8fb;
+    --border: #e1e3ea; --border-soft: #ebedf2;
+    --text: #1a1d27; --muted: #6b7180; --faint: #a1a6b3;
+    --copper: #b5691f; --copper-bright: #d9822f;
+    --copper-dim: rgba(181,105,31,0.08); --copper-dim-strong: rgba(181,105,31,0.14);
+    --led-green: #16a34a; --led-amber: #d97706; --led-red: #dc2626;
     --mono: 'JetBrains Mono', monospace;
     --shadow: 0 1px 2px rgba(20,22,30,0.04), 0 1px 10px rgba(20,22,30,0.03);
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    font-family: 'Assistant', sans-serif;
-    background:
-      radial-gradient(circle at 12% 0%, rgba(181,105,31,0.05), transparent 42%),
-      var(--bg);
-    background-attachment: fixed;
-    color: var(--text);
-    padding: 0 0 40px;
-    min-height: 100vh;
+    margin: 0; font-family: 'Assistant', sans-serif;
+    background: radial-gradient(circle at 12% 0%, rgba(181,105,31,0.05), transparent 42%), var(--bg);
+    background-attachment: fixed; color: var(--text); padding: 0 0 40px; min-height: 100vh;
   }
   ::selection { background: var(--copper-dim-strong); color: var(--copper); }
 
-  .topbar {
-    position: sticky; top: 0; z-index: 20;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 20px;
-    background: rgba(242,243,246,0.85);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-soft);
-  }
+  .topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: rgba(242,243,246,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-soft); }
   .brand { display: flex; align-items: center; gap: 10px; }
-  .brand-mark {
-    width: 34px; height: 34px; border-radius: 9px;
-    background: linear-gradient(135deg, var(--copper-bright), var(--copper));
-    display: flex; align-items: center; justify-content: center; font-size: 17px;
-    box-shadow: 0 4px 14px rgba(181,105,31,0.28);
-  }
+  .brand-mark { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, var(--copper-bright), var(--copper)); display: flex; align-items: center; justify-content: center; font-size: 17px; box-shadow: 0 4px 14px rgba(181,105,31,0.28); }
   .brand-text h1 { font-family: 'Heebo', sans-serif; font-size: 16px; font-weight: 700; margin: 0; letter-spacing: -0.01em; color: var(--text); }
   .brand-text p { margin: 1px 0 0; font-size: 11.5px; color: var(--muted); font-family: var(--mono); letter-spacing: 0.01em; }
-  .gear-btn {
-    width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border);
-    background: var(--panel); color: var(--muted); font-size: 17px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center; transition: all .15s ease;
-    box-shadow: var(--shadow);
-  }
+  .gear-btn { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--muted); font-size: 17px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .15s ease; box-shadow: var(--shadow); }
   .gear-btn:active { transform: scale(0.94); }
   .gear-btn.active { color: var(--copper); border-color: var(--copper-bright); background: var(--copper-dim); }
 
-  .wrap { max-width: 620px; margin: 0 auto; padding: 18px 16px 0; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 18px 16px 0; }
 
-  .status-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 18px; }
-  .status-cell { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px; padding: 13px 14px; position: relative; overflow: hidden; box-shadow: var(--shadow); }
-  .status-cell::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--copper-bright); }
-  .status-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); display: flex; align-items: center; gap: 6px; }
-  .led { width: 6px; height: 6px; border-radius: 50%; background: var(--faint); flex-shrink: 0; }
+  .section-title { font-family: var(--mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin: 22px 2px 10px; display: flex; align-items: center; gap: 8px; }
+  .section-title:first-child { margin-top: 0; }
+
+  /* dashboard */
+  .dash-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .dash-cell { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px; padding: 13px 14px; position: relative; overflow: hidden; box-shadow: var(--shadow); transition: box-shadow .2s ease; }
+  .dash-cell::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--copper-bright); }
+  .dash-cell.wide { grid-column: span 2; }
+  .dash-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); display: flex; align-items: center; gap: 6px; }
+  .dash-value { font-family: var(--mono); font-size: 16px; font-weight: 600; margin-top: 5px; color: var(--text); }
+  .dash-value.small { font-size: 13px; font-weight: 500; }
+  .led { width: 7px; height: 7px; border-radius: 50%; background: var(--faint); flex-shrink: 0; }
   .led.on { background: var(--led-green); box-shadow: 0 0 6px rgba(22,163,74,0.5); animation: pulse 2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-  .status-value { font-family: var(--mono); font-size: 15px; font-weight: 500; margin-top: 4px; color: var(--text); }
+  .led.paused { background: var(--led-amber); box-shadow: 0 0 6px rgba(217,119,6,0.5); }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
+  .fade-update { animation: fadeUpdate .5s ease; }
+  @keyframes fadeUpdate { 0% { opacity: 0.3; } 100% { opacity: 1; } }
 
-  .connection-compact {
-    display: none; align-items: center; justify-content: space-between; gap: 10px;
-    background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px;
-    padding: 11px 14px; margin-bottom: 18px; font-family: var(--mono); font-size: 12.5px;
-    box-shadow: var(--shadow);
+  /* quick actions */
+  .actions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .action-btn {
+    border: 1px solid var(--border); background: var(--panel); border-radius: 12px;
+    padding: 13px 10px; text-align: center; font-size: 13px; font-weight: 600; cursor: pointer;
+    color: var(--text); box-shadow: var(--shadow); transition: all .12s ease;
   }
+  .action-btn:active { transform: scale(0.97); }
+  .action-btn .icon { display: block; font-size: 18px; margin-bottom: 4px; }
+  .action-btn.primary { border-color: var(--copper-bright); background: var(--copper-dim); color: var(--copper); }
+  .action-btn:disabled { opacity: 0.5; pointer-events: none; }
+
+  /* activity feed */
+  .activity-card { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 14px; padding: 6px 16px; box-shadow: var(--shadow); }
+  .activity-item { display: flex; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border-soft); }
+  .activity-item:last-child { border-bottom: none; }
+  .activity-icon { font-size: 15px; flex-shrink: 0; width: 20px; text-align: center; }
+  .activity-text { font-size: 13px; color: var(--text); line-height: 1.5; }
+  .activity-time { font-size: 11px; color: var(--faint); font-family: var(--mono); margin-top: 2px; }
+  .activity-empty { padding: 20px 0; text-align: center; color: var(--faint); font-size: 13px; }
+
+  /* results panel */
+  .result-card { background: var(--panel-raised); border: 1px solid var(--border); border-radius: 10px; padding: 10px; margin-bottom: 8px; display: flex; gap: 10px; align-items: center; }
+  .result-card img { width: 52px; height: 52px; object-fit: cover; border-radius: 8px; background: #fff; border: 1px solid var(--border); flex-shrink: 0; }
+  .result-card .rname { font-size: 12.5px; font-weight: 600; color: var(--text); }
+  .result-card .rprice { font-size: 12px; color: var(--copper); font-family: var(--mono); }
+  .result-card a { font-size: 11px; color: #2563eb; }
+
+  .connection-compact { display: none; align-items: center; justify-content: space-between; gap: 10px; background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px; padding: 11px 14px; margin-bottom: 18px; font-family: var(--mono); font-size: 12.5px; box-shadow: var(--shadow); }
   .connection-compact .repo-name { color: var(--copper); }
   .connection-compact button { background: none; border: none; color: var(--muted); font-family: 'Assistant', sans-serif; font-size: 12.5px; text-decoration: underline; cursor: pointer; padding: 0; }
 
@@ -92,21 +93,14 @@
   .card h2 { font-family: 'Heebo', sans-serif; font-size: 17px; font-weight: 700; margin: 0 0 14px; color: var(--text); }
 
   label.field-label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-  input[type="text"], input[type="password"] {
-    width: 100%; padding: 12px 13px; border-radius: 10px; border: 1px solid var(--border);
-    background: var(--panel-raised); color: var(--text); font-size: 14.5px; margin-bottom: 14px; font-family: var(--mono);
-  }
+  input[type="text"], input[type="password"] { width: 100%; padding: 12px 13px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel-raised); color: var(--text); font-size: 14.5px; margin-bottom: 14px; font-family: var(--mono); }
   input:focus { outline: none; border-color: var(--copper-bright); background: #fff; }
   details { font-size: 12.5px; color: var(--muted); margin-bottom: 14px; }
   details summary { cursor: pointer; color: var(--copper); }
   details div { margin-top: 8px; line-height: 1.7; }
 
   .chip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; }
-  .chip {
-    border: 1px solid var(--border); background: var(--panel-raised); border-radius: 10px;
-    padding: 11px 8px; text-align: center; font-size: 13px; cursor: pointer; user-select: none;
-    transition: all .12s ease; color: var(--text);
-  }
+  .chip { border: 1px solid var(--border); background: var(--panel-raised); border-radius: 10px; padding: 11px 8px; text-align: center; font-size: 13px; cursor: pointer; user-select: none; transition: all .12s ease; color: var(--text); }
   .chip:active { transform: scale(0.96); }
   .chip.selected { border-color: var(--copper-bright); background: var(--copper-dim-strong); color: var(--copper); font-weight: 600; }
   .chip-sub { display: block; font-size: 10px; color: var(--muted); margin-top: 2px; font-family: var(--mono); }
@@ -127,13 +121,8 @@
   .hint { font-size: 12px; color: var(--faint); margin-top: 12px; line-height: 1.6; }
 
   .save-bar { position: sticky; bottom: 0; padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--bg) 65%, transparent); margin-top: 6px; }
-  .save-bar-inner { max-width: 620px; margin: 0 auto; }
-  .btn-save {
-    width: 100%; padding: 15px; border-radius: 12px; border: none;
-    background: linear-gradient(135deg, var(--copper-bright), var(--copper));
-    color: #fff; font-family: 'Heebo', sans-serif; font-size: 15.5px; font-weight: 700; cursor: pointer;
-    box-shadow: 0 6px 20px rgba(181,105,31,0.25);
-  }
+  .save-bar-inner { max-width: 640px; margin: 0 auto; }
+  .btn-save { width: 100%; padding: 15px; border-radius: 12px; border: none; background: linear-gradient(135deg, var(--copper-bright), var(--copper)); color: #fff; font-family: 'Heebo', sans-serif; font-size: 15.5px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 20px rgba(181,105,31,0.25); }
   .btn-save:active { transform: scale(0.985); }
   .btn-ghost { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel-raised); color: var(--muted); font-size: 13.5px; cursor: pointer; }
 
@@ -148,25 +137,63 @@
 <div class="topbar">
   <div class="brand">
     <div class="brand-mark">🖥️</div>
-    <div class="brand-text">
-      <h1>עוקב מלאי</h1>
-      <p>PCS FOR PEOPLE · לוח בקרה</p>
-    </div>
+    <div class="brand-text"><h1>עוקב מלאי</h1><p>PCS FOR PEOPLE · לוח בקרה</p></div>
   </div>
   <button class="gear-btn" id="gearBtn" onclick="toggleConnectionCard()">⚙</button>
 </div>
 
 <div class="wrap">
 
-  <div class="status-strip">
-    <div class="status-cell">
-      <div class="status-label"><span class="led" id="ledStatus"></span> בדיקה אחרונה</div>
-      <div class="status-value" id="lastCheckValue">—</div>
+  <div class="section-title">📊 סטטוס בזמן אמת</div>
+  <div class="dash-grid">
+    <div class="dash-cell wide">
+      <div class="dash-label"><span class="led" id="ledAgent"></span> סטטוס הסוכן</div>
+      <div class="dash-value" id="agentStatusValue">—</div>
     </div>
-    <div class="status-cell">
-      <div class="status-label">בדיקה הבאה</div>
-      <div class="status-value" id="nextCheckValue">—</div>
+    <div class="dash-cell">
+      <div class="dash-label">בדיקה אחרונה</div>
+      <div class="dash-value small" id="lastCheckValue">—</div>
     </div>
+    <div class="dash-cell">
+      <div class="dash-label">בדיקה הבאה</div>
+      <div class="dash-value small" id="nextCheckValue">—</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">נמצאו בסריקה האחרונה</div>
+      <div class="dash-value" id="totalFoundValue">—</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">חדשים מהסריקה הקודמת</div>
+      <div class="dash-value" id="newFoundValue">—</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">התראות היום</div>
+      <div class="dash-value" id="notifTodayValue">—</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">משך הסריקה</div>
+      <div class="dash-value" id="durationValue">—</div>
+    </div>
+  </div>
+
+  <div class="section-title">⚡ פעולות מהירות</div>
+  <div class="actions-grid" style="margin-bottom: 10px;">
+    <button class="action-btn primary" id="runNowBtn" onclick="runNow()"><span class="icon">▶️</span>הרץ סריקה עכשיו</button>
+    <button class="action-btn" id="pauseBtn" onclick="togglePause()"><span class="icon">⏸</span>השהה סוכן</button>
+    <button class="action-btn" id="testBtn" onclick="sendTest()"><span class="icon">🧪</span>שלח התראת ניסיון</button>
+    <button class="action-btn" id="resultsBtn" onclick="toggleResults()"><span class="icon">🗂️</span>תוצאות אחרונות</button>
+  </div>
+  <div id="quickStatus" class="toast" style="margin-bottom: 18px;"></div>
+
+  <div id="resultsPanel" class="card" style="display:none;">
+    <div class="card-eyebrow">מהסריקה האחרונה</div>
+    <h2>מוצרים שנמצאו</h2>
+    <div id="resultsList"></div>
+  </div>
+
+  <div class="section-title">🕘 פעילות אחרונה</div>
+  <div class="activity-card" style="margin-bottom: 20px;">
+    <div id="activityFeed"><div class="activity-empty">אין עדיין פעילות רשומה</div></div>
   </div>
 
   <div class="connection-compact" id="connectionCompact">
@@ -174,17 +201,11 @@
     <button onclick="toggleConnectionCard()">שנה חיבור</button>
   </div>
 
-  <button class="btn-ghost" id="runNowBtn" onclick="runNow()" style="margin-bottom:18px; font-weight:600;">
-    ▶️ הרץ בדיקה עכשיו
-  </button>
-  <div id="runStatus" class="toast" style="margin-top:-10px; margin-bottom:18px;"></div>
-
   <div class="card connection-card" id="connectionCard">
     <div class="card-eyebrow">שלב 1</div>
     <h2>חיבור ל-GitHub</h2>
     <label class="field-label">שם המשתמש / הארגון + שם הריפו</label>
     <input type="text" id="repoPath" placeholder="לדוגמה: moishi770-pixel/pcs-monitor" />
-
     <label class="field-label">מפתח גישה (Personal Access Token)</label>
     <input type="password" id="token" placeholder="הדבק כאן את המפתח" />
     <details>
@@ -193,12 +214,14 @@
         1. ב-GitHub: תמונת פרופיל ← Settings ← Developer settings<br/>
         2. Personal access tokens ← Fine-grained tokens ← Generate new token<br/>
         3. Repository access: "Only select repositories" ← הריפו שלך<br/>
-        4. Permissions ← Contents ← "Read and write"<br/>
+        4. Permissions ← Contents ← "Read and write", Actions ← "Read and write"<br/>
         5. Generate token, ותעתיק את המפתח (מוצג פעם אחת בלבד)
       </div>
     </details>
     <button class="btn-ghost" onclick="loadConfig()">📥 התחבר וטען הגדרות</button>
   </div>
+
+  <div class="section-title">⚙️ הגדרות</div>
 
   <div class="card">
     <div class="card-eyebrow">מותגים</div>
@@ -250,115 +273,156 @@
 <script>
 const REPO_KEY = 'pcs-monitor-repo';
 const TOKEN_KEY = 'pcs-monitor-token';
-let currentSha = null;
-let state = {
-  brands: [], customKeywords: [], cpuBrands: [], minCpuTier: 0,
-  minRamGB: 0, minStorageGB: 0, checkIntervalMinutes: 120, lastCheckedAt: null,
-};
+let configSha = null;
+let statusSha = null;
+let state = { brands: [], customKeywords: [], cpuBrands: [], minCpuTier: 0, minRamGB: 0, minStorageGB: 0, checkIntervalMinutes: 120, lastCheckedAt: null, paused: false };
+let statusData = { agentStatus: 'active', lastScan: null, notificationsToday: { date: null, count: 0 }, activityLog: [] };
 
 const BRAND_OPTIONS = [
-  { id: 'apple', label: 'Apple', sub: 'MacBook / iMac' },
-  { id: 'microsoft', label: 'Microsoft', sub: 'Surface' },
-  { id: 'dell', label: 'Dell', sub: '' },
-  { id: 'hp', label: 'HP', sub: '' },
-  { id: 'lenovo', label: 'Lenovo', sub: 'ThinkPad' },
-  { id: 'asus', label: 'Asus', sub: '' },
-  { id: 'acer', label: 'Acer', sub: '' },
-  { id: 'toshiba', label: 'Toshiba', sub: '' },
-  { id: 'samsung', label: 'Samsung', sub: '' },
-  { id: 'msi', label: 'MSI', sub: '' },
-  { id: 'sony', label: 'Sony', sub: 'VAIO' },
+  { id: 'apple', label: 'Apple', sub: 'MacBook / iMac' }, { id: 'microsoft', label: 'Microsoft', sub: 'Surface' },
+  { id: 'dell', label: 'Dell', sub: '' }, { id: 'hp', label: 'HP', sub: '' }, { id: 'lenovo', label: 'Lenovo', sub: 'ThinkPad' },
+  { id: 'asus', label: 'Asus', sub: '' }, { id: 'acer', label: 'Acer', sub: '' }, { id: 'toshiba', label: 'Toshiba', sub: '' },
+  { id: 'samsung', label: 'Samsung', sub: '' }, { id: 'msi', label: 'MSI', sub: '' }, { id: 'sony', label: 'Sony', sub: 'VAIO' },
   { id: 'panasonic', label: 'Panasonic', sub: 'Toughbook' },
 ];
 const CPU_BRAND_OPTIONS = [
-  { id: 'intel', label: 'Intel', sub: 'Core i3–i9' },
-  { id: 'amd', label: 'AMD', sub: 'Ryzen' },
-  { id: 'apple', label: 'Apple Silicon', sub: 'M1–M4' },
+  { id: 'intel', label: 'Intel', sub: 'Core i3–i9' }, { id: 'amd', label: 'AMD', sub: 'Ryzen' }, { id: 'apple', label: 'Apple Silicon', sub: 'M1–M4' },
 ];
-const CPU_TIERS = [
-  { v: 0, label: 'כל דרגה' }, { v: 3, label: 'בסיסי' }, { v: 5, label: 'בינוני' },
-  { v: 7, label: 'חזק' }, { v: 9, label: 'מקצועי' },
-];
-const RAM_OPTIONS = [
-  { v: 0, label: 'לא משנה' }, { v: 4, label: '4GB+' }, { v: 8, label: '8GB+' },
-  { v: 16, label: '16GB+' }, { v: 32, label: '32GB+' },
-];
-const STORAGE_OPTIONS = [
-  { v: 0, label: 'לא משנה' }, { v: 128, label: '128GB+' }, { v: 256, label: '256GB+' },
-  { v: 512, label: '512GB+' }, { v: 1024, label: '1TB+' },
-];
+const CPU_TIERS = [{ v: 0, label: 'כל דרגה' }, { v: 3, label: 'בסיסי' }, { v: 5, label: 'בינוני' }, { v: 7, label: 'חזק' }, { v: 9, label: 'מקצועי' }];
+const RAM_OPTIONS = [{ v: 0, label: 'לא משנה' }, { v: 4, label: '4GB+' }, { v: 8, label: '8GB+' }, { v: 16, label: '16GB+' }, { v: 32, label: '32GB+' }];
+const STORAGE_OPTIONS = [{ v: 0, label: 'לא משנה' }, { v: 128, label: '128GB+' }, { v: 256, label: '256GB+' }, { v: 512, label: '512GB+' }, { v: 1024, label: '1TB+' }];
 const FREQ_OPTIONS = [
   { v: 5, num: '5', unit: 'דקות' }, { v: 15, num: '15', unit: 'דקות' }, { v: 30, num: '30', unit: 'דקות' },
   { v: 60, num: '1', unit: 'שעה' }, { v: 120, num: '2', unit: 'שעות' }, { v: 180, num: '3', unit: 'שעות' },
   { v: 240, num: '4', unit: 'שעות' }, { v: 360, num: '6', unit: 'שעות' }, { v: 480, num: '8', unit: 'שעות' },
   { v: 720, num: '12', unit: 'שעות' }, { v: 1440, num: '24', unit: 'שעות' }, { v: 4320, num: '3', unit: 'ימים' },
 ];
+const ACTIVITY_ICONS = { scan_complete: '🔍', new_deal: '🆕', notification_sent: '📨', test_notification: '🧪', agent_paused: '⏸', agent_resumed: '▶️', settings_saved: '💾' };
 
 function renderBrandGrid() {
-  const grid = document.getElementById('brandsGrid');
-  grid.innerHTML = BRAND_OPTIONS.map(b => `
-    <div class="chip ${state.brands.includes(b.id) ? 'selected' : ''}" onclick="toggleBrand('${b.id}')">
-      ${b.label}${b.sub ? `<span class="chip-sub">${b.sub}</span>` : ''}
-    </div>`).join('');
+  document.getElementById('brandsGrid').innerHTML = BRAND_OPTIONS.map(b => `
+    <div class="chip ${state.brands.includes(b.id) ? 'selected' : ''}" onclick="toggleBrand('${b.id}')">${b.label}${b.sub ? `<span class="chip-sub">${b.sub}</span>` : ''}</div>`).join('');
 }
-function toggleBrand(id) {
-  const i = state.brands.indexOf(id);
-  if (i === -1) state.brands.push(id); else state.brands.splice(i, 1);
-  renderBrandGrid();
-}
+function toggleBrand(id) { const i = state.brands.indexOf(id); if (i === -1) state.brands.push(id); else state.brands.splice(i, 1); renderBrandGrid(); }
 
 function renderCpuBrandGrid() {
-  const grid = document.getElementById('cpuBrandGrid');
-  grid.innerHTML = CPU_BRAND_OPTIONS.map(b => `
-    <div class="chip ${state.cpuBrands.includes(b.id) ? 'selected' : ''}" onclick="toggleCpuBrand('${b.id}')">
-      ${b.label}<span class="chip-sub">${b.sub}</span>
-    </div>`).join('');
+  document.getElementById('cpuBrandGrid').innerHTML = CPU_BRAND_OPTIONS.map(b => `
+    <div class="chip ${state.cpuBrands.includes(b.id) ? 'selected' : ''}" onclick="toggleCpuBrand('${b.id}')">${b.label}<span class="chip-sub">${b.sub}</span></div>`).join('');
 }
-function toggleCpuBrand(id) {
-  const i = state.cpuBrands.indexOf(id);
-  if (i === -1) state.cpuBrands.push(id); else state.cpuBrands.splice(i, 1);
-  renderCpuBrandGrid();
-}
+function toggleCpuBrand(id) { const i = state.cpuBrands.indexOf(id); if (i === -1) state.cpuBrands.push(id); else state.cpuBrands.splice(i, 1); renderCpuBrandGrid(); }
 
 function renderSegmented(containerId, options, currentVal, onPick) {
   const el = document.getElementById(containerId);
   el.innerHTML = options.map(o => `<div class="seg ${o.v === currentVal ? 'selected' : ''}">${o.label}</div>`).join('');
   [...el.children].forEach((child, idx) => { child.onclick = () => onPick(options[idx].v); });
 }
-function renderCpuTier() { renderSegmented('cpuTierSeg', CPU_TIERS, state.minCpuTier, (v) => { state.minCpuTier = v; renderCpuTier(); }); }
-function renderRam() { renderSegmented('ramSeg', RAM_OPTIONS, state.minRamGB, (v) => { state.minRamGB = v; renderRam(); }); }
-function renderStorage() { renderSegmented('storageSeg', STORAGE_OPTIONS, state.minStorageGB, (v) => { state.minStorageGB = v; renderStorage(); }); }
+function renderCpuTier() { renderSegmented('cpuTierSeg', CPU_TIERS, state.minCpuTier, v => { state.minCpuTier = v; renderCpuTier(); }); }
+function renderRam() { renderSegmented('ramSeg', RAM_OPTIONS, state.minRamGB, v => { state.minRamGB = v; renderRam(); }); }
+function renderStorage() { renderSegmented('storageSeg', STORAGE_OPTIONS, state.minStorageGB, v => { state.minStorageGB = v; renderStorage(); }); }
 
 function renderFreqGrid() {
   const grid = document.getElementById('freqGrid');
-  grid.innerHTML = FREQ_OPTIONS.map(f => `
-    <div class="freq-chip ${f.v === state.checkIntervalMinutes ? 'selected' : ''}">
-      <span class="num">${f.num}</span><span class="unit">${f.unit}</span>
-    </div>`).join('');
+  grid.innerHTML = FREQ_OPTIONS.map(f => `<div class="freq-chip ${f.v === state.checkIntervalMinutes ? 'selected' : ''}"><span class="num">${f.num}</span><span class="unit">${f.unit}</span></div>`).join('');
   [...grid.children].forEach((child, idx) => { child.onclick = () => { state.checkIntervalMinutes = FREQ_OPTIONS[idx].v; renderFreqGrid(); }; });
 }
 
 function renderAll() {
   renderBrandGrid(); renderCpuBrandGrid(); renderCpuTier(); renderRam(); renderStorage(); renderFreqGrid();
   document.getElementById('customKeywords').value = (state.customKeywords || []).join(', ');
-  updateStatusStrip();
+  renderDashboard(); renderActivity(); renderPauseButton();
 }
 
-function updateStatusStrip() {
-  const led = document.getElementById('ledStatus');
+function timeAgo(iso) {
+  if (!iso) return null;
+  const mins = Math.round((Date.now() - new Date(iso).getTime()) / 60000);
+  if (mins < 1) return 'ממש עכשיו';
+  if (mins < 60) return `לפני ${mins} דק'`;
+  const hrs = Math.round(mins / 60);
+  return `לפני ${hrs} שע'`;
+}
+
+function renderDashboard() {
+  const ledAgent = document.getElementById('ledAgent');
+  const agentEl = document.getElementById('agentStatusValue');
+  if (state.paused) {
+    ledAgent.className = 'led paused'; agentEl.textContent = '⏸ מושהה';
+  } else {
+    ledAgent.className = 'led on'; agentEl.textContent = '✓ פעיל';
+  }
+
   const lastEl = document.getElementById('lastCheckValue');
   const nextEl = document.getElementById('nextCheckValue');
   if (!state.lastCheckedAt) {
-    led.classList.remove('on'); lastEl.textContent = 'טרם רץ'; nextEl.textContent = '—';
+    lastEl.textContent = 'טרם רץ'; nextEl.textContent = '—';
+  } else {
+    lastEl.textContent = timeAgo(state.lastCheckedAt);
+    if (state.paused) {
+      nextEl.textContent = 'מושהה';
+    } else {
+      const intervalMs = (state.checkIntervalMinutes || 120) * 60000;
+      const minsLeft = Math.round((new Date(state.lastCheckedAt).getTime() + intervalMs - Date.now()) / 60000);
+      nextEl.textContent = minsLeft <= 0 ? 'בכל רגע' : `בעוד ${minsLeft} דק'`;
+    }
+  }
+
+  const scan = statusData.lastScan;
+  document.getElementById('totalFoundValue').textContent = scan ? scan.totalFound : '—';
+  document.getElementById('newFoundValue').textContent = scan ? scan.newFound : '—';
+  document.getElementById('durationValue').textContent = scan ? `${scan.durationSeconds} שנ'` : '—';
+
+  const today = new Date().toISOString().slice(0, 10);
+  const notifCount = (statusData.notificationsToday && statusData.notificationsToday.date === today) ? statusData.notificationsToday.count : 0;
+  document.getElementById('notifTodayValue').textContent = notifCount;
+
+  document.querySelectorAll('.dash-value').forEach(el => { el.classList.remove('fade-update'); void el.offsetWidth; el.classList.add('fade-update'); });
+}
+
+function renderActivity() {
+  const feed = document.getElementById('activityFeed');
+  const log = statusData.activityLog || [];
+  if (log.length === 0) { feed.innerHTML = '<div class="activity-empty">אין עדיין פעילות רשומה</div>'; return; }
+  feed.innerHTML = log.slice(0, 10).map(item => `
+    <div class="activity-item">
+      <div class="activity-icon">${ACTIVITY_ICONS[item.type] || '•'}</div>
+      <div>
+        <div class="activity-text">${item.message}</div>
+        <div class="activity-time">${timeAgo(item.ts)}</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderPauseButton() {
+  const btn = document.getElementById('pauseBtn');
+  if (state.paused) {
+    btn.innerHTML = '<span class="icon">▶️</span>המשך פעילות';
+    btn.classList.add('primary');
+  } else {
+    btn.innerHTML = '<span class="icon">⏸</span>השהה סוכן';
+    btn.classList.remove('primary');
+  }
+}
+
+function renderResults() {
+  const list = document.getElementById('resultsList');
+  const deals = (statusData.lastScan && statusData.lastScan.sampleDeals) || [];
+  if (deals.length === 0) {
+    list.innerHTML = '<p class="hint">אין עדיין תוצאות מסריקה - נסה "הרץ סריקה עכשיו".</p>';
     return;
   }
-  led.classList.add('on');
-  const last = new Date(state.lastCheckedAt);
-  const minsAgo = Math.round((Date.now() - last.getTime()) / 60000);
-  lastEl.textContent = minsAgo < 1 ? 'ממש עכשיו' : `לפני ${minsAgo} דק'`;
-  const intervalMs = (state.checkIntervalMinutes || 120) * 60000;
-  const minsLeft = Math.round((last.getTime() + intervalMs - Date.now()) / 60000);
-  nextEl.textContent = minsLeft <= 0 ? 'בכל רגע' : `בעוד ${minsLeft} דק'`;
+  list.innerHTML = deals.map(d => `
+    <div class="result-card">
+      ${d.image ? `<img src="${d.image}" alt="" />` : ''}
+      <div style="flex:1; min-width:0;">
+        <div class="rname">${d.name}</div>
+        <div class="rprice">${d.price || ''}</div>
+        <a href="${d.url}" target="_blank">לצפייה במוצר</a>
+      </div>
+    </div>`).join('');
+}
+function toggleResults() {
+  const panel = document.getElementById('resultsPanel');
+  panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+  if (panel.style.display === 'block') { renderResults(); panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
 }
 
 async function storageGet(key) { try { return localStorage.getItem(key); } catch { return null; } }
@@ -369,17 +433,12 @@ function toggleConnectionCard() {
   const compact = document.getElementById('connectionCompact');
   const gear = document.getElementById('gearBtn');
   const isOpen = card.style.display !== 'none';
-  if (isOpen && compact.dataset.hasConn === 'true') {
-    card.style.display = 'none'; compact.style.display = 'flex'; gear.classList.remove('active');
-  } else {
-    card.style.display = 'block'; compact.style.display = 'none'; gear.classList.add('active');
-  }
+  if (isOpen && compact.dataset.hasConn === 'true') { card.style.display = 'none'; compact.style.display = 'flex'; gear.classList.remove('active'); }
+  else { card.style.display = 'block'; compact.style.display = 'none'; gear.classList.add('active'); }
 }
 
-function showStatus(msg, type) {
-  const el = document.getElementById('status');
-  el.textContent = msg; el.className = 'toast ' + type;
-}
+function showStatus(msg, type) { const el = document.getElementById('status'); el.textContent = msg; el.className = 'toast ' + type; }
+function showQuick(msg, type) { const el = document.getElementById('quickStatus'); el.textContent = msg; el.className = 'toast ' + type; }
 
 function getRepoAndToken() {
   const repoPath = document.getElementById('repoPath').value.trim();
@@ -388,13 +447,21 @@ function getRepoAndToken() {
   return { repoPath, token };
 }
 
-async function fetchConfigFile(repoPath, token) {
-  const res = await fetch(`https://api.github.com/repos/${repoPath}/contents/config.json`, {
-    headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' },
-  });
-  if (!res.ok) throw new Error('שגיאה: ' + res.status + ' - תבדוק שהמפתח ושם הריפו נכונים');
+async function fetchJsonFile(repoPath, token, filename) {
+  const res = await fetch(`https://api.github.com/repos/${repoPath}/contents/${filename}`, { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } });
+  if (!res.ok) throw new Error(`שגיאה בטעינת ${filename}: ${res.status}`);
   const data = await res.json();
   return { sha: data.sha, content: JSON.parse(decodeURIComponent(escape(atob(data.content)))) };
+}
+async function putJsonFile(repoPath, token, filename, sha, contentObj, message) {
+  const body = { message, content: btoa(unescape(encodeURIComponent(JSON.stringify(contentObj, null, 2)))) };
+  if (sha) body.sha = sha;
+  const res = await fetch(`https://api.github.com/repos/${repoPath}/contents/${filename}`, {
+    method: 'PUT', headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+  });
+  if (!res.ok) { const e = await res.json().catch(() => ({})); throw new Error(e.message || `שגיאה בשמירת ${filename}`); }
+  const data = await res.json();
+  return data.content.sha;
 }
 
 async function loadConfig(silent) {
@@ -402,8 +469,8 @@ async function loadConfig(silent) {
   if (!creds) return;
   if (!silent) showStatus('טוען הגדרות...', 'loading');
   try {
-    const { sha, content } = await fetchConfigFile(creds.repoPath, creds.token);
-    currentSha = sha;
+    const { sha, content } = await fetchJsonFile(creds.repoPath, creds.token, 'config.json');
+    configSha = sha;
     state.brands = content.brands || [];
     state.customKeywords = content.customKeywords || [];
     state.cpuBrands = content.cpuBrands || [];
@@ -412,6 +479,14 @@ async function loadConfig(silent) {
     state.minStorageGB = content.minStorageGB || 0;
     state.checkIntervalMinutes = content.checkIntervalMinutes || 120;
     state.lastCheckedAt = content.lastCheckedAt || null;
+    state.paused = !!content.paused;
+
+    try {
+      const s = await fetchJsonFile(creds.repoPath, creds.token, 'status.json');
+      statusSha = s.sha;
+      statusData = { agentStatus: 'active', lastScan: null, notificationsToday: { date: null, count: 0 }, activityLog: [], ...s.content };
+    } catch { /* status.json may not exist yet */ }
+
     renderAll();
     await storageSet(REPO_KEY, creds.repoPath);
     await storageSet(TOKEN_KEY, creds.token);
@@ -433,133 +508,115 @@ async function saveConfig() {
   showStatus('שומר הגדרות...', 'loading');
   state.customKeywords = document.getElementById('customKeywords').value.split(',').map(s => s.trim()).filter(Boolean);
   try {
-    if (!currentSha) {
-      const { sha } = await fetchConfigFile(creds.repoPath, creds.token);
-      currentSha = sha;
-    }
-    let lastCheckedAt = state.lastCheckedAt;
-    try {
-      const { content } = await fetchConfigFile(creds.repoPath, creds.token);
-      lastCheckedAt = content.lastCheckedAt || null;
-    } catch {}
-
+    const fresh = await fetchJsonFile(creds.repoPath, creds.token, 'config.json');
+    configSha = fresh.sha;
     const newConfig = {
+      ...fresh.content,
       brands: state.brands, customKeywords: state.customKeywords, cpuBrands: state.cpuBrands,
       minCpuTier: state.minCpuTier, minRamGB: state.minRamGB, minStorageGB: state.minStorageGB,
-      checkIntervalMinutes: state.checkIntervalMinutes, lastCheckedAt,
+      checkIntervalMinutes: state.checkIntervalMinutes,
     };
-
-    const body = { message: 'עדכון הגדרות מדף הניהול', content: btoa(unescape(encodeURIComponent(JSON.stringify(newConfig, null, 2)))) };
-    if (currentSha) body.sha = currentSha;
-
-    const putRes = await fetch(`https://api.github.com/repos/${creds.repoPath}/contents/config.json`, {
-      method: 'PUT',
-      headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-    if (!putRes.ok) {
-      const errData = await putRes.json().catch(() => ({}));
-      throw new Error('שגיאה בשמירה: ' + putRes.status + ' - ' + (errData.message || ''));
-    }
-    const putData = await putRes.json();
-    currentSha = putData.content.sha;
-    state.lastCheckedAt = lastCheckedAt;
+    configSha = await putJsonFile(creds.repoPath, creds.token, 'config.json', configSha, newConfig, 'עדכון הגדרות מהדשבורד');
+    await appendActivity(creds, 'settings_saved', 'ההגדרות נשמרו מהדשבורד');
+    renderDashboard();
     await storageSet(REPO_KEY, creds.repoPath);
     await storageSet(TOKEN_KEY, creds.token);
-    updateStatusStrip();
     showStatus('ההגדרות נשמרו בהצלחה! ✓', 'success');
   } catch (err) {
     showStatus(err.message, 'error');
   }
 }
 
-function showRunStatus(msg, type) {
-  const el = document.getElementById('runStatus');
-  el.textContent = msg;
-  el.className = 'toast ' + type;
+async function appendActivity(creds, type, message) {
+  try {
+    const s = await fetchJsonFile(creds.repoPath, creds.token, 'status.json');
+    const content = { agentStatus: 'active', lastScan: null, notificationsToday: { date: null, count: 0 }, activityLog: [], ...s.content };
+    content.activityLog.unshift({ ts: new Date().toISOString(), type, message });
+    content.activityLog = content.activityLog.slice(0, 25);
+    statusSha = await putJsonFile(creds.repoPath, creds.token, 'status.json', s.sha, content, message);
+    statusData = content;
+    renderActivity();
+  } catch (err) { console.warn('activity log update failed', err); }
+}
+
+async function togglePause() {
+  const creds = getRepoAndToken();
+  if (!creds) { showQuick('קודם צריך להתחבר ל-GitHub', 'error'); return; }
+  const btn = document.getElementById('pauseBtn');
+  btn.disabled = true;
+  showQuick(state.paused ? 'ממשיך את פעילות הסוכן...' : 'משהה את הסוכן...', 'loading');
+  try {
+    const fresh = await fetchJsonFile(creds.repoPath, creds.token, 'config.json');
+    const newPaused = !state.paused;
+    const newConfig = { ...fresh.content, paused: newPaused };
+    configSha = await putJsonFile(creds.repoPath, creds.token, 'config.json', fresh.sha, newConfig, newPaused ? 'השהיית הסוכן' : 'המשך פעילות הסוכן');
+    state.paused = newPaused;
+    await appendActivity(creds, newPaused ? 'agent_paused' : 'agent_resumed', newPaused ? 'הסוכן הושהה מהדשבורד' : 'הסוכן חודש מהדשבורד');
+    renderDashboard(); renderPauseButton();
+    showQuick(newPaused ? 'הסוכן הושהה ✓' : 'הסוכן פעיל שוב ✓', 'success');
+  } catch (err) {
+    showQuick(err.message, 'error');
+  } finally { btn.disabled = false; }
+}
+
+async function dispatchAndWait(creds, flagName) {
+  const fresh = await fetchJsonFile(creds.repoPath, creds.token, 'config.json');
+  const newConfig = { ...fresh.content, [flagName]: true };
+  configSha = await putJsonFile(creds.repoPath, creds.token, 'config.json', fresh.sha, newConfig, 'הפעלה מהדשבורד');
+
+  const dispatchRes = await fetch(`https://api.github.com/repos/${creds.repoPath}/actions/workflows/check.yml/dispatches`, {
+    method: 'POST', headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' }, body: JSON.stringify({ ref: 'main' }),
+  });
+  if (!dispatchRes.ok) throw new Error('לא הצלחתי להפעיל את ה-workflow - ודא שיש למפתח הרשאת Actions: Read and write');
+
+  const startedAt = Date.now();
+  await new Promise(r => setTimeout(r, 4000));
+  while (Date.now() - startedAt < 90000) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${creds.repoPath}/actions/runs?per_page=1`, { headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json' } });
+      if (res.ok) {
+        const data = await res.json();
+        const run = data.workflow_runs && data.workflow_runs[0];
+        if (run && run.status === 'completed') return run.conclusion === 'success';
+      }
+    } catch {}
+    await new Promise(r => setTimeout(r, 3000));
+  }
+  return null; // timeout
 }
 
 async function runNow() {
   const creds = getRepoAndToken();
-  if (!creds) { showRunStatus('קודם צריך להתחבר ל-GitHub (למעלה)', 'error'); return; }
-
+  if (!creds) { showQuick('קודם צריך להתחבר ל-GitHub (למעלה)', 'error'); return; }
   const btn = document.getElementById('runNowBtn');
   btn.disabled = true;
-  showRunStatus('מפעיל בדיקה ידנית...', 'loading');
-
+  showQuick('מריץ סריקה... (בערך 15-20 שניות)', 'loading');
   try {
-    // שלב 1: מסמנים ב-config.json שרוצים לדלג על בדיקת התדירות בהרצה הקרובה
-    const { sha, content } = await fetchConfigFile(creds.repoPath, creds.token);
-    content.forceCheck = true;
-    const body = {
-      message: 'הרצה ידנית מהדשבורד',
-      content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
-      sha,
-    };
-    const putRes = await fetch(`https://api.github.com/repos/${creds.repoPath}/contents/config.json`, {
-      method: 'PUT',
-      headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-    if (!putRes.ok) throw new Error('לא הצלחתי לסמן בדיקה ידנית (בדוק הרשאת Contents)');
-    currentSha = (await putRes.json()).content.sha;
-
-    // שלב 2: מפעילים את ה-workflow עצמו
-    showRunStatus('מריץ את הסקריפט ב-GitHub...', 'loading');
-    const dispatchRes = await fetch(
-      `https://api.github.com/repos/${creds.repoPath}/actions/workflows/check.yml/dispatches`,
-      {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ref: 'main' }),
-      }
-    );
-    if (!dispatchRes.ok) {
-      throw new Error('לא הצלחתי להפעיל את ה-workflow - צריך להוסיף למפתח הגישה הרשאת "Actions: Read and write"');
-    }
-
-    // שלב 3: בודקים כל כמה שניות אם ההרצה הסתיימה
-    showRunStatus('הבדיקה רצה כרגע... (זה לוקח בערך 15-20 שניות)', 'loading');
-    await pollRunStatus(creds);
+    const ok = await dispatchAndWait(creds, 'forceCheck');
+    if (ok === null) showQuick('זה לוקח יותר מהרגיל - בדוק בטאב Actions בגיטהאב', 'error');
+    else if (ok) showQuick('הסריקה הושלמה בהצלחה ✓', 'success');
+    else showQuick('הסריקה נכשלה - בדוק ב-Actions בגיטהאב', 'error');
+    await loadConfig(true);
   } catch (err) {
-    showRunStatus(err.message, 'error');
-  } finally {
-    btn.disabled = false;
-  }
+    showQuick(err.message, 'error');
+  } finally { btn.disabled = false; }
 }
 
-async function pollRunStatus(creds) {
-  const startedAt = Date.now();
-  const maxWaitMs = 90000;
-
-  // רגע לפני שנתחיל לבדוק, נותנים ל-GitHub זמן "לקלוט" את ההפעלה
-  await new Promise((r) => setTimeout(r, 4000));
-
-  while (Date.now() - startedAt < maxWaitMs) {
-    try {
-      const res = await fetch(
-        `https://api.github.com/repos/${creds.repoPath}/actions/runs?per_page=1`,
-        { headers: { Authorization: `Bearer ${creds.token}`, Accept: 'application/vnd.github+json' } }
-      );
-      if (res.ok) {
-        const data = await res.json();
-        const run = data.workflow_runs && data.workflow_runs[0];
-        if (run) {
-          if (run.status === 'completed') {
-            if (run.conclusion === 'success') {
-              showRunStatus('הבדיקה הושלמה בהצלחה ✓', 'success');
-            } else {
-              showRunStatus('הבדיקה נכשלה - בדוק ב-Actions בגיטהאב', 'error');
-            }
-            await loadConfig(true);
-            return;
-          }
-        }
-      }
-    } catch {}
-    await new Promise((r) => setTimeout(r, 3000));
-  }
-  showRunStatus('זה לוקח יותר מהרגיל - תבדוק בטאב Actions בגיטהאב', 'error');
+async function sendTest() {
+  const creds = getRepoAndToken();
+  if (!creds) { showQuick('קודם צריך להתחבר ל-GitHub (למעלה)', 'error'); return; }
+  const btn = document.getElementById('testBtn');
+  btn.disabled = true;
+  showQuick('שולח הודעת בדיקה...', 'loading');
+  try {
+    const ok = await dispatchAndWait(creds, 'sendTestNotification');
+    if (ok === null) showQuick('זה לוקח יותר מהרגיל - בדוק בטאב Actions בגיטהאב', 'error');
+    else if (ok) showQuick('הודעת הבדיקה נשלחה - תבדוק מייל/ווטסאפ ✓', 'success');
+    else showQuick('הפעולה נכשלה - בדוק ב-Actions בגיטהאב', 'error');
+    await loadConfig(true);
+  } catch (err) {
+    showQuick(err.message, 'error');
+  } finally { btn.disabled = false; }
 }
 
 async function init() {
