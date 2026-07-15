@@ -12,5 +12,5 @@
   "lastCheckedAt": "2026-07-15T03:25:12.981Z",
   "forceCheck": false,
   "paused": false,
-  "sendTestNotification": false
+  "sendTestNotification": true
 }
