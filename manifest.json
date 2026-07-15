@@ -1,0 +1,12 @@
+{
+  "name": "עוקב מלאי - PCs for People",
+  "short_name": "עוקב מלאי",
+  "start_url": "./settings-app.html",
+  "display": "standalone",
+  "background_color": "#f2f3f6",
+  "theme_color": "#d9822f",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
