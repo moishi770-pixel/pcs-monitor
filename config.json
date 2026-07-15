@@ -1,5 +1,8 @@
 {
-  "brands": ["apple", "microsoft"],
+  "brands": [
+    "apple",
+    "microsoft"
+  ],
   "customKeywords": [],
   "cpuBrands": [],
   "minCpuTier": 0,
@@ -7,7 +10,7 @@
   "minStorageGB": 0,
   "checkIntervalMinutes": 120,
   "lastCheckedAt": null,
-  "forceCheck": false,
+  "forceCheck": true,
   "paused": false,
   "sendTestNotification": false
 }
