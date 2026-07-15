@@ -15,6 +15,11 @@
   },
   "activityLog": [
     {
+      "ts": "2026-07-15T03:26:21.283Z",
+      "type": "agent_resumed",
+      "message": "הסוכן חודש מהדשבורד"
+    },
+    {
       "ts": "2026-07-15T03:26:17.952Z",
       "type": "agent_paused",
       "message": "הסוכן הושהה מהדשבורד"
