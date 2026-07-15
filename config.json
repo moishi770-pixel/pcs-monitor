@@ -1,16 +1,13 @@
 {
-  "brands": [
-    "apple",
-    "microsoft"
-  ],
+  "brands": ["apple", "microsoft"],
   "customKeywords": [],
-  "cpuBrands": [
-    "intel"
-  ],
+  "cpuBrands": [],
   "minCpuTier": 0,
-  "minRamGB": 16,
-  "minStorageGB": 256,
-  "checkIntervalMinutes": 30,
-  "lastCheckedAt": "2026-07-15T01:01:33.343Z",
-  "forceCheck": false
+  "minRamGB": 0,
+  "minStorageGB": 0,
+  "checkIntervalMinutes": 120,
+  "lastCheckedAt": null,
+  "forceCheck": false,
+  "paused": false,
+  "sendTestNotification": false
 }
