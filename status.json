@@ -1,8 +1,8 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-15T06:36:15.257Z",
-    "finishedAt": "2026-07-15T06:36:15.774Z",
+    "startedAt": "2026-07-15T09:00:41.520Z",
+    "finishedAt": "2026-07-15T09:00:42.521Z",
     "durationSeconds": 1,
     "totalFound": 7,
     "newFound": 0,
@@ -14,6 +14,11 @@
     "count": 0
   },
   "activityLog": [
+    {
+      "ts": "2026-07-15T09:00:42.521Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 7 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-15T06:39:40.410Z",
       "type": "settings_saved",
