@@ -15,6 +15,11 @@
   },
   "activityLog": [
     {
+      "ts": "2026-07-15T03:29:20.220Z",
+      "type": "settings_saved",
+      "message": "ההגדרות נשמרו מהדשבורד"
+    },
+    {
       "ts": "2026-07-15T03:28:09.952Z",
       "type": "settings_saved",
       "message": "ההגדרות נשמרו מהדשבורד"
