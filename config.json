@@ -8,7 +8,7 @@
   "minCpuTier": 0,
   "minRamGB": 0,
   "minStorageGB": 0,
-  "checkIntervalMinutes": 120,
+  "checkIntervalMinutes": 15,
   "lastCheckedAt": "2026-07-15T03:25:12.981Z",
   "forceCheck": false,
   "paused": false,
