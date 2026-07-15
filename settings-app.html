@@ -4,6 +4,11 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>לוח בקרה · עוקב PCs for People</title>
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d9822f">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Assistant:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -234,8 +239,8 @@
     <h2>סוג ורמת מעבד</h2>
     <label class="field-label">יצרן (אפשר לבחור כמה, או להשאיר ריק לכל היצרנים)</label>
     <div class="chip-grid" id="cpuBrandGrid" style="margin-bottom:16px;"></div>
-    <label class="field-label">רמת ביצועים מינימלית</label>
-    <div class="segmented" id="cpuTierSeg"></div>
+    <label class="field-label">דגמים ספציפיים (אפשר לבחור כמה, או להשאיר ריק לכל הדגמים)</label>
+    <div class="chip-grid" id="cpuTierGrid"></div>
   </div>
 
   <div class="card">
@@ -275,7 +280,7 @@ const REPO_KEY = 'pcs-monitor-repo';
 const TOKEN_KEY = 'pcs-monitor-token';
 let configSha = null;
 let statusSha = null;
-let state = { brands: [], customKeywords: [], cpuBrands: [], minCpuTier: 0, minRamGB: 0, minStorageGB: 0, checkIntervalMinutes: 120, lastCheckedAt: null, paused: false };
+let state = { brands: [], customKeywords: [], cpuBrands: [], cpuTiers: [], minRamGB: 0, minStorageGB: 0, checkIntervalMinutes: 120, lastCheckedAt: null, paused: false };
 let statusData = { agentStatus: 'active', lastScan: null, notificationsToday: { date: null, count: 0 }, activityLog: [] };
 
 const BRAND_OPTIONS = [
@@ -288,7 +293,12 @@ const BRAND_OPTIONS = [
 const CPU_BRAND_OPTIONS = [
   { id: 'intel', label: 'Intel', sub: 'Core i3–i9' }, { id: 'amd', label: 'AMD', sub: 'Ryzen' }, { id: 'apple', label: 'Apple Silicon', sub: 'M1–M4' },
 ];
-const CPU_TIERS = [{ v: 0, label: 'כל דרגה' }, { v: 3, label: 'בסיסי' }, { v: 5, label: 'בינוני' }, { v: 7, label: 'חזק' }, { v: 9, label: 'מקצועי' }];
+const CPU_TIER_OPTIONS = [
+  { v: 3, label: 'i3', sub: 'Ryzen 3' },
+  { v: 5, label: 'i5', sub: 'Ryzen 5' },
+  { v: 7, label: 'i7', sub: 'Ryzen 7' },
+  { v: 9, label: 'i9', sub: 'Ryzen 9 / Apple M' },
+];
 const RAM_OPTIONS = [{ v: 0, label: 'לא משנה' }, { v: 4, label: '4GB+' }, { v: 8, label: '8GB+' }, { v: 16, label: '16GB+' }, { v: 32, label: '32GB+' }];
 const STORAGE_OPTIONS = [{ v: 0, label: 'לא משנה' }, { v: 128, label: '128GB+' }, { v: 256, label: '256GB+' }, { v: 512, label: '512GB+' }, { v: 1024, label: '1TB+' }];
 const FREQ_OPTIONS = [
@@ -316,7 +326,11 @@ function renderSegmented(containerId, options, currentVal, onPick) {
   el.innerHTML = options.map(o => `<div class="seg ${o.v === currentVal ? 'selected' : ''}">${o.label}</div>`).join('');
   [...el.children].forEach((child, idx) => { child.onclick = () => onPick(options[idx].v); });
 }
-function renderCpuTier() { renderSegmented('cpuTierSeg', CPU_TIERS, state.minCpuTier, v => { state.minCpuTier = v; renderCpuTier(); }); }
+function renderCpuTierGrid() {
+  document.getElementById('cpuTierGrid').innerHTML = CPU_TIER_OPTIONS.map(t => `
+    <div class="chip ${state.cpuTiers.includes(t.v) ? 'selected' : ''}" onclick="toggleCpuTier(${t.v})">${t.label}<span class="chip-sub">${t.sub}</span></div>`).join('');
+}
+function toggleCpuTier(v) { const i = state.cpuTiers.indexOf(v); if (i === -1) state.cpuTiers.push(v); else state.cpuTiers.splice(i, 1); renderCpuTierGrid(); }
 function renderRam() { renderSegmented('ramSeg', RAM_OPTIONS, state.minRamGB, v => { state.minRamGB = v; renderRam(); }); }
 function renderStorage() { renderSegmented('storageSeg', STORAGE_OPTIONS, state.minStorageGB, v => { state.minStorageGB = v; renderStorage(); }); }
 
@@ -327,7 +341,7 @@ function renderFreqGrid() {
 }
 
 function renderAll() {
-  renderBrandGrid(); renderCpuBrandGrid(); renderCpuTier(); renderRam(); renderStorage(); renderFreqGrid();
+  renderBrandGrid(); renderCpuBrandGrid(); renderCpuTierGrid(); renderRam(); renderStorage(); renderFreqGrid();
   document.getElementById('customKeywords').value = (state.customKeywords || []).join(', ');
   renderDashboard(); renderActivity(); renderPauseButton();
 }
@@ -474,7 +488,7 @@ async function loadConfig(silent) {
     state.brands = content.brands || [];
     state.customKeywords = content.customKeywords || [];
     state.cpuBrands = content.cpuBrands || [];
-    state.minCpuTier = content.minCpuTier || 0;
+    state.cpuTiers = content.cpuTiers || [];
     state.minRamGB = content.minRamGB || 0;
     state.minStorageGB = content.minStorageGB || 0;
     state.checkIntervalMinutes = content.checkIntervalMinutes || 120;
@@ -513,7 +527,7 @@ async function saveConfig() {
     const newConfig = {
       ...fresh.content,
       brands: state.brands, customKeywords: state.customKeywords, cpuBrands: state.cpuBrands,
-      minCpuTier: state.minCpuTier, minRamGB: state.minRamGB, minStorageGB: state.minStorageGB,
+      minCpuTier: undefined, cpuTiers: state.cpuTiers, minRamGB: state.minRamGB, minStorageGB: state.minStorageGB,
       checkIntervalMinutes: state.checkIntervalMinutes,
     };
     configSha = await putJsonFile(creds.repoPath, creds.token, 'config.json', configSha, newConfig, 'עדכון הגדרות מהדשבורד');
