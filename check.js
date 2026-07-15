@@ -74,8 +74,29 @@ function bumpNotificationCount(status) {
 
 function resolveUrl(src) {
   if (!src) return null;
+  if (src.startsWith('data:')) return null; // תמונה מוטבעת - לא אמינה למייל, מתעלמים
   if (src.startsWith('http')) return src;
   return `${BASE_URL}${src.startsWith('/') ? '' : '/'}${src}`;
+}
+
+async function fetchProductImage(url) {
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; PCsMonitorBot/1.0)' } });
+    if (!res.ok) return null;
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    let found = null;
+    $('img').each((_, el) => {
+      if (found) return;
+      const src = $(el).attr('src') || $(el).attr('data-src');
+      if (!src || src.startsWith('data:')) return;
+      if (/logo|icon|sprite|banner/i.test(src)) return;
+      found = resolveUrl(src);
+    });
+    return found;
+  } catch {
+    return null;
+  }
 }
 
 async function fetchCategoryProducts(categoryId) {
@@ -308,6 +329,19 @@ async function main() {
   }
 
   logActivity(status, 'new_deal', `נמצאה התאמה: ${newGoodDeals.map((p) => p.name).join(', ')}`);
+
+  // עבור כל מציאה חדשה - אם אין לה תמונה מעמוד הרשימה, ננסה לשלוף אחת מעמוד המוצר עצמו
+  for (const deal of newGoodDeals) {
+    if (!deal.image) {
+      const detailImage = await fetchProductImage(deal.url);
+      if (detailImage) {
+        deal.image = detailImage;
+        if (seen[deal.id]) seen[deal.id].image = detailImage;
+      }
+    }
+  }
+  saveSeen(seen);
+  status.lastScan.sampleDeals = newGoodDeals.slice(0, 10).map((p) => ({ name: p.name, price: p.price, url: p.url, image: p.image }));
 
   const lines = newGoodDeals.map((p) => `${p.name} - ${p.price || 'מחיר לא זמין'}\n${p.url}`);
   const message = `🖥️ נמצאו מחשבים חדשים ב-PCs for People:\n\n${lines.join('\n\n')}`;
