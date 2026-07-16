@@ -1,32 +1,24 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-16T15:13:41.706Z",
-    "finishedAt": "2026-07-16T15:13:42.596Z",
+    "startedAt": "2026-07-16T16:44:16.513Z",
+    "finishedAt": "2026-07-16T16:44:17.053Z",
     "durationSeconds": 1,
-    "totalFound": 13,
-    "newFound": 6,
-    "goodDeals": 2,
-    "sampleDeals": [
-      {
-        "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
-        "price": "$210.00",
-        "url": "https://pcsrefurbished.com/sales/productPage?productID=64302",
-        "image": "https://pcsrefurbished.com/img/en-us.svg"
-      },
-      {
-        "name": "Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11",
-        "price": "$175.00",
-        "url": "https://pcsrefurbished.com/sales/productPage?productID=74646",
-        "image": "https://pcsrefurbished.com/img/en-us.svg"
-      }
-    ]
+    "totalFound": 9,
+    "newFound": 0,
+    "goodDeals": 0,
+    "sampleDeals": []
   },
   "notificationsToday": {
     "date": "2026-07-16",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-16T16:44:17.053Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 9 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-16T15:13:45.389Z",
       "type": "notification_sent",
@@ -146,11 +138,6 @@
       "ts": "2026-07-15T04:20:00.495Z",
       "type": "settings_saved",
       "message": "ההגדרות נשמרו מהדשבורד"
-    },
-    {
-      "ts": "2026-07-15T04:17:13.578Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 7 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }
