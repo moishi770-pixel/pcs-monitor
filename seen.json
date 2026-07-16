@@ -21,9 +21,19 @@
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.594Z"
   },
+  "66270": {
+    "name": "Dell Latitude 5520 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T23:38:44.005Z"
+  },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
     "firstSeen": "2026-07-14T01:42:51.273Z"
+  },
+  "73121": {
+    "name": "Lenovo ThinkPad P1 Gen 5 i7 12700H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T23:38:44.006Z"
   },
   "73233": {
     "name": "Upgraded Dell Latitude 5520 | i5-1145G7 | 500GB SSD | Windows 11",
@@ -34,6 +44,11 @@
     "name": "Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "76707": {
+    "name": "Upgraded Dell Latitude 7430 i5 1245U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T23:38:44.006Z"
   },
   "77008": {
     "name": "Upgraded Intel NUC11TNKv5 i5 1145G7 Mini Desktop Full Set - Windows 11",
