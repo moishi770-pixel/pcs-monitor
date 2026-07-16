@@ -1,8 +1,8 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-16T07:01:54.568Z",
-    "finishedAt": "2026-07-16T07:01:55.068Z",
+    "startedAt": "2026-07-16T09:28:21.173Z",
+    "finishedAt": "2026-07-16T09:28:21.873Z",
     "durationSeconds": 1,
     "totalFound": 7,
     "newFound": 0,
@@ -14,6 +14,11 @@
     "count": 0
   },
   "activityLog": [
+    {
+      "ts": "2026-07-16T09:28:21.873Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 7 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-16T07:01:55.068Z",
       "type": "scan_complete",
@@ -133,11 +138,6 @@
       "ts": "2026-07-15T03:26:17.952Z",
       "type": "agent_paused",
       "message": "הסוכן הושהה מהדשבורד"
-    },
-    {
-      "ts": "2026-07-15T03:25:13.778Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }
