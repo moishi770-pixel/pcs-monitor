@@ -16,6 +16,11 @@
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
   },
+  "64302": {
+    "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
+    "image": "https://pcsrefurbished.com/img/en-us.svg",
+    "firstSeen": "2026-07-16T15:13:42.594Z"
+  },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
     "firstSeen": "2026-07-14T01:42:51.273Z"
@@ -24,6 +29,11 @@
     "name": "Upgraded Dell Latitude 5520 | i5-1145G7 | 500GB SSD | Windows 11",
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
+  },
+  "74646": {
+    "name": "Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11",
+    "image": "https://pcsrefurbished.com/img/en-us.svg",
+    "firstSeen": "2026-07-16T15:13:42.595Z"
   },
   "77008": {
     "name": "Upgraded Intel NUC11TNKv5 i5 1145G7 Mini Desktop Full Set - Windows 11",
@@ -60,5 +70,25 @@
     "name": "Dell Latitude 5520 | i7-1185G7 | Windows 11",
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
+  },
+  "79221": {
+    "name": "Upgraded Dell Latitude 5591 | i5-8400H | 500GB SSD | NVIDIA GeForce MX130 | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "79222": {
+    "name": "Upgraded Dell Latitude 5591 | i5-8400H | 240GB SSD | NVIDIA GeForce MX130 | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "79223": {
+    "name": "Upgraded Lenovo ThinkPad E15 Gen 2 | i5-1135G7 | 500GB SSD | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "79224": {
+    "name": "Dell Latitude 3540 | i7-1355U | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-16T15:13:42.595Z"
   }
 }
