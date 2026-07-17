@@ -155,5 +155,15 @@
     "name": "Lenovo ThinkPad T15 Gen 1 | Touchscreen | i5-10210U | Windows 11",
     "image": null,
     "firstSeen": "2026-07-17T18:06:35.474Z"
+  },
+  "79294": {
+    "name": "Upgraded Touchscreen Dell Latitude 7430 i7 1265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T21:34:49.918Z"
+  },
+  "79295": {
+    "name": "Upgraded Lenovo ThinkPad T14 Gen 2 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T21:34:49.918Z"
   }
 }
