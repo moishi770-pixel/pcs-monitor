@@ -105,5 +105,10 @@
     "name": "Dell Latitude 3540 | i7-1355U | Windows 11",
     "image": null,
     "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "79264": {
+    "name": "Upgraded Dell Precision 7760 i7 11850H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T14:05:14.297Z"
   }
 }
