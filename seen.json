@@ -16,6 +16,16 @@
     "name": "Upgraded Dell OptiPlex 3080 i5 10500T Mini Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T17:34:47.077Z"
   },
+  "43437": {
+    "name": "Dell OptiPlex 3060 i5 8500T Mini Desktop Full Set  - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T22:32:17.217Z"
+  },
+  "53313": {
+    "name": "Lenovo ThinkCentre M920q i5 8500T Mini Tower Only - 120GB SSD",
+    "image": null,
+    "firstSeen": "2026-07-17T22:32:17.217Z"
+  },
   "59694": {
     "name": "Upgraded Dell Latitude 5420 | Touch | i7-1185G7 | 32GB RAM | 500GB SSD",
     "image": null,
@@ -30,6 +40,11 @@
     "name": "Dell Latitude 5520 i5 1135G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-07-16T23:38:44.005Z"
+  },
+  "66422": {
+    "name": "Lenovo ThinkCentre M720q i5 8600T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T22:32:17.217Z"
   },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
@@ -63,6 +78,11 @@
   "77008": {
     "name": "Upgraded Intel NUC11TNKv5 i5 1145G7 Mini Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T17:34:47.078Z"
+  },
+  "77208": {
+    "name": "Dell OptiPlex 3070 i5 9500T Micro Tower Only- Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T22:32:17.217Z"
   },
   "78431": {
     "name": "HP EliteDesk 800 G4 DM 35W i7 8700T Mini Desktop Full Set - Windows 11",
@@ -165,5 +185,10 @@
     "name": "Upgraded Lenovo ThinkPad T14 Gen 2 i7 1165G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-07-17T21:34:49.918Z"
+  },
+  "79296": {
+    "name": "Upgraded HP ProDesk 600 G6 i5 10500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T22:32:17.217Z"
   }
 }
