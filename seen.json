@@ -76,6 +76,16 @@
     "name": "Upgraded Dell Precision 3430 i7 8700 SFF Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T01:42:51.273Z"
   },
+  "79107": {
+    "name": "Upgraded Lenovo ThinkPad T590 | i5-8365U | 240GB SSD | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.473Z"
+  },
+  "79127": {
+    "name": "Upgraded HP ZBook Firefly 14 G8 | i5-1145G7 | 500GB SSD | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.474Z"
+  },
   "79206": {
     "name": "Lenovo ThinkPad T480s i5 8350U - Windows 11",
     "image": null,
@@ -115,5 +125,30 @@
     "name": "Upgraded Dell Precision 7760 i7 11850H - Windows 11",
     "image": null,
     "firstSeen": "2026-07-17T14:05:14.297Z"
+  },
+  "79271": {
+    "name": "Upgraded Dell Latitude 5320 2-in-1 | Touchscreen | i5-1145G7 | 8GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.474Z"
+  },
+  "79273": {
+    "name": "Upgraded Dell Latitude 5590 | i5-8250U | 240GB SSD | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.474Z"
+  },
+  "79274": {
+    "name": "Upgraded Dell Latitude 5590 | i5-8350U | 500GB SSD | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.474Z"
+  },
+  "79275": {
+    "name": "Upgraded Lenovo ThinkPad T15 Gen 1 | Touchscreen | i5-10210U | 24GB RAM | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.474Z"
+  },
+  "79276": {
+    "name": "Lenovo ThinkPad T15 Gen 1 | Touchscreen | i5-10210U | Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-17T18:06:35.474Z"
   }
 }
