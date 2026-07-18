@@ -1,10 +1,10 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-17T23:35:42.950Z",
-    "finishedAt": "2026-07-17T23:35:43.907Z",
-    "durationSeconds": 1,
-    "totalFound": 10,
+    "startedAt": "2026-07-18T01:06:39.585Z",
+    "finishedAt": "2026-07-18T01:06:40.080Z",
+    "durationSeconds": 0,
+    "totalFound": 8,
     "newFound": 0,
     "goodDeals": 0,
     "sampleDeals": []
@@ -14,6 +14,11 @@
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-18T01:06:40.080Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 0 שניות"
+    },
     {
       "ts": "2026-07-17T23:35:43.907Z",
       "type": "scan_complete",
@@ -133,11 +138,6 @@
       "ts": "2026-07-16T15:13:42.596Z",
       "type": "new_deal",
       "message": "נמצאה התאמה: Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue, Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11"
-    },
-    {
-      "ts": "2026-07-16T15:13:42.596Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 13 מחשבים (6 חדשים) תוך 1 שניות"
     }
   ]
 }
