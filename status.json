@@ -1,26 +1,24 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-21T21:11:47.376Z",
-    "finishedAt": "2026-07-21T21:11:48.038Z",
-    "durationSeconds": 1,
-    "totalFound": 3,
-    "newFound": 1,
-    "goodDeals": 1,
-    "sampleDeals": [
-      {
-        "name": "Apple MacBook Pro 14-inch M1 Pro - Tahoe",
-        "price": "$235.00",
-        "url": "https://pcsrefurbished.com/sales/productPage?productID=73745",
-        "image": "https://pcsrefurbished.com/img/en-us.svg"
-      }
-    ]
+    "startedAt": "2026-07-21T22:12:58.777Z",
+    "finishedAt": "2026-07-21T22:12:59.194Z",
+    "durationSeconds": 0,
+    "totalFound": 2,
+    "newFound": 0,
+    "goodDeals": 0,
+    "sampleDeals": []
   },
   "notificationsToday": {
     "date": "2026-07-21",
     "count": 2
   },
   "activityLog": [
+    {
+      "ts": "2026-07-21T22:12:59.194Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 2 מחשבים (0 חדשים) תוך 0 שניות"
+    },
     {
       "ts": "2026-07-21T21:11:49.599Z",
       "type": "notification_sent",
@@ -140,11 +138,6 @@
       "ts": "2026-07-20T08:07:40.225Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-07-20T04:55:42.114Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }
