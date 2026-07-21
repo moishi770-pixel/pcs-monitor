@@ -12,7 +12,7 @@
   "lastCheckedAt": "2026-07-21T22:12:58.777Z",
   "forceCheck": false,
   "paused": false,
-  "sendTestNotification": false,
+  "sendTestNotification": true,
   "cpuTiers": [
     7,
     9
