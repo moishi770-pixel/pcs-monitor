@@ -5,16 +5,16 @@
   ],
   "customKeywords": [],
   "cpuBrands": [],
-  "minCpuTier": 0,
+  "cpuTiers": [
+    7,
+    9
+  ],
   "minRamGB": 16,
   "minStorageGB": 256,
   "checkIntervalMinutes": 15,
   "lastCheckedAt": "2026-07-21T22:12:58.777Z",
   "forceCheck": false,
   "paused": false,
-  "sendTestNotification": true,
-  "cpuTiers": [
-    7,
-    9
-  ]
+  "sendTestNotification": false,
+  "minCpuTier": 0
 }
