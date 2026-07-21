@@ -222,16 +222,22 @@ function isAppleProduct(name) {
 }
 
 async function sendWhatsApp(message) {
-  const phone = process.env.CALLMEBOT_PHONE;
-  const apikey = process.env.CALLMEBOT_APIKEY;
-  if (!phone || !apikey) {
-    console.log('דילוג על ווטסאפ - חסרים CALLMEBOT_PHONE / CALLMEBOT_APIKEY');
+  const idInstance = process.env.GREENAPI_ID_INSTANCE;
+  const token = process.env.GREENAPI_TOKEN;
+  const phone = process.env.GREENAPI_PHONE;
+  if (!idInstance || !token || !phone) {
+    console.log('דילוג על ווטסאפ - חסרים GREENAPI_ID_INSTANCE / GREENAPI_TOKEN / GREENAPI_PHONE');
     return false;
   }
-  const url = `https://api.callmebot.com/whatsapp.php?phone=${phone}&text=${encodeURIComponent(message)}&apikey=${apikey}`;
   try {
-    const res = await fetch(url);
-    console.log('סטטוס שליחת ווטסאפ:', res.status);
+    const url = `https://api.green-api.com/waInstance${idInstance}/sendMessage/${token}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chatId: `${phone}@c.us`, message }),
+    });
+    const text = await res.text();
+    console.log('סטטוס שליחת ווטסאפ (Green API):', res.status, text.slice(0, 200));
     return res.ok;
   } catch (err) {
     console.error('שגיאה בשליחת ווטסאפ:', err.message);
