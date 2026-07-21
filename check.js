@@ -85,15 +85,29 @@ async function fetchProductImage(url) {
     if (!res.ok) return null;
     const html = await res.text();
     const $ = cheerio.load(html);
-    let found = null;
+
+    const candidates = [];
     $('img').each((_, el) => {
-      if (found) return;
       const src = $(el).attr('src') || $(el).attr('data-src');
       if (!src || src.startsWith('data:')) return;
-      if (/logo|icon|sprite|banner/i.test(src)) return;
-      found = resolveUrl(src);
+      if (/logo|icon|sprite|banner|flag|payment|visa|mastercard|paypal|footer|header/i.test(src)) return;
+
+      const width = parseInt($(el).attr('width'), 10) || 0;
+      const height = parseInt($(el).attr('height'), 10) || 0;
+      candidates.push({ src: resolveUrl(src), area: width * height });
     });
-    return found;
+
+    if (!candidates.length) return null;
+
+    // מעדיפים את התמונה עם הממדים הגדולים ביותר (כנראה תמונת המוצר, לא אייקון קטן)
+    const withDimensions = candidates.filter((c) => c.area > 0);
+    if (withDimensions.length) {
+      withDimensions.sort((a, b) => b.area - a.area);
+      return withDimensions[0].src;
+    }
+
+    // אם אין מידע על ממדים - ניקח את הראשונה שנשארה אחרי הסינון
+    return candidates[0].src;
   } catch {
     return null;
   }
@@ -219,6 +233,41 @@ async function sendPush(title, message) {
 
 function isAppleProduct(name) {
   return /apple|macbook|imac/i.test(name);
+}
+
+async function sendWhatsAppDeal(deal) {
+  const idInstance = process.env.GREENAPI_ID_INSTANCE;
+  const token = process.env.GREENAPI_TOKEN;
+  const phone = process.env.GREENAPI_PHONE;
+  if (!idInstance || !token || !phone) {
+    console.log('דילוג על ווטסאפ - חסרים GREENAPI_ID_INSTANCE / GREENAPI_TOKEN / GREENAPI_PHONE');
+    return false;
+  }
+  const caption = `${deal.name} - ${deal.price || 'מחיר לא זמין'}\n${deal.url}`;
+
+  if (deal.image) {
+    try {
+      const url = `https://api.green-api.com/waInstance${idInstance}/sendFileByUrl/${token}`;
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chatId: `${phone}@c.us`,
+          urlFile: deal.image,
+          fileName: 'computer.jpg',
+          caption,
+        }),
+      });
+      const text = await res.text();
+      console.log('סטטוס שליחת תמונה בווטסאפ:', res.status, text.slice(0, 200));
+      if (res.ok) return true;
+      // אם שליחת התמונה נכשלה - ננסה טקסט רגיל כגיבוי
+    } catch (err) {
+      console.error('שגיאה בשליחת תמונה בווטסאפ:', err.message);
+    }
+  }
+
+  return sendWhatsApp(caption);
 }
 
 async function sendWhatsApp(message) {
@@ -385,7 +434,11 @@ async function main() {
   const message = `🖥️ נמצאו מחשבים חדשים ב-PCs for People:\n\n${lines.join('\n\n')}`;
   console.log(message);
 
-  const waOk = await sendWhatsApp(message);
+  let waOk = false;
+  for (const deal of newGoodDeals) {
+    const sent = await sendWhatsAppDeal(deal);
+    if (sent) waOk = true;
+  }
   const mailOk = await sendEmail('נמצא מחשב טוב ב-PCs for People!', message, newGoodDeals);
 
   // התראת פוש רועשת - רק אם יש כאן מחשב אפל (נדיר, שווה לב מיוחד)
