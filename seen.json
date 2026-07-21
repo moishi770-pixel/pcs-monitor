@@ -21,6 +21,11 @@
     "image": null,
     "firstSeen": "2026-07-17T22:32:17.217Z"
   },
+  "51056": {
+    "name": "Upgraded Dell Optiplex 7060 i7 8700 (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-21T23:14:15.096Z"
+  },
   "53313": {
     "name": "Lenovo ThinkCentre M920q i5 8500T Mini Tower Only - 120GB SSD",
     "image": null,
@@ -35,6 +40,11 @@
     "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.594Z"
+  },
+  "65481": {
+    "name": "HP ProDesk 600 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-21T23:14:15.096Z"
   },
   "66235": {
     "name": "Dell Latitude 5420 | i5-1145G7 | Windows 11",
@@ -84,6 +94,11 @@
     "name": "Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "74853": {
+    "name": "Dell OptiPlex 5080 i5 10500 Small (SFF) Desktop Full Set",
+    "image": null,
+    "firstSeen": "2026-07-21T23:14:15.096Z"
   },
   "75172": {
     "name": "Touchscreen Dell Latitude 5421 i5 11500H - Windows 11",
