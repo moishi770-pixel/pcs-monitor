@@ -19,7 +19,7 @@ function loadConfig() {
     brands: ['apple', 'microsoft'],
     customKeywords: [],
     cpuBrands: [],
-    minCpuTier: 0,
+    cpuTiers: [],
     minRamGB: 0,
     minStorageGB: 0,
     checkIntervalMinutes: 120,
@@ -174,7 +174,7 @@ function isGoodDeal(product, config) {
   const ramOk = !config.minRamGB || ramGB === null || ramGB >= config.minRamGB;
   const storageOk = !config.minStorageGB || storageGB === null || storageGB >= config.minStorageGB;
   const cpuBrandOk = !(config.cpuBrands && config.cpuBrands.length) || cpuBrand === null || config.cpuBrands.includes(cpuBrand);
-  const cpuTierOk = !config.minCpuTier || cpuTier === null || cpuTier >= config.minCpuTier;
+  const cpuTierOk = !(config.cpuTiers && config.cpuTiers.length) || cpuTier === null || config.cpuTiers.includes(cpuTier);
 
   return ramOk && storageOk && cpuBrandOk && cpuTierOk;
 }
@@ -188,6 +188,34 @@ function loadSeen() {
 }
 function saveSeen(seen) {
   fs.writeFileSync(SEEN_FILE, JSON.stringify(seen, null, 2));
+}
+
+async function sendPush(title, message) {
+  const topic = process.env.NTFY_TOPIC;
+  if (!topic) {
+    console.log('דילוג על התראת פוש - חסר NTFY_TOPIC');
+    return false;
+  }
+  try {
+    const res = await fetch(`https://ntfy.sh/${topic}`, {
+      method: 'POST',
+      headers: {
+        'Title': title,
+        'Priority': 'urgent',
+        'Tags': 'apple,rotating_light',
+      },
+      body: message,
+    });
+    console.log('סטטוס שליחת פוש:', res.status);
+    return res.ok;
+  } catch (err) {
+    console.error('שגיאה בשליחת פוש:', err.message);
+    return false;
+  }
+}
+
+function isAppleProduct(name) {
+  return /apple|macbook|imac/i.test(name);
 }
 
 async function sendWhatsApp(message) {
@@ -350,9 +378,17 @@ async function main() {
   const waOk = await sendWhatsApp(message);
   const mailOk = await sendEmail('נמצא מחשב טוב ב-PCs for People!', message, newGoodDeals);
 
-  if (waOk || mailOk) {
+  // התראת פוש רועשת - רק אם יש כאן מחשב אפל (נדיר, שווה לב מיוחד)
+  const appleDeals = newGoodDeals.filter((p) => isAppleProduct(p.name));
+  let pushOk = false;
+  if (appleDeals.length > 0) {
+    const appleLines = appleDeals.map((p) => `${p.name} - ${p.price || 'מחיר לא זמין'}`);
+    pushOk = await sendPush('🍎 נמצא מחשב Apple!', appleLines.join('\n'));
+  }
+
+  if (waOk || mailOk || pushOk) {
     bumpNotificationCount(status);
-    logActivity(status, 'notification_sent', `נשלחה התראה (מייל: ${mailOk ? 'הצליח' : 'נכשל'}, ווטסאפ: ${waOk ? 'הצליח' : 'נכשל'})`);
+    logActivity(status, 'notification_sent', `נשלחה התראה (מייל: ${mailOk ? 'הצליח' : 'נכשל'}, ווטסאפ: ${waOk ? 'הצליח' : 'נכשל'}${appleDeals.length ? `, פוש-אפל: ${pushOk ? 'הצליח' : 'נכשל'}` : ''})`);
   }
 
   saveStatus(status);
