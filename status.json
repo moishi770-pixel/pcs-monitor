@@ -1,26 +1,24 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-21T15:04:55.040Z",
-    "finishedAt": "2026-07-21T15:04:55.808Z",
+    "startedAt": "2026-07-21T16:42:12.456Z",
+    "finishedAt": "2026-07-21T16:42:12.992Z",
     "durationSeconds": 1,
-    "totalFound": 5,
-    "newFound": 1,
-    "goodDeals": 1,
-    "sampleDeals": [
-      {
-        "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
-        "price": "$175.00",
-        "url": "https://pcsrefurbished.com/sales/productPage?productID=70907",
-        "image": "https://pcsrefurbished.com/img/en-us.svg"
-      }
-    ]
+    "totalFound": 4,
+    "newFound": 0,
+    "goodDeals": 0,
+    "sampleDeals": []
   },
   "notificationsToday": {
     "date": "2026-07-21",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-21T16:42:12.992Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 4 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-21T15:04:58.509Z",
       "type": "notification_sent",
@@ -140,11 +138,6 @@
       "ts": "2026-07-19T20:31:46.235Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-19T19:43:50.862Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 0 שניות"
     }
   ]
 }
