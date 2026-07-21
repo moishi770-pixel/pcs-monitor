@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-21T12:54:08.331Z",
-    "finishedAt": "2026-07-21T12:54:09.051Z",
+    "startedAt": "2026-07-21T15:04:55.040Z",
+    "finishedAt": "2026-07-21T15:04:55.808Z",
     "durationSeconds": 1,
-    "totalFound": 4,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 5,
+    "newFound": 1,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
+        "price": "$175.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=70907",
+        "image": "https://pcsrefurbished.com/img/en-us.svg"
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-07-16",
+    "date": "2026-07-21",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-21T15:04:58.509Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: נכשל)"
+    },
+    {
+      "ts": "2026-07-21T15:04:55.808Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11"
+    },
+    {
+      "ts": "2026-07-21T15:04:55.808Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 5 מחשבים (1 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-21T12:54:09.051Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-07-19T19:43:50.862Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-07-19T18:27:48.153Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-19T17:16:19.386Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-19T16:02:28.327Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }
