@@ -197,16 +197,19 @@ async function sendPush(title, message) {
     return false;
   }
   try {
-    const res = await fetch(`https://ntfy.sh/${topic}`, {
+    const res = await fetch('https://ntfy.sh', {
       method: 'POST',
-      headers: {
-        'Title': title,
-        'Priority': 'urgent',
-        'Tags': 'apple,rotating_light',
-      },
-      body: message,
+      headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      body: JSON.stringify({
+        topic,
+        title,
+        message,
+        priority: 5,
+        tags: ['apple', 'rotating_light'],
+      }),
     });
-    console.log('סטטוס שליחת פוש:', res.status);
+    const text = await res.text();
+    console.log('סטטוס שליחת פוש:', res.status, text.slice(0, 200));
     return res.ok;
   } catch (err) {
     console.error('שגיאה בשליחת פוש:', err.message);
@@ -282,7 +285,8 @@ async function main() {
     const testMsg = '👋 זוהי הודעת בדיקה מהעוקב שלך - אם קיבלת את זה, הכל מחובר ועובד!';
     const waOk = await sendWhatsApp(testMsg);
     const mailOk = await sendEmail('הודעת בדיקה מהעוקב שלך 🧪', testMsg, []);
-    logActivity(status, 'test_notification', `נשלחה הודעת בדיקה (מייל: ${mailOk ? 'הצליח' : 'נכשל'}, ווטסאפ: ${waOk ? 'הצליח' : 'נכשל'})`);
+    const pushOk = await sendPush('🧪 הודעת בדיקה', testMsg);
+    logActivity(status, 'test_notification', `נשלחה הודעת בדיקה (מייל: ${mailOk ? 'הצליח' : 'נכשל'}, ווטסאפ: ${waOk ? 'הצליח' : 'נכשל'}, פוש: ${pushOk ? 'הצליח' : 'נכשל'})`);
     config.sendTestNotification = false;
     saveConfig(config);
     saveStatus(status);
