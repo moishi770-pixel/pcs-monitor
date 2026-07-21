@@ -30,6 +30,7 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: npm run check
 
       - name: Commit updated state file
