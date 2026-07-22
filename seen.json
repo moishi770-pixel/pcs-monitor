@@ -280,5 +280,20 @@
     "name": "Touchscreen HP Elite Dragonfly G2 i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-07-22T20:47:53.878Z"
+  },
+  "79405": {
+    "name": "HP ProDesk 400 G5 i5 9500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-22T22:04:45.800Z"
+  },
+  "79406": {
+    "name": "Dell OptiPlex 7080 i5 10500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-22T22:04:45.801Z"
+  },
+  "79407": {
+    "name": "Lenovo ThinkCentre M720e i5 9400 Small (SFF) Desktop Full Set",
+    "image": null,
+    "firstSeen": "2026-07-22T22:04:45.801Z"
   }
 }
