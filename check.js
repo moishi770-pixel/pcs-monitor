@@ -235,12 +235,19 @@ function isAppleProduct(name) {
   return /apple|macbook|imac/i.test(name);
 }
 
+function getWhatsAppChatId() {
+  const groupId = process.env.GREENAPI_GROUP_ID;
+  if (groupId) return groupId; // כבר מכיל @g.us
+  const phone = process.env.GREENAPI_PHONE;
+  return phone ? `${phone}@c.us` : null;
+}
+
 async function sendWhatsAppDeal(deal) {
   const idInstance = process.env.GREENAPI_ID_INSTANCE;
   const token = process.env.GREENAPI_TOKEN;
-  const phone = process.env.GREENAPI_PHONE;
-  if (!idInstance || !token || !phone) {
-    console.log('דילוג על ווטסאפ - חסרים GREENAPI_ID_INSTANCE / GREENAPI_TOKEN / GREENAPI_PHONE');
+  const chatId = getWhatsAppChatId();
+  if (!idInstance || !token || !chatId) {
+    console.log('דילוג על ווטסאפ - חסרים GREENAPI_ID_INSTANCE / GREENAPI_TOKEN / יעד שליחה');
     return false;
   }
   const caption = `${deal.name} - ${deal.price || 'מחיר לא זמין'}\n${deal.url}`;
@@ -252,7 +259,7 @@ async function sendWhatsAppDeal(deal) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          chatId: `${phone}@c.us`,
+          chatId,
           urlFile: deal.image,
           fileName: 'computer.jpg',
           caption,
@@ -273,9 +280,9 @@ async function sendWhatsAppDeal(deal) {
 async function sendWhatsApp(message) {
   const idInstance = process.env.GREENAPI_ID_INSTANCE;
   const token = process.env.GREENAPI_TOKEN;
-  const phone = process.env.GREENAPI_PHONE;
-  if (!idInstance || !token || !phone) {
-    console.log('דילוג על ווטסאפ - חסרים GREENAPI_ID_INSTANCE / GREENAPI_TOKEN / GREENAPI_PHONE');
+  const chatId = getWhatsAppChatId();
+  if (!idInstance || !token || !chatId) {
+    console.log('דילוג על ווטסאפ - חסרים GREENAPI_ID_INSTANCE / GREENAPI_TOKEN / יעד שליחה');
     return false;
   }
   try {
@@ -283,7 +290,7 @@ async function sendWhatsApp(message) {
     const res = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chatId: `${phone}@c.us`, message }),
+      body: JSON.stringify({ chatId, message }),
     });
     const text = await res.text();
     console.log('סטטוס שליחת ווטסאפ (Green API):', res.status, text.slice(0, 200));
