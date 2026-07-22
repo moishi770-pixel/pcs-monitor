@@ -15,6 +15,5 @@
   "lastCheckedAt": "2026-07-22T18:08:31.025Z",
   "forceCheck": false,
   "paused": false,
-  "sendTestNotification": false,
-  "minCpuTier": 0
+  "sendTestNotification": false
 }
