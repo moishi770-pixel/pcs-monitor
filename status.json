@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-22T16:46:40.876Z",
-    "finishedAt": "2026-07-22T16:46:41.693Z",
+    "startedAt": "2026-07-22T18:08:31.025Z",
+    "finishedAt": "2026-07-22T18:08:31.647Z",
     "durationSeconds": 1,
-    "totalFound": 4,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 8,
+    "newFound": 4,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Upgraded 15\" Microsoft Surface Laptop 4 | Touch | i7-1185 | 500GB SSD | Blk",
+        "price": "$210.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=67490",
+        "image": "https://pcsrefurbished.com/img/en-us.svg"
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-07-21",
-    "count": 2
+    "date": "2026-07-22",
+    "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-22T18:08:34.944Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
+    },
+    {
+      "ts": "2026-07-22T18:08:31.647Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Upgraded 15\" Microsoft Surface Laptop 4 | Touch | i7-1185 | 500GB SSD | Blk"
+    },
+    {
+      "ts": "2026-07-22T18:08:31.647Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 8 מחשבים (4 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-22T16:46:41.693Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-07-21T21:11:49.599Z",
       "type": "notification_sent",
       "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: נכשל)"
-    },
-    {
-      "ts": "2026-07-21T21:11:48.038Z",
-      "type": "new_deal",
-      "message": "נמצאה התאמה: Apple MacBook Pro 14-inch M1 Pro - Tahoe"
-    },
-    {
-      "ts": "2026-07-21T21:11:48.038Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 3 מחשבים (1 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-21T19:51:32.286Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 3 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }
