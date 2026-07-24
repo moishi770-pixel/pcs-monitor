@@ -1,26 +1,24 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-24T21:38:10.295Z",
-    "finishedAt": "2026-07-24T21:38:11.329Z",
+    "startedAt": "2026-07-24T22:18:48.158Z",
+    "finishedAt": "2026-07-24T22:18:49.095Z",
     "durationSeconds": 1,
     "totalFound": 13,
-    "newFound": 1,
-    "goodDeals": 1,
-    "sampleDeals": [
-      {
-        "name": "Upgraded 15\" Microsoft Surface Laptop 5 i7 1265U - Windows 11",
-        "price": "$210.00",
-        "url": "https://pcsrefurbished.com/sales/productPage?productID=70608",
-        "image": null
-      }
-    ]
+    "newFound": 0,
+    "goodDeals": 0,
+    "sampleDeals": []
   },
   "notificationsToday": {
     "date": "2026-07-24",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-24T22:18:49.095Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 13 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-24T21:38:17.974Z",
       "type": "notification_sent",
@@ -138,11 +136,6 @@
     },
     {
       "ts": "2026-07-23T14:24:27.091Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-07-23T11:57:31.774Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 0 שניות"
     }
