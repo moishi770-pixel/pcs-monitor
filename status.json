@@ -1,8 +1,8 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-24T01:10:34.091Z",
-    "finishedAt": "2026-07-24T01:10:34.898Z",
+    "startedAt": "2026-07-24T04:33:51.291Z",
+    "finishedAt": "2026-07-24T04:33:51.958Z",
     "durationSeconds": 1,
     "totalFound": 3,
     "newFound": 0,
@@ -14,6 +14,11 @@
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-24T04:33:51.958Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 3 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-24T01:10:34.898Z",
       "type": "scan_complete",
@@ -133,11 +138,6 @@
       "ts": "2026-07-22T18:08:34.944Z",
       "type": "notification_sent",
       "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
-    },
-    {
-      "ts": "2026-07-22T18:08:31.647Z",
-      "type": "new_deal",
-      "message": "נמצאה התאמה: Upgraded 15\" Microsoft Surface Laptop 4 | Touch | i7-1185 | 500GB SSD | Blk"
     }
   ]
 }
