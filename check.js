@@ -90,7 +90,8 @@ async function fetchProductImage(url) {
     $('img').each((_, el) => {
       const src = $(el).attr('src') || $(el).attr('data-src');
       if (!src || src.startsWith('data:')) return;
-      if (/logo|icon|sprite|banner|flag|payment|visa|mastercard|paypal|footer|header/i.test(src)) return;
+      if (/\.svg(\?|$)/i.test(src)) return; // אייקונים/דגלים כמעט תמיד SVG, תמונות מוצר לא
+      if (/logo|icon|sprite|banner|flag|payment|visa|mastercard|paypal|footer|header|lang|locale|en-us|en-gb/i.test(src)) return;
 
       const width = parseInt($(el).attr('width'), 10) || 0;
       const height = parseInt($(el).attr('height'), 10) || 0;
