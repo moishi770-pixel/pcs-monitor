@@ -13,7 +13,7 @@
   "minStorageGB": 256,
   "checkIntervalMinutes": 15,
   "lastCheckedAt": "2026-07-24T21:06:47.372Z",
-  "forceCheck": false,
+  "forceCheck": true,
   "paused": false,
   "sendTestNotification": false
 }
