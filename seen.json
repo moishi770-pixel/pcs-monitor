@@ -8,6 +8,11 @@
     "image": null,
     "firstSeen": "2026-07-17T19:33:21.540Z"
   },
+  "36979": {
+    "name": "Upgraded Dell Latitude 7420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-24T15:07:05.257Z"
+  },
   "37487": {
     "name": "Dell OptiPlex 3070 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T16:01:05.868Z"
@@ -81,6 +86,11 @@
     "image": null,
     "firstSeen": "2026-07-20T20:41:05.735Z"
   },
+  "69521": {
+    "name": "Upgraded Lenovo ThinkPad X1 Carbon 9th Generation i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-24T15:07:05.257Z"
+  },
   "70907": {
     "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
@@ -128,6 +138,11 @@
   "77008": {
     "name": "Upgraded Intel NUC11TNKv5 i5 1145G7 Mini Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T17:34:47.078Z"
+  },
+  "77125": {
+    "name": "Dell Latitude 7420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-24T15:07:05.257Z"
   },
   "77208": {
     "name": "Dell OptiPlex 3070 i5 9500T Micro Tower Only- Windows 11",
@@ -305,5 +320,15 @@
     "name": "Lenovo ThinkCentre M720e i5 9400 Small (SFF) Desktop Full Set",
     "image": null,
     "firstSeen": "2026-07-22T22:04:45.801Z"
+  },
+  "79463": {
+    "name": "Dell Latitude 3520 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-24T15:07:05.257Z"
+  },
+  "79464": {
+    "name": "HP EliteBook 850 G7 i5 10210U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-24T15:07:05.257Z"
   }
 }
