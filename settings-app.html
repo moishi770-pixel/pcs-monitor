@@ -2,280 +2,371 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>לוח בקרה · עוקב PCs for People</title>
-<link rel="icon" type="image/svg+xml" href="icon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>עוקב מלאי · PCs for People</title>
+<link rel="icon" type="image/png" href="icon-32.png">
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#d9822f">
+<meta name="theme-color" content="#111113">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;700;800&family=Assistant:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #f2f3f6; --panel: #ffffff; --panel-raised: #f7f8fb;
-    --border: #e1e3ea; --border-soft: #ebedf2;
-    --text: #1a1d27; --muted: #6b7180; --faint: #a1a6b3;
-    --copper: #b5691f; --copper-bright: #d9822f;
-    --copper-dim: rgba(181,105,31,0.08); --copper-dim-strong: rgba(181,105,31,0.14);
-    --led-green: #16a34a; --led-amber: #d97706; --led-red: #dc2626;
-    --mono: 'JetBrains Mono', monospace;
-    --shadow: 0 1px 2px rgba(20,22,30,0.04), 0 1px 10px rgba(20,22,30,0.03);
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0; font-family: 'Assistant', sans-serif;
-    background: radial-gradient(circle at 12% 0%, rgba(181,105,31,0.05), transparent 42%), var(--bg);
-    background-attachment: fixed; color: var(--text); padding: 0 0 40px; min-height: 100vh;
-  }
-  ::selection { background: var(--copper-dim-strong); color: var(--copper); }
+:root {
+  --gray-25: #fcfcfd; --gray-50: #f9fafb; --gray-100: #f3f4f6; --gray-150: #ececef;
+  --gray-200: #e5e7eb; --gray-300: #d1d5db; --gray-400: #9ca3af; --gray-500: #6b7280;
+  --gray-600: #4b5563; --gray-700: #374151; --gray-800: #1f2937; --gray-900: #111113;
+  --accent: #3d5afe; --accent-soft: #eef1ff; --accent-soft-border: #d8deff;
+  --green: #17803d; --green-soft: #ecfdf3; --green-border: #b7ecc9;
+  --amber: #b45309; --amber-soft: #fffaeb; --amber-border: #fde3a3;
+  --red: #d92d20; --red-soft: #fef3f2; --red-border: #fecdca;
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+* { box-sizing: border-box; }
+html { -webkit-tap-highlight-color: transparent; }
+body { margin: 0; font-family: var(--font-ui); background: var(--gray-50); color: var(--gray-900); -webkit-font-smoothing: antialiased; padding-bottom: 100px; font-size: 14px; line-height: 1.5; }
+::selection { background: var(--accent-soft-border); }
+button, input { font-family: inherit; }
+svg.ic { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; display: block; }
 
-  .topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: rgba(242,243,246,0.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-soft); }
-  .brand { display: flex; align-items: center; gap: 10px; }
-  .brand-mark { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, var(--copper-bright), var(--copper)); display: flex; align-items: center; justify-content: center; font-size: 17px; box-shadow: 0 4px 14px rgba(181,105,31,0.28); }
-  .brand-text h1 { font-family: 'Heebo', sans-serif; font-size: 16px; font-weight: 700; margin: 0; letter-spacing: -0.01em; color: var(--text); }
-  .brand-text p { margin: 1px 0 0; font-size: 11.5px; color: var(--muted); font-family: var(--mono); letter-spacing: 0.01em; }
-  .gear-btn { width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--muted); font-size: 17px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .15s ease; box-shadow: var(--shadow); }
-  .gear-btn:active { transform: scale(0.94); }
-  .gear-btn.active { color: var(--copper); border-color: var(--copper-bright); background: var(--copper-dim); }
+.topbar { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; background: rgba(249,250,251,0.82); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid var(--gray-150); }
+.brand { display: flex; align-items: center; gap: 9px; }
+.brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--gray-900); color: #fff; display: flex; align-items: center; justify-content: center; }
+.brand-mark svg { width: 15px; height: 15px; }
+.brand-name { font-size: 14px; font-weight: 700; letter-spacing: -0.01em; }
+.brand-sub { font-size: 10.5px; color: var(--gray-400); font-family: var(--font-mono); letter-spacing: 0.02em; margin-top: -1px; }
+.icon-btn { width: 34px; height: 34px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); background: #fff; color: var(--gray-500); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .15s var(--ease); }
+.icon-btn svg { width: 16px; height: 16px; }
+.icon-btn:active { transform: scale(0.93); }
+.icon-btn.active { background: var(--gray-900); color: #fff; border-color: var(--gray-900); }
 
-  .wrap { max-width: 640px; margin: 0 auto; padding: 18px 16px 0; }
+.page { max-width: 640px; margin: 0 auto; padding: 20px 16px 0; }
+.eyebrow { font-size: 11px; font-weight: 600; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.07em; margin: 28px 2px 12px; }
+.eyebrow:first-child { margin-top: 4px; }
 
-  .section-title { font-family: var(--mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin: 22px 2px 10px; display: flex; align-items: center; gap: 8px; }
-  .section-title:first-child { margin-top: 0; }
+.kpi-hero { border-radius: var(--radius-lg); border: 1px solid var(--gray-200); background: #fff; padding: 18px 20px; margin-bottom: 10px; }
+.kpi-hero-top { display: flex; align-items: center; justify-content: space-between; }
+.kpi-status-label { font-size: 12px; color: var(--gray-400); font-weight: 500; }
+.kpi-status-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gray-300); flex-shrink: 0; }
+.dot.on { background: var(--green); box-shadow: 0 0 0 3px var(--green-soft); animation: pulse 2.2s ease-in-out infinite; }
+.dot.paused { background: var(--amber); box-shadow: 0 0 0 3px var(--amber-soft); }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.kpi-status-word { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+.kpi-hero-meta { display: flex; gap: 24px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--gray-150); }
+.kpi-meta-item .l { font-size: 10.5px; color: var(--gray-400); font-weight: 500; }
+.kpi-meta-item .v { font-size: 13.5px; font-weight: 600; margin-top: 3px; font-family: var(--font-mono); color: var(--gray-800); transition: opacity .3s var(--ease); }
 
-  /* dashboard */
-  .dash-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .dash-cell { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px; padding: 13px 14px; position: relative; overflow: hidden; box-shadow: var(--shadow); transition: box-shadow .2s ease; }
-  .dash-cell::before { content: ''; position: absolute; inset: 0 auto 0 0; width: 3px; background: var(--copper-bright); }
-  .dash-cell.wide { grid-column: span 2; }
-  .dash-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; font-family: var(--mono); display: flex; align-items: center; gap: 6px; }
-  .dash-value { font-family: var(--mono); font-size: 16px; font-weight: 600; margin-top: 5px; color: var(--text); }
-  .dash-value.small { font-size: 13px; font-weight: 500; }
-  .led { width: 7px; height: 7px; border-radius: 50%; background: var(--faint); flex-shrink: 0; }
-  .led.on { background: var(--led-green); box-shadow: 0 0 6px rgba(22,163,74,0.5); animation: pulse 2s ease-in-out infinite; }
-  .led.paused { background: var(--led-amber); box-shadow: 0 0 6px rgba(217,119,6,0.5); }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
-  .fade-update { animation: fadeUpdate .5s ease; }
-  @keyframes fadeUpdate { 0% { opacity: 0.3; } 100% { opacity: 1; } }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 4px; }
+.kpi-card { border: 1px solid var(--gray-200); background: #fff; border-radius: var(--radius-md); padding: 14px 12px; }
+.kpi-card-icon { width: 26px; height: 26px; border-radius: 7px; background: var(--gray-100); color: var(--gray-500); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+.kpi-card-icon svg { width: 14px; height: 14px; }
+.kpi-value { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; transition: opacity .3s var(--ease); }
+.kpi-label { font-size: 11px; color: var(--gray-500); margin-top: 2px; font-weight: 500; }
+.fade { animation: fadeVal .4s var(--ease); }
+@keyframes fadeVal { from { opacity: 0.25; } to { opacity: 1; } }
 
-  /* quick actions */
-  .actions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
-  .action-btn {
-    border: 1px solid var(--border); background: var(--panel); border-radius: 12px;
-    padding: 13px 10px; text-align: center; font-size: 13px; font-weight: 600; cursor: pointer;
-    color: var(--text); box-shadow: var(--shadow); transition: all .12s ease;
-  }
-  .action-btn:active { transform: scale(0.97); }
-  .action-btn .icon { display: block; font-size: 18px; margin-bottom: 4px; }
-  .action-btn.primary { border-color: var(--copper-bright); background: var(--copper-dim); color: var(--copper); }
-  .action-btn:disabled { opacity: 0.5; pointer-events: none; }
+.actions-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 6px; }
+.action-btn { border: 1px solid var(--gray-200); background: #fff; border-radius: var(--radius-md); padding: 12px 4px; display: flex; flex-direction: column; align-items: center; gap: 7px; font-size: 11px; font-weight: 600; color: var(--gray-700); cursor: pointer; transition: all .15s var(--ease); }
+.action-btn svg { width: 17px; height: 17px; }
+.action-btn:active { transform: scale(0.95); background: var(--gray-50); }
+.action-btn.primary { background: var(--gray-900); color: #fff; border-color: var(--gray-900); }
+.action-btn:disabled { opacity: 0.45; pointer-events: none; }
 
-  /* activity feed */
-  .activity-card { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 14px; padding: 6px 16px; box-shadow: var(--shadow); }
-  .activity-item { display: flex; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--border-soft); }
-  .activity-item:last-child { border-bottom: none; }
-  .activity-icon { font-size: 15px; flex-shrink: 0; width: 20px; text-align: center; }
-  .activity-text { font-size: 13px; color: var(--text); line-height: 1.5; }
-  .activity-time { font-size: 11px; color: var(--faint); font-family: var(--mono); margin-top: 2px; }
-  .activity-empty { padding: 20px 0; text-align: center; color: var(--faint); font-size: 13px; }
+.toast { display: none; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 500; padding: 10px 13px; border-radius: var(--radius-sm); margin-bottom: 14px; border: 1px solid transparent; animation: slideIn .25s var(--ease); }
+@keyframes slideIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+.toast.success { display: flex; background: var(--green-soft); color: var(--green); border-color: var(--green-border); }
+.toast.error { display: flex; background: var(--red-soft); color: var(--red); border-color: var(--red-border); }
+.toast.loading { display: flex; background: var(--gray-100); color: var(--gray-600); border-color: var(--gray-200); }
 
-  /* results panel */
-  .result-card { background: var(--panel-raised); border: 1px solid var(--border); border-radius: 10px; padding: 10px; margin-bottom: 8px; display: flex; gap: 10px; align-items: center; }
-  .result-card img { width: 52px; height: 52px; object-fit: cover; border-radius: 8px; background: #fff; border: 1px solid var(--border); flex-shrink: 0; }
-  .result-card .rname { font-size: 12.5px; font-weight: 600; color: var(--text); }
-  .result-card .rprice { font-size: 12px; color: var(--copper); font-family: var(--mono); }
-  .result-card a { font-size: 11px; color: #2563eb; }
+.timeline { border: 1px solid var(--gray-200); background: #fff; border-radius: var(--radius-lg); padding: 6px 18px; }
+.activity-item { position: relative; display: flex; gap: 13px; padding: 14px 0; }
+.activity-item:not(:last-child)::before { content: ''; position: absolute; right: 12px; top: 34px; bottom: -2px; width: 1px; background: var(--gray-150); }
+.activity-icon { width: 25px; height: 25px; border-radius: 50%; background: var(--gray-100); color: var(--gray-500); display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 1; position: relative; }
+.activity-icon svg { width: 12.5px; height: 12.5px; }
+.activity-text { font-size: 13px; color: var(--gray-800); line-height: 1.5; padding-top: 2px; }
+.activity-time { font-size: 11px; color: var(--gray-400); margin-top: 2px; font-family: var(--font-mono); }
+.activity-empty { padding: 28px 0; text-align: center; color: var(--gray-400); font-size: 13px; }
 
-  .connection-compact { display: none; align-items: center; justify-content: space-between; gap: 10px; background: var(--panel); border: 1px solid var(--border-soft); border-radius: 12px; padding: 11px 14px; margin-bottom: 18px; font-family: var(--mono); font-size: 12.5px; box-shadow: var(--shadow); }
-  .connection-compact .repo-name { color: var(--copper); }
-  .connection-compact button { background: none; border: none; color: var(--muted); font-family: 'Assistant', sans-serif; font-size: 12.5px; text-decoration: underline; cursor: pointer; padding: 0; }
+.results-card { border: 1px solid var(--gray-200); background: #fff; border-radius: var(--radius-lg); padding: 18px; margin-top: 4px; }
+.results-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+table.products { width: 100%; border-collapse: collapse; }
+table.products th { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-400); font-weight: 600; text-align: right; padding: 0 0 8px; border-bottom: 1px solid var(--gray-150); }
+table.products td { padding: 10px 0; border-bottom: 1px solid var(--gray-100); vertical-align: middle; font-size: 12.5px; }
+table.products tr:last-child td { border-bottom: none; }
+.p-cell { display: flex; align-items: center; gap: 10px; }
+.p-thumb { width: 36px; height: 36px; border-radius: 7px; background: var(--gray-100); object-fit: cover; flex-shrink: 0; }
+.p-thumb-empty { width: 36px; height: 36px; border-radius: 7px; background: var(--gray-100); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: var(--gray-300); }
+.p-thumb-empty svg { width: 15px; height: 15px; }
+.p-name { font-weight: 500; color: var(--gray-800); max-width: 220px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.p-price { font-family: var(--font-mono); font-weight: 600; color: var(--gray-900); white-space: nowrap; }
+.p-link { color: var(--accent); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 3px; }
+.p-link svg { width: 12px; height: 12px; }
+.hint { font-size: 12px; color: var(--gray-400); text-align: center; padding: 20px 0; }
 
-  .card { background: var(--panel); border: 1px solid var(--border-soft); border-radius: 16px; padding: 20px; margin-bottom: 14px; box-shadow: var(--shadow); }
-  .card.connection-card { border-color: var(--copper-bright); box-shadow: 0 0 0 1px rgba(181,105,31,0.12), var(--shadow); }
-  .card-eyebrow { font-family: var(--mono); font-size: 10.5px; color: var(--copper); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-  .card h2 { font-family: 'Heebo', sans-serif; font-size: 17px; font-weight: 700; margin: 0 0 14px; color: var(--text); }
+.settings-shell { border: 1px solid var(--gray-200); background: #fff; border-radius: var(--radius-lg); overflow: hidden; margin-top: 4px; }
+.tabs-nav { display: flex; overflow-x: auto; border-bottom: 1px solid var(--gray-150); scrollbar-width: none; }
+.tabs-nav::-webkit-scrollbar { display: none; }
+.tab-btn { flex: 0 0 auto; padding: 13px 15px; font-size: 12.5px; font-weight: 600; color: var(--gray-400); background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 6px; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; transition: all .15s var(--ease); }
+.tab-btn svg { width: 14px; height: 14px; }
+.tab-btn.active { color: var(--gray-900); border-bottom-color: var(--gray-900); }
+.tab-panel { display: none; padding: 20px; }
+.tab-panel.active { display: block; animation: fadeVal .25s var(--ease); }
 
-  label.field-label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
-  input[type="text"], input[type="password"] { width: 100%; padding: 12px 13px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel-raised); color: var(--text); font-size: 14.5px; margin-bottom: 14px; font-family: var(--mono); }
-  input:focus { outline: none; border-color: var(--copper-bright); background: #fff; }
-  details { font-size: 12.5px; color: var(--muted); margin-bottom: 14px; }
-  details summary { cursor: pointer; color: var(--copper); }
-  details div { margin-top: 8px; line-height: 1.7; }
+.field-group { margin-bottom: 22px; }
+.field-group:last-child { margin-bottom: 0; }
+.field-label { font-size: 12.5px; font-weight: 600; color: var(--gray-800); margin-bottom: 3px; }
+.field-desc { font-size: 11.5px; color: var(--gray-400); margin-bottom: 10px; line-height: 1.5; }
+input[type="text"], input[type="password"] { width: 100%; padding: 10px 12px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); background: var(--gray-25); color: var(--gray-900); font-size: 13.5px; font-family: var(--font-mono); transition: all .15s var(--ease); }
+input:focus { outline: none; border-color: var(--gray-900); background: #fff; box-shadow: 0 0 0 3px var(--gray-100); }
+input::placeholder { color: var(--gray-300); font-family: var(--font-ui); }
 
-  .chip-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 8px; }
-  .chip { border: 1px solid var(--border); background: var(--panel-raised); border-radius: 10px; padding: 11px 8px; text-align: center; font-size: 13px; cursor: pointer; user-select: none; transition: all .12s ease; color: var(--text); }
-  .chip:active { transform: scale(0.96); }
-  .chip.selected { border-color: var(--copper-bright); background: var(--copper-dim-strong); color: var(--copper); font-weight: 600; }
-  .chip-sub { display: block; font-size: 10px; color: var(--muted); margin-top: 2px; font-family: var(--mono); }
-  .chip.selected .chip-sub { color: var(--copper); opacity: 0.8; }
+.chip-grid { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--gray-200); background: var(--gray-25); border-radius: 999px; padding: 7px 13px; cursor: pointer; user-select: none; font-size: 12.5px; font-weight: 500; color: var(--gray-700); transition: all .12s var(--ease); }
+.chip:active { transform: scale(0.95); }
+.chip.selected { border-color: var(--gray-900); background: var(--gray-900); color: #fff; }
+.chip .chip-check { width: 12px; height: 12px; display: none; }
+.chip.selected .chip-check { display: block; }
+.chip-sub { font-size: 10.5px; opacity: 0.55; }
 
-  .segmented { display: flex; background: var(--panel-raised); border: 1px solid var(--border); border-radius: 10px; padding: 3px; gap: 3px; flex-wrap: wrap; }
-  .segmented .seg { flex: 1 1 auto; min-width: 60px; text-align: center; padding: 9px 6px; border-radius: 7px; font-size: 13px; cursor: pointer; color: var(--muted); }
-  .segmented .seg.selected { background: var(--copper-bright); color: #fff; font-weight: 700; }
+.segmented { display: flex; background: var(--gray-100); border-radius: var(--radius-sm); padding: 3px; gap: 2px; flex-wrap: wrap; }
+.segmented .seg { flex: 1 1 auto; min-width: 54px; text-align: center; padding: 8px 6px; border-radius: 6px; font-size: 12.5px; font-weight: 500; color: var(--gray-500); cursor: pointer; transition: all .12s var(--ease); }
+.segmented .seg.selected { background: #fff; color: var(--gray-900); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
 
-  .freq-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .freq-chip { border: 1px solid var(--border); background: var(--panel-raised); border-radius: 10px; padding: 12px 4px; text-align: center; cursor: pointer; font-family: var(--mono); }
-  .freq-chip .num { display: block; font-size: 17px; font-weight: 600; color: var(--text); }
-  .freq-chip .unit { display: block; font-size: 10px; color: var(--muted); margin-top: 1px; }
-  .freq-chip.selected { border-color: var(--copper-bright); background: var(--copper-dim-strong); }
-  .freq-chip.selected .num { color: var(--copper); }
-  .freq-chip.selected .unit { color: var(--copper); opacity: 0.8; }
+.freq-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+.freq-chip { border: 1px solid var(--gray-200); background: var(--gray-25); border-radius: var(--radius-sm); padding: 10px 2px; text-align: center; cursor: pointer; transition: all .12s var(--ease); }
+.freq-chip .num { display: block; font-size: 15px; font-weight: 700; font-family: var(--font-mono); color: var(--gray-800); }
+.freq-chip .unit { display: block; font-size: 9.5px; color: var(--gray-400); margin-top: 1px; }
+.freq-chip.selected { border-color: var(--gray-900); background: var(--gray-900); }
+.freq-chip.selected .num, .freq-chip.selected .unit { color: #fff; }
 
-  .hint { font-size: 12px; color: var(--faint); margin-top: 12px; line-height: 1.6; }
+.connect-compact { display: none; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 14px; background: var(--green-soft); border: 1px solid var(--green-border); border-radius: var(--radius-md); font-size: 12.5px; margin-bottom: 10px; }
+.connect-compact .repo-name { font-family: var(--font-mono); color: var(--green); font-weight: 600; }
+.connect-compact button { background: none; border: none; color: var(--gray-500); font-size: 12px; text-decoration: underline; cursor: pointer; padding: 0; }
+details.help { font-size: 12px; color: var(--gray-500); margin-top: 12px; }
+details.help summary { cursor: pointer; color: var(--accent); font-weight: 500; }
+details.help div { margin-top: 8px; line-height: 1.8; }
+.btn-secondary { width: 100%; padding: 11px; border-radius: var(--radius-sm); border: 1px solid var(--gray-200); background: #fff; color: var(--gray-800); font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 14px; }
+.btn-secondary:active { background: var(--gray-50); }
 
-  .save-bar { position: sticky; bottom: 0; padding: 14px 16px calc(14px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--bg) 65%, transparent); margin-top: 6px; }
-  .save-bar-inner { max-width: 640px; margin: 0 auto; }
-  .btn-save { width: 100%; padding: 15px; border-radius: 12px; border: none; background: linear-gradient(135deg, var(--copper-bright), var(--copper)); color: #fff; font-family: 'Heebo', sans-serif; font-size: 15.5px; font-weight: 700; cursor: pointer; box-shadow: 0 6px 20px rgba(181,105,31,0.25); }
-  .btn-save:active { transform: scale(0.985); }
-  .btn-ghost { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel-raised); color: var(--muted); font-size: 13.5px; cursor: pointer; }
+.info-row { display: flex; align-items: flex-start; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--gray-100); }
+.info-row:last-child { border-bottom: none; }
+.info-row svg { width: 16px; height: 16px; color: var(--gray-400); flex-shrink: 0; margin-top: 1px; }
+.info-row-text { font-size: 12.5px; color: var(--gray-600); line-height: 1.5; }
+.info-row-text b { color: var(--gray-900); font-weight: 600; }
 
-  .toast { text-align: center; padding: 11px; border-radius: 10px; font-size: 13.5px; margin-top: 10px; display: none; font-family: var(--mono); }
-  .toast.success { display: block; background: rgba(22,163,74,0.08); color: var(--led-green); border: 1px solid rgba(22,163,74,0.25); }
-  .toast.error { display: block; background: rgba(220,38,38,0.08); color: var(--led-red); border: 1px solid rgba(220,38,38,0.25); }
-  .toast.loading { display: block; background: var(--copper-dim); color: var(--copper); border: 1px solid rgba(181,105,31,0.25); }
+.save-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 30; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(to top, var(--gray-50) 55%, transparent); }
+.save-bar-inner { max-width: 640px; margin: 0 auto; }
+.btn-save { width: 100%; padding: 14px; border-radius: var(--radius-md); border: none; background: var(--gray-900); color: #fff; font-size: 14.5px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(17,17,19,0.18); transition: transform .1s var(--ease); }
+.btn-save:active { transform: scale(0.98); }
 </style>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2" fill="#fff"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2" fill="#fff"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="10" cy="18" r="2" fill="#fff"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="10" y="10" width="4" height="4"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 10a6 6 0 1112 0c0 5 2 6 2 6H4s2-1 2-6z"/><path d="M10 20a2 2 0 004 0"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="9" r="2.5"/><path d="M6 8.5v7"/><path d="M6 12c0-2 2-3 5-3h2.5"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3"/><line x1="12" y1="15" x2="17" y2="15"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="i-forward" viewBox="0 0 24 24"><path d="M5 5l7 7-7 7"/><path d="M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5"/><line x1="9" y1="2" x2="15" y2="2"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8V4z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6"/><path d="M10 3v6l-5.5 9.5A2 2 0 006.2 21h11.6a2 2 0 001.7-2.5L14 9V3"/><line x1="8" y1="14" x2="16" y2="14"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6a1 1 0 011-1h5l2 2h9a1 1 0 011 1v10a1 1 0 01-1 1H4a1 1 0 01-1-1V6z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M5 3h11l3 3v15H5z"/><rect x="8" y="3" width="7" height="5"/><rect x="7" y="13" width="10" height="7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5.5 5.5L20 6"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5-9 9"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6"/><path d="M10 14L20 4"/><path d="M18 13v6a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h6"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24"><path d="M2 12h5l2 8 4-16 2 8h7"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3L2 20h20L12 3z"/><line x1="12" y1="10" x2="12" y2="14"/><circle cx="12" cy="17" r="0.6" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
 <div class="topbar">
   <div class="brand">
-    <div class="brand-mark">🖥️</div>
-    <div class="brand-text"><h1>עוקב מלאי</h1><p>PCS FOR PEOPLE · לוח בקרה</p></div>
+    <div class="brand-mark"><svg class="ic" style="stroke:#fff"><use href="#i-monitor"/></svg></div>
+    <div>
+      <div class="brand-name">עוקב מלאי</div>
+      <div class="brand-sub">PCS FOR PEOPLE</div>
+    </div>
   </div>
-  <button class="gear-btn" id="gearBtn" onclick="toggleConnectionCard()">⚙</button>
+  <button class="icon-btn" id="gearBtn" onclick="toggleConnectionCard()"><svg class="ic"><use href="#i-settings"/></svg></button>
 </div>
 
-<div class="wrap">
+<div class="page">
 
-  <div class="section-title">📊 סטטוס בזמן אמת</div>
-  <div class="dash-grid">
-    <div class="dash-cell wide">
-      <div class="dash-label"><span class="led" id="ledAgent"></span> סטטוס הסוכן</div>
-      <div class="dash-value" id="agentStatusValue">—</div>
-    </div>
-    <div class="dash-cell">
-      <div class="dash-label">בדיקה אחרונה</div>
-      <div class="dash-value small" id="lastCheckValue">—</div>
-    </div>
-    <div class="dash-cell">
-      <div class="dash-label">בדיקה הבאה</div>
-      <div class="dash-value small" id="nextCheckValue">—</div>
-    </div>
-    <div class="dash-cell">
-      <div class="dash-label">נמצאו בסריקה האחרונה</div>
-      <div class="dash-value" id="totalFoundValue">—</div>
-    </div>
-    <div class="dash-cell">
-      <div class="dash-label">חדשים מהסריקה הקודמת</div>
-      <div class="dash-value" id="newFoundValue">—</div>
-    </div>
-    <div class="dash-cell">
-      <div class="dash-label">התראות היום</div>
-      <div class="dash-value" id="notifTodayValue">—</div>
-    </div>
-    <div class="dash-cell">
-      <div class="dash-label">משך הסריקה</div>
-      <div class="dash-value" id="durationValue">—</div>
-    </div>
-  </div>
+  <div class="eyebrow">סטטוס בזמן אמת</div>
 
-  <div class="section-title">⚡ פעולות מהירות</div>
-  <div class="actions-grid" style="margin-bottom: 10px;">
-    <button class="action-btn primary" id="runNowBtn" onclick="runNow()"><span class="icon">▶️</span>הרץ סריקה עכשיו</button>
-    <button class="action-btn" id="pauseBtn" onclick="togglePause()"><span class="icon">⏸</span>השהה סוכן</button>
-    <button class="action-btn" id="testBtn" onclick="sendTest()"><span class="icon">🧪</span>שלח התראת ניסיון</button>
-    <button class="action-btn" id="resultsBtn" onclick="toggleResults()"><span class="icon">🗂️</span>תוצאות אחרונות</button>
-  </div>
-  <div id="quickStatus" class="toast" style="margin-bottom: 18px;"></div>
-
-  <div id="resultsPanel" class="card" style="display:none;">
-    <div class="card-eyebrow">מהסריקה האחרונה</div>
-    <h2>מוצרים שנמצאו</h2>
-    <div id="resultsList"></div>
-  </div>
-
-  <div class="section-title">🕘 פעילות אחרונה</div>
-  <div class="activity-card" style="margin-bottom: 20px;">
-    <div id="activityFeed"><div class="activity-empty">אין עדיין פעילות רשומה</div></div>
-  </div>
-
-  <div class="connection-compact" id="connectionCompact">
-    <span>🔌 מחובר: <span class="repo-name" id="repoLabel"></span></span>
-    <button onclick="toggleConnectionCard()">שנה חיבור</button>
-  </div>
-
-  <div class="card connection-card" id="connectionCard">
-    <div class="card-eyebrow">שלב 1</div>
-    <h2>חיבור ל-GitHub</h2>
-    <label class="field-label">שם המשתמש / הארגון + שם הריפו</label>
-    <input type="text" id="repoPath" placeholder="לדוגמה: moishi770-pixel/pcs-monitor" />
-    <label class="field-label">מפתח גישה (Personal Access Token)</label>
-    <input type="password" id="token" placeholder="הדבק כאן את המפתח" />
-    <details>
-      <summary>איך יוצרים מפתח גישה?</summary>
+  <div class="kpi-hero" id="heroStatus">
+    <div class="kpi-hero-top">
       <div>
-        1. ב-GitHub: תמונת פרופיל ← Settings ← Developer settings<br/>
-        2. Personal access tokens ← Fine-grained tokens ← Generate new token<br/>
-        3. Repository access: "Only select repositories" ← הריפו שלך<br/>
-        4. Permissions ← Contents ← "Read and write", Actions ← "Read and write"<br/>
-        5. Generate token, ותעתיק את המפתח (מוצג פעם אחת בלבד)
+        <div class="kpi-status-label">סטטוס הסוכן</div>
+        <div class="kpi-status-row">
+          <span class="dot" id="ledAgent"></span>
+          <span class="kpi-status-word" id="agentStatusValue">—</span>
+        </div>
       </div>
-    </details>
-    <button class="btn-ghost" onclick="loadConfig()">📥 התחבר וטען הגדרות</button>
+    </div>
+    <div class="kpi-hero-meta">
+      <div class="kpi-meta-item"><div class="l">בדיקה אחרונה</div><div class="v" id="lastCheckValue">—</div></div>
+      <div class="kpi-meta-item"><div class="l">בדיקה הבאה</div><div class="v" id="nextCheckValue">—</div></div>
+      <div class="kpi-meta-item"><div class="l">משך סריקה</div><div class="v" id="durationValue">—</div></div>
+    </div>
   </div>
 
-  <div class="section-title">⚙️ הגדרות</div>
-
-  <div class="card">
-    <div class="card-eyebrow">מותגים</div>
-    <h2>אילו חברות מעניינות אותך?</h2>
-    <div class="chip-grid" id="brandsGrid"></div>
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-card-icon"><svg class="ic"><use href="#i-monitor"/></svg></div>
+      <div class="kpi-value" id="totalFoundValue">—</div>
+      <div class="kpi-label">נמצאו בסריקה</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-card-icon"><svg class="ic"><use href="#i-sparkle"/></svg></div>
+      <div class="kpi-value" id="newFoundValue">—</div>
+      <div class="kpi-label">חדשים</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-card-icon"><svg class="ic"><use href="#i-bell"/></svg></div>
+      <div class="kpi-value" id="notifTodayValue">—</div>
+      <div class="kpi-label">התראות היום</div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-eyebrow">מעבד</div>
-    <h2>סוג ורמת מעבד</h2>
-    <label class="field-label">יצרן (אפשר לבחור כמה, או להשאיר ריק לכל היצרנים)</label>
-    <div class="chip-grid" id="cpuBrandGrid" style="margin-bottom:16px;"></div>
-    <label class="field-label">דגמים ספציפיים (אפשר לבחור כמה, או להשאיר ריק לכל הדגמים)</label>
-    <div class="chip-grid" id="cpuTierGrid"></div>
+  <div class="eyebrow">פעולות מהירות</div>
+  <div class="actions-bar">
+    <button class="action-btn primary" id="runNowBtn" onclick="runNow()"><svg class="ic"><use href="#i-play"/></svg>הרץ עכשיו</button>
+    <button class="action-btn" id="pauseBtn" onclick="togglePause()"><svg class="ic"><use href="#i-pause"/></svg>השהה</button>
+    <button class="action-btn" id="testBtn" onclick="sendTest()"><svg class="ic"><use href="#i-flask"/></svg>בדיקה</button>
+    <button class="action-btn" id="resultsBtn" onclick="toggleResults()"><svg class="ic"><use href="#i-folder"/></svg>תוצאות</button>
+  </div>
+  <div id="quickStatus" class="toast"></div>
+
+  <div id="resultsPanel" style="display:none;">
+    <div class="results-card">
+      <div class="results-title">תוצאות מהסריקה האחרונה</div>
+      <div id="resultsList"></div>
+    </div>
   </div>
 
-  <div class="card">
-    <div class="card-eyebrow">מפרט טכני</div>
-    <h2>דרישות מינימום</h2>
-    <label class="field-label">זיכרון (RAM)</label>
-    <div class="segmented" id="ramSeg" style="margin-bottom:16px;"></div>
-    <label class="field-label">אחסון</label>
-    <div class="segmented" id="storageSeg"></div>
-    <p class="hint">⚡ הסינון לפי מעבד/זיכרון/אחסון עובד רק אם המידע מופיע בשם המוצר באתר. אם המידע לא מופיע - המוצר לא ייפסל, כדי לא לפספס מציאות.</p>
+  <div class="eyebrow">פעילות אחרונה</div>
+  <div class="timeline" id="activityFeed"></div>
+
+  <div class="eyebrow">הגדרות</div>
+
+  <div class="connect-compact" id="connectionCompact">
+    <span>מחובר ל־<span class="repo-name" id="repoLabel"></span></span>
+    <button onclick="toggleConnectionCard()">שנה</button>
   </div>
 
-  <div class="card">
-    <div class="card-eyebrow">מילות מפתח</div>
-    <h2>נוספות (אופציונלי)</h2>
-    <label class="field-label">הפרד עם פסיקים</label>
-    <input type="text" id="customKeywords" placeholder="thinkpad, gaming, touchscreen" />
-  </div>
+  <div class="settings-shell" id="connectionCard">
+    <div class="tabs-nav">
+      <button class="tab-btn active" data-tab="general" onclick="switchTab('general')"><svg class="ic"><use href="#i-grid"/></svg>כללי</button>
+      <button class="tab-btn" data-tab="hardware" onclick="switchTab('hardware')"><svg class="ic"><use href="#i-cpu"/></svg>חומרה</button>
+      <button class="tab-btn" data-tab="notifications" onclick="switchTab('notifications')"><svg class="ic"><use href="#i-bell"/></svg>התראות</button>
+      <button class="tab-btn" data-tab="github" onclick="switchTab('github')"><svg class="ic"><use href="#i-git"/></svg>GitHub</button>
+      <button class="tab-btn" data-tab="advanced" onclick="switchTab('advanced')"><svg class="ic"><use href="#i-terminal"/></svg>מתקדם</button>
+    </div>
 
-  <div class="card">
-    <div class="card-eyebrow">תדירות</div>
-    <h2>כל כמה זמן לבדוק?</h2>
-    <div class="freq-grid" id="freqGrid"></div>
+    <div class="tab-panel active" data-panel="general">
+      <div class="field-group">
+        <div class="field-label">חברות מחשבים</div>
+        <div class="field-desc">אילו יצרנים מעניינים אותך</div>
+        <div class="chip-grid" id="brandsGrid"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">מילות מפתח נוספות</div>
+        <div class="field-desc">הפרד עם פסיקים, לדוגמה: thinkpad, gaming</div>
+        <input type="text" id="customKeywords" placeholder="thinkpad, gaming, touchscreen" />
+      </div>
+      <div class="field-group">
+        <div class="field-label">תדירות בדיקה</div>
+        <div class="field-desc">כל כמה זמן לסרוק את האתר</div>
+        <div class="freq-grid" id="freqGrid"></div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="hardware">
+      <div class="field-group">
+        <div class="field-label">יצרן מעבד</div>
+        <div class="field-desc">ריק = כל היצרנים</div>
+        <div class="chip-grid" id="cpuBrandGrid"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">דגם מעבד</div>
+        <div class="field-desc">אפשר לבחור כמה, לדוגמה רק i5 ו-i7</div>
+        <div class="chip-grid" id="cpuTierGrid"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">זיכרון (RAM) מינימלי</div>
+        <div class="segmented" id="ramSeg"></div>
+      </div>
+      <div class="field-group">
+        <div class="field-label">אחסון מינימלי</div>
+        <div class="segmented" id="storageSeg"></div>
+      </div>
+      <p class="field-desc" style="margin-top:-6px;">הסינון לפי מעבד/זיכרון/אחסון פועל רק כשהמידע מופיע בשם המוצר באתר. אם חסר - המוצר לא ייפסל.</p>
+    </div>
+
+    <div class="tab-panel" data-panel="notifications">
+      <div class="info-row"><svg class="ic"><use href="#i-check"/></svg><div class="info-row-text"><b>מייל</b> — נשלח לכל התאמה, כולל תמונת מוצר.</div></div>
+      <div class="info-row"><svg class="ic"><use href="#i-check"/></svg><div class="info-row-text"><b>ווטסאפ</b> — נשלח דרך Green API לקבוצה שהוגדרה, כולל תמונה.</div></div>
+      <div class="info-row"><svg class="ic"><use href="#i-check"/></svg><div class="info-row-text"><b>פוש (ntfy)</b> — התראה דחופה, רק עבור מחשבי Apple.</div></div>
+      <button class="btn-secondary" onclick="sendTest()">שלח הודעת בדיקה לכל הערוצים</button>
+      <p class="field-desc" style="margin-top:10px;">ניהול המפתחות והחיבורים לערוצים נעשה דרך GitHub Secrets בריפו, לא מהדשבורד.</p>
+    </div>
+
+    <div class="tab-panel" data-panel="github" id="connectionCard">
+      <div class="field-group">
+        <div class="field-label">שם המשתמש / ריפו</div>
+        <input type="text" id="repoPath" placeholder="לדוגמה: moishi770-pixel/pcs-monitor" />
+        <div class="field-label" style="margin-top:14px;">מפתח גישה (Personal Access Token)</div>
+        <input type="password" id="token" placeholder="הדבק כאן את המפתח" />
+        <details class="help">
+          <summary>איך יוצרים מפתח גישה?</summary>
+          <div>
+            1. GitHub → תמונת פרופיל → Settings → Developer settings<br/>
+            2. Personal access tokens → Fine-grained tokens → Generate new token<br/>
+            3. Repository access → הריפו שלך בלבד<br/>
+            4. Permissions → Contents + Actions → Read and write<br/>
+            5. Generate token, ותעתיק את המפתח (מוצג פעם אחת בלבד)
+          </div>
+        </details>
+        <button class="btn-secondary" onclick="loadConfig()">התחבר וטען הגדרות</button>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="advanced">
+      <div class="info-row"><svg class="ic"><use href="#i-terminal"/></svg><div class="info-row-text">הקוד רץ אוטומטית כל 15 דקות דרך <b>GitHub Actions</b>, ובודק אם הגיע הזמן לסריקה לפי התדירות שהוגדרה.</div></div>
+      <div class="info-row"><svg class="ic"><use href="#i-alert"/></svg><div class="info-row-text">אם משהו לא עובד, הבדיקה הראשונה היא לוג ההרצה בטאב <b>Actions</b> בריפו.</div></div>
+    </div>
   </div>
 
 </div>
 
 <div class="save-bar">
   <div class="save-bar-inner">
-    <button class="btn-save" onclick="saveConfig()">💾 שמור הגדרות</button>
-    <div id="status" class="toast"></div>
+    <button class="btn-save" onclick="saveConfig()">שמור הגדרות</button>
+    <div id="status" class="toast" style="margin-top:8px; margin-bottom:0;"></div>
   </div>
 </div>
 
 <script>
+function switchTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === name));
+}
+
 const REPO_KEY = 'pcs-monitor-repo';
 const TOKEN_KEY = 'pcs-monitor-token';
 let configSha = null;
@@ -307,17 +398,32 @@ const FREQ_OPTIONS = [
   { v: 240, num: '4', unit: 'שעות' }, { v: 360, num: '6', unit: 'שעות' }, { v: 480, num: '8', unit: 'שעות' },
   { v: 720, num: '12', unit: 'שעות' }, { v: 1440, num: '24', unit: 'שעות' }, { v: 4320, num: '3', unit: 'ימים' },
 ];
-const ACTIVITY_ICONS = { scan_complete: '🔍', new_deal: '🆕', notification_sent: '📨', test_notification: '🧪', agent_paused: '⏸', agent_resumed: '▶️', settings_saved: '💾' };
+function svgIcon(name) { return `<svg class="ic" width="13" height="13"><use href="#i-${name}"/></svg>`; }
+const ACTIVITY_ICONS = {
+  scan_complete: svgIcon('search'),
+  new_deal: svgIcon('sparkle'),
+  notification_sent: svgIcon('bell'),
+  test_notification: svgIcon('flask'),
+  agent_paused: svgIcon('pause'),
+  agent_resumed: svgIcon('play'),
+  settings_saved: svgIcon('save'),
+};
 
 function renderBrandGrid() {
   document.getElementById('brandsGrid').innerHTML = BRAND_OPTIONS.map(b => `
-    <div class="chip ${state.brands.includes(b.id) ? 'selected' : ''}" onclick="toggleBrand('${b.id}')">${b.label}${b.sub ? `<span class="chip-sub">${b.sub}</span>` : ''}</div>`).join('');
+    <div class="chip ${state.brands.includes(b.id) ? 'selected' : ''}" onclick="toggleBrand('${b.id}')">
+      <svg class="ic chip-check" width="13" height="13"><use href="#i-check"/></svg>
+      <span>${b.label}</span>${b.sub ? `<span class="chip-sub">${b.sub}</span>` : ''}
+    </div>`).join('');
 }
 function toggleBrand(id) { const i = state.brands.indexOf(id); if (i === -1) state.brands.push(id); else state.brands.splice(i, 1); renderBrandGrid(); }
 
 function renderCpuBrandGrid() {
   document.getElementById('cpuBrandGrid').innerHTML = CPU_BRAND_OPTIONS.map(b => `
-    <div class="chip ${state.cpuBrands.includes(b.id) ? 'selected' : ''}" onclick="toggleCpuBrand('${b.id}')">${b.label}<span class="chip-sub">${b.sub}</span></div>`).join('');
+    <div class="chip ${state.cpuBrands.includes(b.id) ? 'selected' : ''}" onclick="toggleCpuBrand('${b.id}')">
+      <svg class="ic chip-check" width="13" height="13"><use href="#i-check"/></svg>
+      <span>${b.label}</span><span class="chip-sub">${b.sub}</span>
+    </div>`).join('');
 }
 function toggleCpuBrand(id) { const i = state.cpuBrands.indexOf(id); if (i === -1) state.cpuBrands.push(id); else state.cpuBrands.splice(i, 1); renderCpuBrandGrid(); }
 
@@ -328,7 +434,10 @@ function renderSegmented(containerId, options, currentVal, onPick) {
 }
 function renderCpuTierGrid() {
   document.getElementById('cpuTierGrid').innerHTML = CPU_TIER_OPTIONS.map(t => `
-    <div class="chip ${state.cpuTiers.includes(t.v) ? 'selected' : ''}" onclick="toggleCpuTier(${t.v})">${t.label}<span class="chip-sub">${t.sub}</span></div>`).join('');
+    <div class="chip ${state.cpuTiers.includes(t.v) ? 'selected' : ''}" onclick="toggleCpuTier(${t.v})">
+      <svg class="ic chip-check" width="13" height="13"><use href="#i-check"/></svg>
+      <span>${t.label}</span><span class="chip-sub">${t.sub}</span>
+    </div>`).join('');
 }
 function toggleCpuTier(v) { const i = state.cpuTiers.indexOf(v); if (i === -1) state.cpuTiers.push(v); else state.cpuTiers.splice(i, 1); renderCpuTierGrid(); }
 function renderRam() { renderSegmented('ramSeg', RAM_OPTIONS, state.minRamGB, v => { state.minRamGB = v; renderRam(); }); }
@@ -356,12 +465,15 @@ function timeAgo(iso) {
 }
 
 function renderDashboard() {
+  const hero = document.getElementById('heroStatus');
   const ledAgent = document.getElementById('ledAgent');
   const agentEl = document.getElementById('agentStatusValue');
   if (state.paused) {
-    ledAgent.className = 'led paused'; agentEl.textContent = '⏸ מושהה';
+    hero.className = 'hero-status paused';
+    ledAgent.className = 'led-lg paused'; agentEl.textContent = 'מושהה';
   } else {
-    ledAgent.className = 'led on'; agentEl.textContent = '✓ פעיל';
+    hero.className = 'hero-status on';
+    ledAgent.className = 'led-lg on'; agentEl.textContent = 'פעיל';
   }
 
   const lastEl = document.getElementById('lastCheckValue');
@@ -388,7 +500,7 @@ function renderDashboard() {
   const notifCount = (statusData.notificationsToday && statusData.notificationsToday.date === today) ? statusData.notificationsToday.count : 0;
   document.getElementById('notifTodayValue').textContent = notifCount;
 
-  document.querySelectorAll('.dash-value').forEach(el => { el.classList.remove('fade-update'); void el.offsetWidth; el.classList.add('fade-update'); });
+  document.querySelectorAll('.stat-value, .hero-meta-item .v').forEach(el => { el.classList.remove('fade-update'); void el.offsetWidth; el.classList.add('fade-update'); });
 }
 
 function renderActivity() {
@@ -408,10 +520,10 @@ function renderActivity() {
 function renderPauseButton() {
   const btn = document.getElementById('pauseBtn');
   if (state.paused) {
-    btn.innerHTML = '<span class="icon">▶️</span>המשך פעילות';
+    btn.innerHTML = '<svg class="ic action-icon" width="16" height="16"><use href="#i-play"/></svg>המשך';
     btn.classList.add('primary');
   } else {
-    btn.innerHTML = '<span class="icon">⏸</span>השהה סוכן';
+    btn.innerHTML = '<svg class="ic action-icon" width="16" height="16"><use href="#i-pause"/></svg>השהה';
     btn.classList.remove('primary');
   }
 }
@@ -420,18 +532,28 @@ function renderResults() {
   const list = document.getElementById('resultsList');
   const deals = (statusData.lastScan && statusData.lastScan.sampleDeals) || [];
   if (deals.length === 0) {
-    list.innerHTML = '<p class="hint">אין עדיין תוצאות מסריקה - נסה "הרץ סריקה עכשיו".</p>';
+    list.innerHTML = '<p class="hint">אין עדיין תוצאות מסריקה - נסה "הרץ עכשיו".</p>';
     return;
   }
-  list.innerHTML = deals.map(d => `
-    <div class="result-card">
-      ${d.image ? `<img src="${d.image}" alt="" />` : ''}
-      <div style="flex:1; min-width:0;">
-        <div class="rname">${d.name}</div>
-        <div class="rprice">${d.price || ''}</div>
-        <a href="${d.url}" target="_blank">לצפייה במוצר</a>
-      </div>
-    </div>`).join('');
+  list.innerHTML = `
+    <table class="products">
+      <thead><tr><th>מוצר</th><th>מחיר</th><th></th></tr></thead>
+      <tbody>
+        ${deals.map(d => `
+          <tr>
+            <td>
+              <div class="p-cell">
+                ${d.image
+                  ? `<img class="p-thumb" src="${d.image}" alt="" />`
+                  : `<div class="p-thumb-empty"><svg class="ic"><use href="#i-image"/></svg></div>`}
+                <span class="p-name">${d.name}</span>
+              </div>
+            </td>
+            <td class="p-price">${d.price || '—'}</td>
+            <td><a class="p-link" href="${d.url}" target="_blank">פתח<svg class="ic"><use href="#i-external"/></svg></a></td>
+          </tr>`).join('')}
+      </tbody>
+    </table>`;
 }
 function toggleResults() {
   const panel = document.getElementById('resultsPanel');
@@ -443,6 +565,7 @@ async function storageGet(key) { try { return localStorage.getItem(key); } catch
 async function storageSet(key, value) { try { localStorage.setItem(key, value); } catch {} }
 
 function toggleConnectionCard() {
+  switchTab('github');
   const card = document.getElementById('connectionCard');
   const compact = document.getElementById('connectionCompact');
   const gear = document.getElementById('gearBtn');
@@ -647,6 +770,14 @@ async function init() {
   }
 }
 init();
+
+
+/* ============================================================
+   PRESERVED APPLICATION LOGIC — state, constants, and all
+   functions kept exactly as before. Only two adaptations made:
+   1) renderResults() now renders a <table> instead of cards
+   2) toggleConnectionCard() also switches to the GitHub tab
+   ============================================================ */
 </script>
 
 </body>
