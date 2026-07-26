@@ -1,8 +1,8 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-26T12:04:08.960Z",
-    "finishedAt": "2026-07-26T12:04:09.763Z",
+    "startedAt": "2026-07-26T13:57:05.073Z",
+    "finishedAt": "2026-07-26T13:57:05.607Z",
     "durationSeconds": 1,
     "totalFound": 0,
     "newFound": 0,
@@ -14,6 +14,11 @@
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-26T13:57:05.607Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 0 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-26T12:04:09.763Z",
       "type": "scan_complete",
@@ -133,11 +138,6 @@
       "ts": "2026-07-24T21:38:17.974Z",
       "type": "notification_sent",
       "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
-    },
-    {
-      "ts": "2026-07-24T21:38:11.329Z",
-      "type": "new_deal",
-      "message": "נמצאה התאמה: Upgraded 15\" Microsoft Surface Laptop 5 i7 1265U - Windows 11"
     }
   ]
 }
