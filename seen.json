@@ -8,6 +8,11 @@
     "image": null,
     "firstSeen": "2026-07-17T19:33:21.540Z"
   },
+  "36399": {
+    "name": "Dell OptiPlex 5060 i5 8500T Mini Desktop Full Set  - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-27T16:22:10.729Z"
+  },
   "36979": {
     "name": "Upgraded Dell Latitude 7420 i5 1145G7 - Windows 11",
     "image": null,
@@ -31,6 +36,11 @@
     "image": null,
     "firstSeen": "2026-07-17T22:32:17.217Z"
   },
+  "49187": {
+    "name": "HP EliteDesk 800 G5 i5 9500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-27T16:22:10.729Z"
+  },
   "51056": {
     "name": "Upgraded Dell Optiplex 7060 i7 8700 (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -45,6 +55,11 @@
     "name": "Upgraded Dell Latitude 7420 i7 1185G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-07-23T22:40:27.218Z"
+  },
+  "55795": {
+    "name": "Dell OptiPlex 3070 i3 9100T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-27T16:22:10.729Z"
   },
   "59694": {
     "name": "Upgraded Dell Latitude 5420 | Touch | i7-1185G7 | 32GB RAM | 500GB SSD",
@@ -115,6 +130,11 @@
     "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-21T15:04:55.806Z"
+  },
+  "71543": {
+    "name": "Upgraded HP EliteDesk 800 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-27T16:22:10.729Z"
   },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
@@ -395,5 +415,10 @@
     "name": "Upgraded Lenovo ThinkPad T15 Gen 1 | Touch | i5-10210U | 16GB RAM",
     "image": null,
     "firstSeen": "2026-07-24T19:55:36.932Z"
+  },
+  "79493": {
+    "name": "Upgraded Lenovo ThinkCentre M75q Gen 2 Ryzen 5 4650GE Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-27T16:22:10.729Z"
   }
 }
