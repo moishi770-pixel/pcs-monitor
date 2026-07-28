@@ -41,6 +41,11 @@
     "image": null,
     "firstSeen": "2026-07-27T16:22:10.729Z"
   },
+  "49817": {
+    "name": "Upgraded Touchscreen Dell Latitude 5300 2 in 1 i7 8665U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-28T22:05:25.325Z"
+  },
   "51056": {
     "name": "Upgraded Dell Optiplex 7060 i7 8700 (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -85,6 +90,11 @@
     "name": "HP ProDesk 600 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-07-21T23:14:15.096Z"
+  },
+  "66127": {
+    "name": "Upgraded HP EliteBook 840 G8 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-28T22:05:25.326Z"
   },
   "66235": {
     "name": "Dell Latitude 5420 | i5-1145G7 | Windows 11",
@@ -159,6 +169,11 @@
     "name": "Apple MacBook Pro 14-inch M1 Pro - Tahoe",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-21T21:11:48.037Z"
+  },
+  "74295": {
+    "name": "Dell Latitude 7420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-28T22:05:25.326Z"
   },
   "74646": {
     "name": "Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11",
