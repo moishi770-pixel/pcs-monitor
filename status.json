@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-07-30T13:16:15.162Z",
-    "finishedAt": "2026-07-30T13:16:15.703Z",
+    "startedAt": "2026-07-30T15:32:11.467Z",
+    "finishedAt": "2026-07-30T15:32:12.069Z",
     "durationSeconds": 1,
-    "totalFound": 5,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 11,
+    "newFound": 3,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "13.5\" Microsoft Surface Laptop 4 | Touch | i7-1185G7 | Black",
+        "price": "$175.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=79598",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-07-24",
+    "date": "2026-07-30",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-07-30T15:32:15.878Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
+    },
+    {
+      "ts": "2026-07-30T15:32:12.069Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: 13.5\" Microsoft Surface Laptop 4 | Touch | i7-1185G7 | Black"
+    },
+    {
+      "ts": "2026-07-30T15:32:12.069Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 11 מחשבים (3 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-07-30T13:16:15.703Z",
       "type": "scan_complete",
@@ -121,21 +143,6 @@
     },
     {
       "ts": "2026-07-28T20:48:31.576Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 4 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-28T19:37:37.943Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 4 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-28T17:56:00.038Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 4 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-07-28T16:25:03.071Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 4 מחשבים (0 חדשים) תוך 1 שניות"
     }

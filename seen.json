@@ -81,6 +81,11 @@
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.567Z"
   },
+  "63494": {
+    "name": "Upgraded 13.5\" MS Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Black",
+    "image": null,
+    "firstSeen": "2026-07-30T15:32:12.068Z"
+  },
   "64302": {
     "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
@@ -115,6 +120,11 @@
     "name": "Lenovo ThinkCentre M720q i5 8600T Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-07-17T22:32:17.217Z"
+  },
+  "66644": {
+    "name": "Upgraded Dell Latitude 5420 | i5-1145G7 | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-07-30T15:32:12.068Z"
   },
   "67490": {
     "name": "Upgraded 15\" Microsoft Surface Laptop 4 | Touch | i7-1185 | 500GB SSD | Blk",
@@ -445,5 +455,10 @@
     "name": "Upgraded Lenovo ThinkCentre M75q Gen 2 Ryzen 5 4650GE Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-07-27T16:22:10.729Z"
+  },
+  "79598": {
+    "name": "13.5\" Microsoft Surface Laptop 4 | Touch | i7-1185G7 | Black",
+    "image": null,
+    "firstSeen": "2026-07-30T15:32:12.068Z"
   }
 }
