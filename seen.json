@@ -61,6 +61,11 @@
     "image": null,
     "firstSeen": "2026-07-23T22:40:27.218Z"
   },
+  "54260": {
+    "name": "Lenovo ThinkPad T480 i5 8250U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-30T22:47:43.681Z"
+  },
   "55795": {
     "name": "Dell OptiPlex 3070 i3 9100T Mini Desktop Full Set - Windows 11",
     "image": null,
@@ -475,5 +480,20 @@
     "name": "Upgraded HP EliteBook 840 G8 | i5-1145G7 | 32GB RAM",
     "image": null,
     "firstSeen": "2026-07-30T17:09:13.509Z"
+  },
+  "79642": {
+    "name": "Lenovo ThinkPad X13 Gen 1 i7 10610U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-30T22:47:43.682Z"
+  },
+  "79643": {
+    "name": "Touchscreen Dell Latitude 7390 2-in-1 i7 8650U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-30T22:47:43.682Z"
+  },
+  "79644": {
+    "name": "Upgraded Touchscreen Dell Latitude 7390 2-in-1 i7 8650U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-30T22:47:43.682Z"
   }
 }
