@@ -161,6 +161,11 @@
     "image": null,
     "firstSeen": "2026-07-24T15:07:05.257Z"
   },
+  "70103": {
+    "name": "Dell OptiPlex 3080 i5 10500 Small (SFF) Desktop Full Set",
+    "image": null,
+    "firstSeen": "2026-07-31T21:49:10.542Z"
+  },
   "70608": {
     "name": "Upgraded 15\" Microsoft Surface Laptop 5 i7 1265U - Windows 11",
     "image": null,
@@ -520,5 +525,10 @@
     "name": "Lenovo ThinkPad E14 i7 10510U - Windows 11",
     "image": null,
     "firstSeen": "2026-07-31T20:43:25.390Z"
+  },
+  "79689": {
+    "name": "Upgraded Dell OptiPlex Plus 7010 Intel i7 13700 Small (SFF) Tower Only",
+    "image": null,
+    "firstSeen": "2026-07-31T21:49:10.542Z"
   }
 }
