@@ -71,6 +71,11 @@
     "image": null,
     "firstSeen": "2026-07-27T16:22:10.729Z"
   },
+  "56854": {
+    "name": "Upgraded Dell Latitude 5500 i7 8665U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-31T00:03:59.538Z"
+  },
   "59694": {
     "name": "Upgraded Dell Latitude 5420 | Touch | i7-1185G7 | 32GB RAM | 500GB SSD",
     "image": null,
@@ -170,6 +175,11 @@
     "name": "Touchscreen Dell Latitude 7420 i7 1185G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-07-27T22:28:48.724Z"
+  },
+  "71763": {
+    "name": "Upgraded Dell Latitude 3490 i5 8250U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-07-31T00:03:59.538Z"
   },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
