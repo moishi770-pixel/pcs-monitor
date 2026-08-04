@@ -96,6 +96,11 @@
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.567Z"
   },
+  "63010": {
+    "name": "HP EliteBook 840 G8 | Touch | i5-1145G7",
+    "image": null,
+    "firstSeen": "2026-08-04T20:43:52.579Z"
+  },
   "63494": {
     "name": "Upgraded 13.5\" MS Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Black",
     "image": null,
@@ -224,6 +229,11 @@
     "name": "Microsoft Surface Laptop 4 | i7-1185G7 | Touchscreen | Black | Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.595Z"
+  },
+  "74662": {
+    "name": "Upgraded Dell Latitude 7420 2-in-1 | Touch | i7-1185G7 | 1TB SSD",
+    "image": null,
+    "firstSeen": "2026-08-04T20:43:52.580Z"
   },
   "74853": {
     "name": "Dell OptiPlex 5080 i5 10500 Small (SFF) Desktop Full Set",
@@ -506,6 +516,11 @@
     "image": null,
     "firstSeen": "2026-07-27T16:22:10.729Z"
   },
+  "79597": {
+    "name": "13.5\" MS Surface Laptop 5 | Touch | i7-1265U | Black",
+    "image": null,
+    "firstSeen": "2026-08-04T20:43:52.580Z"
+  },
   "79598": {
     "name": "13.5\" Microsoft Surface Laptop 4 | Touch | i7-1185G7 | Black",
     "image": null,
@@ -540,5 +555,10 @@
     "name": "Upgraded Dell OptiPlex Plus 7010 Intel i7 13700 Small (SFF) Tower Only",
     "image": null,
     "firstSeen": "2026-07-31T21:49:10.542Z"
+  },
+  "79740": {
+    "name": "Dell Latitude 5530 | i7-1255U",
+    "image": null,
+    "firstSeen": "2026-08-04T20:43:52.580Z"
   }
 }
