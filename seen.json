@@ -560,5 +560,10 @@
     "name": "Dell Latitude 5530 | i7-1255U",
     "image": null,
     "firstSeen": "2026-08-04T20:43:52.580Z"
+  },
+  "79809": {
+    "name": "EliteDesk 800 G9 i5-12500T Mini Tower Only",
+    "image": null,
+    "firstSeen": "2026-08-06T15:45:05.323Z"
   }
 }
