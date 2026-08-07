@@ -86,6 +86,11 @@
     "image": null,
     "firstSeen": "2026-07-31T00:03:59.538Z"
   },
+  "56856": {
+    "name": "HP Elitebook 840 G5 i5 8250U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T22:06:37.155Z"
+  },
   "59694": {
     "name": "Upgraded Dell Latitude 5420 | Touch | i7-1185G7 | 32GB RAM | 500GB SSD",
     "image": null,
@@ -100,6 +105,11 @@
     "name": "HP EliteBook 840 G8 | i5-1145G7",
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.567Z"
+  },
+  "62349": {
+    "name": "HP EliteBook 840 G7 i7 10510U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T22:06:37.155Z"
   },
   "63010": {
     "name": "HP EliteBook 840 G8 | Touch | i5-1145G7",
@@ -135,6 +145,11 @@
     "name": "Dell Latitude 5420 | i5-1145G7 | Windows 11",
     "image": null,
     "firstSeen": "2026-07-20T20:41:05.735Z"
+  },
+  "66264": {
+    "name": "Upgraded HP Elitebook 840 G5 i5 8250U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T22:06:37.155Z"
   },
   "66270": {
     "name": "Dell Latitude 5520 i5 1135G7 - Windows 11",
@@ -190,6 +205,11 @@
     "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-21T15:04:55.806Z"
+  },
+  "70913": {
+    "name": "Upgraded HP EliteBook 840 G6 i7 8665U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T22:06:37.155Z"
   },
   "71543": {
     "name": "Upgraded HP EliteDesk 800 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
@@ -615,5 +635,10 @@
     "name": "Upgraded Lenovo P15 Gen 2 i7 11800H - Windows 11",
     "image": null,
     "firstSeen": "2026-08-07T21:22:58.486Z"
+  },
+  "79888": {
+    "name": "Upgraded HP EliteBook 850 G7 i7 10510U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T22:06:37.155Z"
   }
 }
