@@ -245,6 +245,11 @@
     "image": null,
     "firstSeen": "2026-07-17T15:40:57.592Z"
   },
+  "75205": {
+    "name": "HP EliteDesk 800 G5 i5 9500T Mini Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T00:40:59.351Z"
+  },
   "76707": {
     "name": "Upgraded Dell Latitude 7430 i5 1245U - Windows 11",
     "image": null,
@@ -565,5 +570,15 @@
     "name": "EliteDesk 800 G9 i5-12500T Mini Tower Only",
     "image": null,
     "firstSeen": "2026-08-06T15:45:05.323Z"
+  },
+  "79843": {
+    "name": "Lenovo ThinkPad T14 Gen 3 i5 1245U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T00:40:59.452Z"
+  },
+  "79844": {
+    "name": "Upgraded Dell OptiPlex 5080 i5 10600T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T00:40:59.351Z"
   }
 }
