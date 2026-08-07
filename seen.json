@@ -71,6 +71,11 @@
     "image": null,
     "firstSeen": "2026-07-30T22:47:43.681Z"
   },
+  "54616": {
+    "name": "MS Surface Laptop Go | Touch | i5-1035G1 | 120GB SSD",
+    "image": null,
+    "firstSeen": "2026-08-07T18:59:14.039Z"
+  },
   "55795": {
     "name": "Dell OptiPlex 3070 i3 9100T Mini Desktop Full Set - Windows 11",
     "image": null,
@@ -268,6 +273,11 @@
     "name": "Dell OptiPlex 3070 i5 9500T Micro Tower Only- Windows 11",
     "image": null,
     "firstSeen": "2026-07-17T22:32:17.217Z"
+  },
+  "77785": {
+    "name": "Upgraded 13\" MS Surface Laptop 5 | Touch | i7-1265U | 32GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-08-07T18:59:14.040Z"
   },
   "77786": {
     "name": "13.5\" MS Surface Laptop 5 | Touch | i7-1265U",
@@ -580,5 +590,15 @@
     "name": "Upgraded Dell OptiPlex 5080 i5 10600T Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-08-07T00:40:59.351Z"
+  },
+  "79866": {
+    "name": "Upgraded HP EliteBook 840 G8 | Touch | i5-1145G7 | 32GB RAM",
+    "image": null,
+    "firstSeen": "2026-08-07T18:59:14.040Z"
+  },
+  "79869": {
+    "name": "Lenovo IdeaPad 1 15IAU7 | Touch | i3-1215U",
+    "image": null,
+    "firstSeen": "2026-08-07T18:59:14.040Z"
   }
 }
