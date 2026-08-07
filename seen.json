@@ -600,5 +600,20 @@
     "name": "Lenovo IdeaPad 1 15IAU7 | Touch | i3-1215U",
     "image": null,
     "firstSeen": "2026-08-07T18:59:14.040Z"
+  },
+  "79885": {
+    "name": "Touchscreen Dell Latitude 5320 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T21:22:58.486Z"
+  },
+  "79886": {
+    "name": "Touchscreen Dell Latitude 7320 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T21:22:58.486Z"
+  },
+  "79887": {
+    "name": "Upgraded Lenovo P15 Gen 2 i7 11800H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-07T21:22:58.486Z"
   }
 }
