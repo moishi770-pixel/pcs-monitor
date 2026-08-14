@@ -725,5 +725,15 @@
     "name": "Dell OptiPlex 3090 Micro Tower | i5-10500T",
     "image": null,
     "firstSeen": "2026-08-14T19:37:39.678Z"
+  },
+  "80087": {
+    "name": "Dell Latitude 5430 i5 1235U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-14T21:29:01.693Z"
+  },
+  "80088": {
+    "name": "Upgraded Touchscreen Dell Latitude 5430 i5 1235U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-14T21:29:01.694Z"
   }
 }
