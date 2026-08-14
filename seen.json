@@ -28,6 +28,11 @@
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.566Z"
   },
+  "37467": {
+    "name": "Upgraded Dell Latitude 5500 | i5-8265U | 240GB SSD",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
+  },
   "37487": {
     "name": "Dell OptiPlex 3070 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T16:01:05.868Z"
@@ -56,6 +61,11 @@
     "image": null,
     "firstSeen": "2026-07-21T23:14:15.096Z"
   },
+  "52306": {
+    "name": "Upgraded Dell Latitude 7490 | i5-8350U | 16GB RAM",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
+  },
   "53313": {
     "name": "Lenovo ThinkCentre M920q i5 8500T Mini Tower Only - 120GB SSD",
     "image": null,
@@ -66,6 +76,11 @@
     "image": null,
     "firstSeen": "2026-07-23T22:40:27.218Z"
   },
+  "54044": {
+    "name": "Ugraded Lenovo ThinkPad T14s Gen 1 | Touch | i5-10210U | 16GB RAM | 500GB",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
+  },
   "54260": {
     "name": "Lenovo ThinkPad T480 i5 8250U - Windows 11",
     "image": null,
@@ -75,6 +90,11 @@
     "name": "MS Surface Laptop Go | Touch | i5-1035G1 | 120GB SSD",
     "image": null,
     "firstSeen": "2026-08-07T18:59:14.039Z"
+  },
+  "55031": {
+    "name": "Dell OptiPlex 3080 Micro Tower | i5 10500T",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.678Z"
   },
   "55795": {
     "name": "Dell OptiPlex 3070 i3 9100T Mini Desktop Full Set - Windows 11",
@@ -216,6 +236,11 @@
     "image": null,
     "firstSeen": "2026-08-07T22:06:37.155Z"
   },
+  "71262": {
+    "name": "Upgraded Lenovo ThinkPad E14 Gen 1 | i5-10210U | 16GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
+  },
   "71543": {
     "name": "Upgraded HP EliteDesk 800 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -230,6 +255,11 @@
     "name": "Upgraded Dell Latitude 3490 i5 8250U - Windows 11",
     "image": null,
     "firstSeen": "2026-07-31T00:03:59.538Z"
+  },
+  "71802": {
+    "name": "Upgraded Dell Precision 3530 | i7-8850H | Quadro P600 | 16GB RAM| 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
   },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
@@ -304,6 +334,11 @@
     "image": null,
     "firstSeen": "2026-07-17T22:32:17.217Z"
   },
+  "77586": {
+    "name": "Lenovo ThinkPad E14 Gen 2 | i5-1135G7",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
+  },
   "77785": {
     "name": "Upgraded 13\" MS Surface Laptop 5 | Touch | i7-1265U | 32GB RAM | 500GB SSD",
     "image": null,
@@ -313,6 +348,11 @@
     "name": "13.5\" MS Surface Laptop 5 | Touch | i7-1265U",
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.567Z"
+  },
+  "77808": {
+    "name": "13.5\" MS Surface Laptop 3 | Touch | i7-1065G7 | Platinum",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.852Z"
   },
   "78408": {
     "name": "Upgraded HP EliteBook 840 G8 | i5-1145G7 | 32GB RAM | 500GB SSD",
@@ -332,6 +372,11 @@
     "name": "Upgraded Lenovo ThinkPad T14 Gen 3 i5 1235U - Windows 11",
     "image": null,
     "firstSeen": "2026-07-31T20:43:25.390Z"
+  },
+  "78643": {
+    "name": "Upgraded Dell OptiPlex 3080 Micro Tower | i5-10500T | 16GB RAM",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.678Z"
   },
   "78717": {
     "name": "Upgraded Dell OptiPlex 3080 i5-10500 SFF Tower Only",
@@ -675,5 +720,10 @@
     "name": "Dell Latitude 5320 i5 1135G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-08-10T21:58:36.566Z"
+  },
+  "80075": {
+    "name": "Dell OptiPlex 3090 Micro Tower | i5-10500T",
+    "image": null,
+    "firstSeen": "2026-08-14T19:37:39.678Z"
   }
 }
