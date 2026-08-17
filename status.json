@@ -1,10 +1,10 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-08-17T22:01:08.389Z",
-    "finishedAt": "2026-08-17T22:01:08.930Z",
-    "durationSeconds": 1,
-    "totalFound": 2,
+    "startedAt": "2026-08-17T22:41:29.161Z",
+    "finishedAt": "2026-08-17T22:41:29.648Z",
+    "durationSeconds": 0,
+    "totalFound": 3,
     "newFound": 0,
     "goodDeals": 0,
     "sampleDeals": []
@@ -14,6 +14,11 @@
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-08-17T22:41:29.648Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 3 מחשבים (0 חדשים) תוך 0 שניות"
+    },
     {
       "ts": "2026-08-17T22:01:08.930Z",
       "type": "scan_complete",
@@ -131,11 +136,6 @@
     },
     {
       "ts": "2026-08-17T08:24:30.339Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 3 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-08-17T07:32:30.091Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 3 מחשבים (0 חדשים) תוך 1 שניות"
     }
