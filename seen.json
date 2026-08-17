@@ -91,6 +91,11 @@
     "image": null,
     "firstSeen": "2026-08-07T18:59:14.039Z"
   },
+  "54871": {
+    "name": "Upgraded Dell Latitude 7320 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-17T23:01:07.562Z"
+  },
   "55031": {
     "name": "Dell OptiPlex 3080 Micro Tower | i5 10500T",
     "image": null,
@@ -740,5 +745,10 @@
     "name": "Upgraded Touchscreen Dell Latitude 5430 i5 1235U - Windows 11",
     "image": null,
     "firstSeen": "2026-08-14T21:29:01.694Z"
+  },
+  "80106": {
+    "name": "Upgraded Dell Latitude 5400 i7 8665U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-17T23:01:07.562Z"
   }
 }
