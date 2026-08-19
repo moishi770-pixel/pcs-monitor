@@ -61,6 +61,11 @@
     "image": null,
     "firstSeen": "2026-07-21T23:14:15.096Z"
   },
+  "51999": {
+    "name": "Upgraded Dell Latitude 5420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-19T21:31:01.610Z"
+  },
   "52306": {
     "name": "Upgraded Dell Latitude 7490 | i5-8350U | 16GB RAM",
     "image": null,
@@ -750,5 +755,20 @@
     "name": "Upgraded Dell Latitude 5400 i7 8665U - Windows 11",
     "image": null,
     "firstSeen": "2026-08-17T23:01:07.562Z"
+  },
+  "80360": {
+    "name": "Upgraded Dell Latitude 7420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-19T21:31:01.610Z"
+  },
+  "80361": {
+    "name": "Dell Latitude 5440 i5 1335U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-19T21:31:01.610Z"
+  },
+  "80362": {
+    "name": "Upgraded Dell Latitude 5450 Ultra 5 135U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-19T21:31:01.610Z"
   }
 }
