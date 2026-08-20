@@ -12,7 +12,7 @@
   "minRamGB": 16,
   "minStorageGB": 256,
   "checkIntervalMinutes": 15,
-  "lastCheckedAt": "2026-08-20T21:28:57.400Z",
+  "lastCheckedAt": "2026-08-20T21:55:45.059Z",
   "forceCheck": false,
   "paused": false,
   "sendTestNotification": false
