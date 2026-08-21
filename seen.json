@@ -166,6 +166,11 @@
     "image": null,
     "firstSeen": "2026-07-30T18:46:47.584Z"
   },
+  "65447": {
+    "name": "Upgraded 13.5\" MS Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Plat",
+    "image": null,
+    "firstSeen": "2026-08-21T19:14:31.403Z"
+  },
   "65481": {
     "name": "HP ProDesk 600 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -740,6 +745,11 @@
     "name": "Dell Latitude 5320 i5 1135G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-08-10T21:58:36.566Z"
+  },
+  "79995": {
+    "name": "Upgraded Dell Latitude 5410 | Touch | i5-10310U | 16GB RAM",
+    "image": null,
+    "firstSeen": "2026-08-21T19:14:31.404Z"
   },
   "80075": {
     "name": "Dell OptiPlex 3090 Micro Tower | i5-10500T",
