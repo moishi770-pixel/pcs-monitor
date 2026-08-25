@@ -141,6 +141,11 @@
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.567Z"
   },
+  "61891": {
+    "name": "Upgraded Dell Latitude 5320 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
   "62349": {
     "name": "HP EliteBook 840 G7 i7 10510U - Windows 11",
     "image": null,
@@ -160,6 +165,11 @@
     "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.594Z"
+  },
+  "64738": {
+    "name": "Upgraded Lenovo ThinkPad L14 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
   },
   "65393": {
     "name": "Dell OptiPlex 5070 Micro | i7-9700T | Windows 11",
@@ -236,6 +246,11 @@
     "image": null,
     "firstSeen": "2026-07-24T15:07:05.257Z"
   },
+  "69675": {
+    "name": "Lenovo ThinkPad L14 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
   "70103": {
     "name": "Dell OptiPlex 3080 i5 10500 Small (SFF) Desktop Full Set",
     "image": null,
@@ -251,6 +266,26 @@
     "image": null,
     "firstSeen": "2026-08-10T22:48:59.173Z"
   },
+  "70816": {
+    "name": "Upgraded Lenovo ThinkPad E14 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
+  "70819": {
+    "name": "Lenovo ThinkPad X1 Carbon 9th Generation i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
+  "70820": {
+    "name": "Lenovo ThinkPad T14 Ryzen 5 4650U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
+  "70825": {
+    "name": "Upgraded Lenovo ThinkPad T14 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
   "70907": {
     "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
@@ -260,6 +295,11 @@
     "name": "Upgraded HP EliteBook 840 G6 i7 8665U - Windows 11",
     "image": null,
     "firstSeen": "2026-08-07T22:06:37.155Z"
+  },
+  "70935": {
+    "name": "Dell Latitude 3520 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
   },
   "71262": {
     "name": "Upgraded Lenovo ThinkPad E14 Gen 1 | i5-10210U | 16GB RAM | 500GB SSD",
@@ -345,6 +385,11 @@
     "image": null,
     "firstSeen": "2026-07-16T23:38:44.006Z"
   },
+  "76915": {
+    "name": "Microsoft Surface Pro 7+ i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
   "77008": {
     "name": "Upgraded Intel NUC11TNKv5 i5 1145G7 Mini Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T17:34:47.078Z"
@@ -378,6 +423,11 @@
     "name": "13.5\" MS Surface Laptop 3 | Touch | i7-1065G7 | Platinum",
     "image": null,
     "firstSeen": "2026-08-14T19:37:39.852Z"
+  },
+  "78248": {
+    "name": "Upgraded Dell Latitude 5410 i5 10310U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
   },
   "78408": {
     "name": "Upgraded HP EliteBook 840 G8 | i5-1145G7 | 32GB RAM | 500GB SSD",
@@ -785,5 +835,10 @@
     "name": "Upgraded Dell Latitude 5450 Ultra 5 135U - Windows 11",
     "image": null,
     "firstSeen": "2026-08-19T21:31:01.610Z"
+  },
+  "80634": {
+    "name": "Upgraded Dell Latitude 5420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-25T14:04:24.030Z"
   }
 }
