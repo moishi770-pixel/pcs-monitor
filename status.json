@@ -1,8 +1,8 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-08-26T07:25:53.181Z",
-    "finishedAt": "2026-08-26T07:25:54.039Z",
+    "startedAt": "2026-08-26T08:08:46.090Z",
+    "finishedAt": "2026-08-26T08:08:46.814Z",
     "durationSeconds": 1,
     "totalFound": 5,
     "newFound": 0,
@@ -14,6 +14,11 @@
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-08-26T08:08:46.814Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-08-26T07:25:54.039Z",
       "type": "scan_complete",
@@ -133,11 +138,6 @@
       "ts": "2026-08-25T14:04:24.031Z",
       "type": "new_deal",
       "message": "נמצאה התאמה: Microsoft Surface Pro 7+ i7 1165G7 - Windows 11"
-    },
-    {
-      "ts": "2026-08-25T14:04:24.031Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 12 מחשבים (11 חדשים) תוך 1 שניות"
     }
   ]
 }
