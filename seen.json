@@ -395,6 +395,16 @@
     "image": null,
     "firstSeen": "2026-08-07T00:40:59.351Z"
   },
+  "76490": {
+    "name": "Microsoft Surface Laptop 5 i5 1245U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-31T14:54:20.095Z"
+  },
+  "76491": {
+    "name": "Microsoft Surface Laptop 4 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-31T14:54:20.096Z"
+  },
   "76707": {
     "name": "Upgraded Dell Latitude 7430 i5 1245U - Windows 11",
     "image": null,
@@ -865,5 +875,10 @@
     "name": "Upgraded Dell Latitude 5420 i7 1185G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
+  "80807": {
+    "name": "Microsoft Surface Laptop 3 i7 1065G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-08-31T14:54:20.096Z"
   }
 }

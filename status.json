@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-08-31T06:45:51.614Z",
-    "finishedAt": "2026-08-31T06:45:52.375Z",
+    "startedAt": "2026-08-31T14:54:19.524Z",
+    "finishedAt": "2026-08-31T14:54:20.097Z",
     "durationSeconds": 1,
-    "totalFound": 1,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 4,
+    "newFound": 3,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Microsoft Surface Laptop 3 i7 1065G7 - Windows 11",
+        "price": "$175.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=80807",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-08-25",
+    "date": "2026-08-31",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-08-31T14:54:23.147Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
+    },
+    {
+      "ts": "2026-08-31T14:54:20.097Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Microsoft Surface Laptop 3 i7 1065G7 - Windows 11"
+    },
+    {
+      "ts": "2026-08-31T14:54:20.097Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 4 מחשבים (3 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-08-31T06:45:52.375Z",
       "type": "scan_complete",
@@ -121,21 +143,6 @@
     },
     {
       "ts": "2026-08-26T14:47:54.296Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-08-26T13:55:49.448Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-08-26T12:54:39.304Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-08-26T11:48:19.386Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 1 שניות"
     }
