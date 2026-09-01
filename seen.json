@@ -246,6 +246,11 @@
     "image": null,
     "firstSeen": "2026-07-30T15:32:12.068Z"
   },
+  "66901": {
+    "name": "HP EliteDesk 800 G5 i5 9500 SFF Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-01T00:05:50.314Z"
+  },
   "67490": {
     "name": "Upgraded 15\" Microsoft Surface Laptop 4 | Touch | i7-1185 | 500GB SSD | Blk",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
@@ -900,5 +905,10 @@
     "name": "Upgraded Dell OptiPlex 5090 i5 10505 Small (SFF) Tower Only - Windows 11",
     "image": null,
     "firstSeen": "2026-08-31T20:41:38.254Z"
+  },
+  "80832": {
+    "name": "Dell OptiPlex 5070 i5 8500 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-01T00:05:50.314Z"
   }
 }
