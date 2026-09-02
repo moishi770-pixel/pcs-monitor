@@ -945,5 +945,10 @@
     "name": "Dell OptiPlex 5070 i5 8500 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-09-01T00:05:50.314Z"
+  },
+  "80929": {
+    "name": "Touchscreen Lenovo Thinkpad X1 Yoga Gen 6 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-02T21:19:20.160Z"
   }
 }
