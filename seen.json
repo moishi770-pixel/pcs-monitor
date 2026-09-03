@@ -166,6 +166,11 @@
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
   },
+  "59982": {
+    "name": "Lenovo ThinkPad X13 Yoga Gen 1 i7 10510U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T23:26:44.855Z"
+  },
   "61540": {
     "name": "Microsoft Surface Pro 7+ i5 1135G7 - Windows 11",
     "image": null,
@@ -414,6 +419,11 @@
     "name": "Apple MacBook Pro 14-inch M1 Pro - Tahoe",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-21T21:11:48.037Z"
+  },
+  "73831": {
+    "name": "Upgraded Dell Latitude 7420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T23:26:44.856Z"
   },
   "74171": {
     "name": "Lenovo ThinkPad T14 Ryzen 5 5650U - Windows 11",
@@ -995,5 +1005,10 @@
     "name": "Upgraded Dell Latitude 5501 i7 9850H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-03T21:22:32.071Z"
+  },
+  "80991": {
+    "name": "Dell Latitude 5521 i5 11400H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T23:26:44.856Z"
   }
 }
