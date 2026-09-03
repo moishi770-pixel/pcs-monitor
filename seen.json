@@ -1,4 +1,14 @@
 {
+  "25018": {
+    "name": "Dell OptiPlex 7060 i5 8500T Micro Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:31.887Z"
+  },
+  "34737": {
+    "name": "Upgraded Dell Latitude 5590 i7 8650U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:32.071Z"
+  },
   "35496": {
     "name": "Dell OptiPlex 3070 i5 9500T Mini Desktop Full Set - Windows 11",
     "image": null,
@@ -17,6 +27,11 @@
     "name": "Dell OptiPlex 5060 i5 8500T Mini Desktop Full Set  - Windows 11",
     "image": null,
     "firstSeen": "2026-07-27T16:22:10.729Z"
+  },
+  "36975": {
+    "name": "HP EliteDesk 800 G5 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:31.888Z"
   },
   "36979": {
     "name": "Upgraded Dell Latitude 7420 i5 1145G7 - Windows 11",
@@ -55,6 +70,11 @@
     "name": "Upgraded Touchscreen Dell Latitude 5300 2 in 1 i7 8665U - Windows 11",
     "image": null,
     "firstSeen": "2026-07-28T22:05:25.325Z"
+  },
+  "50437": {
+    "name": "Upgraded HP EliteDesk 800 G5 SFF Tower | i7-9700 | 16GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:31.888Z"
   },
   "51056": {
     "name": "Upgraded Dell Optiplex 7060 i7 8700 (SFF) Desktop Full Set - Windows 11",
@@ -190,6 +210,11 @@
     "name": "Upgraded 13.5\" MS Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Black",
     "image": null,
     "firstSeen": "2026-07-30T15:32:12.068Z"
+  },
+  "63915": {
+    "name": "Upgraded Dell OptiPlex 5070 SFF Tower | i5-8400 | 240GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:31.888Z"
   },
   "64302": {
     "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
@@ -950,5 +975,25 @@
     "name": "Touchscreen Lenovo Thinkpad X1 Yoga Gen 6 i7 1185G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-09-02T21:19:20.160Z"
+  },
+  "80983": {
+    "name": "Dell OptiPlex XE4 i5-12600 SFF Tower Only",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:31.888Z"
+  },
+  "80984": {
+    "name": "Dell OptiPlex 7070 i7 9700 Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:31.888Z"
+  },
+  "80989": {
+    "name": "HP ZBook Firefly 14 G8 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:32.071Z"
+  },
+  "80990": {
+    "name": "Upgraded Dell Latitude 5501 i7 9850H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-03T21:22:32.071Z"
   }
 }
