@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-09-04T18:15:58.995Z",
-    "finishedAt": "2026-09-04T18:15:59.840Z",
+    "startedAt": "2026-09-04T20:56:07.327Z",
+    "finishedAt": "2026-09-04T20:56:08.338Z",
     "durationSeconds": 1,
-    "totalFound": 8,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 13,
+    "newFound": 2,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Upgraded Microsoft Surface Laptop 5 i7 1265U - Windows 11",
+        "price": "$210.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=81031",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-08-31",
+    "date": "2026-09-04",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-09-04T20:56:10.827Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
+    },
+    {
+      "ts": "2026-09-04T20:56:08.338Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Upgraded Microsoft Surface Laptop 5 i7 1265U - Windows 11"
+    },
+    {
+      "ts": "2026-09-04T20:56:08.338Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 13 מחשבים (2 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-09-04T18:15:59.840Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-09-01T18:13:15.199Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 5 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-01T14:54:14.386Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 6 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-09-01T10:07:42.494Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-01T05:09:41.951Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }

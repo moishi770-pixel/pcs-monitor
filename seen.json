@@ -746,6 +746,11 @@
     "image": null,
     "firstSeen": "2026-08-03T16:31:53.472Z"
   },
+  "79462": {
+    "name": "Upgraded Dell Latitude 7420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-04T20:56:08.337Z"
+  },
   "79463": {
     "name": "Dell Latitude 3520 i7 1165G7 - Windows 11",
     "image": null,
@@ -1015,5 +1020,10 @@
     "name": "Dell Latitude 5521 i5 11400H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-03T23:26:44.856Z"
+  },
+  "81031": {
+    "name": "Upgraded Microsoft Surface Laptop 5 i7 1265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-04T20:56:08.337Z"
   }
 }
