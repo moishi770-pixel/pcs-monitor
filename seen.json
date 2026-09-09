@@ -161,6 +161,11 @@
     "image": null,
     "firstSeen": "2026-08-07T22:06:37.155Z"
   },
+  "58663": {
+    "name": "Upgraded Dell Latitude 5591 i7 8850H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-09T21:50:32.655Z"
+  },
   "59694": {
     "name": "Upgraded Dell Latitude 5420 | Touch | i7-1185G7 | 32GB RAM | 500GB SSD",
     "image": null,
@@ -1035,5 +1040,10 @@
     "name": "Upgraded Dell Latitude 7290 i7 8650U - Windows 11",
     "image": null,
     "firstSeen": "2026-09-08T15:14:08.277Z"
+  },
+  "81117": {
+    "name": "Dell Latitude 5501 i5 9400H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-09T21:50:32.655Z"
   }
 }
