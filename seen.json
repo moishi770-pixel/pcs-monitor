@@ -1065,5 +1065,10 @@
     "name": "Upgraded Dell Latitude 5420 | Touch | i5-1145G7 | 32GB RAM | 500GB SSD",
     "image": null,
     "firstSeen": "2026-09-10T17:00:06.129Z"
+  },
+  "81188": {
+    "name": "Dell Inspiron 3593  i5 1035G1 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-10T23:48:52.578Z"
   }
 }
