@@ -455,6 +455,11 @@
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.595Z"
   },
+  "74655": {
+    "name": "Dell Latitude 5520 | i5-1145G7",
+    "image": null,
+    "firstSeen": "2026-09-10T17:00:06.128Z"
+  },
   "74659": {
     "name": "Upgraded Dell Latitude 7420 | i5-1145G7 | 500GB SSD | Carbon Fiber",
     "image": null,
@@ -1050,5 +1055,15 @@
     "name": "Dell Latitude 5501 i5 9400H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-09T21:50:32.655Z"
+  },
+  "81130": {
+    "name": "Dell Latitude 5430 | i5-1235U",
+    "image": null,
+    "firstSeen": "2026-09-10T17:00:06.129Z"
+  },
+  "81131": {
+    "name": "Upgraded Dell Latitude 5420 | Touch | i5-1145G7 | 32GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-10T17:00:06.129Z"
   }
 }
