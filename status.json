@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-09-11T12:57:17.589Z",
-    "finishedAt": "2026-09-11T12:57:18.329Z",
-    "durationSeconds": 1,
-    "totalFound": 7,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "startedAt": "2026-09-11T16:59:05.909Z",
+    "finishedAt": "2026-09-11T16:59:06.281Z",
+    "durationSeconds": 0,
+    "totalFound": 10,
+    "newFound": 2,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Apple MacBook Pro 16\" (2019) | i7-9700H | 32GB RAM | 1TB SSD | Space Gray",
+        "price": "$240.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=66195",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-09-04",
+    "date": "2026-09-11",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-09-11T16:59:11.175Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח, פוש-אפל: הצליח)"
+    },
+    {
+      "ts": "2026-09-11T16:59:06.281Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Apple MacBook Pro 16\" (2019) | i7-9700H | 32GB RAM | 1TB SSD | Space Gray"
+    },
+    {
+      "ts": "2026-09-11T16:59:06.281Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 10 מחשבים (2 חדשים) תוך 0 שניות"
+    },
     {
       "ts": "2026-09-11T12:57:18.329Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-09-08T11:20:04.795Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 0 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-08T06:00:38.653Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 0 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-08T01:13:10.393Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 1 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-09-07T23:01:40.116Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 1 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }

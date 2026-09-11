@@ -56,6 +56,11 @@
     "name": "Upgraded Dell OptiPlex 3080 i5 10500T Mini Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T17:34:47.077Z"
   },
+  "41094": {
+    "name": "Upgraded Dell Latitude 5590 i7 8650U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-11T16:59:06.280Z"
+  },
   "43437": {
     "name": "Dell OptiPlex 3060 i5 8500T Mini Desktop Full Set  - Windows 11",
     "image": null,
@@ -265,6 +270,11 @@
     "name": "Upgraded HP EliteBook 840 G8 i7 1185G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-07-28T22:05:25.326Z"
+  },
+  "66195": {
+    "name": "Apple MacBook Pro 16\" (2019) | i7-9700H | 32GB RAM | 1TB SSD | Space Gray",
+    "image": null,
+    "firstSeen": "2026-09-11T16:59:06.280Z"
   },
   "66235": {
     "name": "Dell Latitude 5420 | i5-1145G7 | Windows 11",
