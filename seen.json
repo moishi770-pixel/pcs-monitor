@@ -1,4 +1,9 @@
 {
+  "25017": {
+    "name": "HP EliteDesk 800 G4 i5 8500 Small (SFF) Desktop Full Set",
+    "image": null,
+    "firstSeen": "2026-09-12T00:05:47.811Z"
+  },
   "25018": {
     "name": "Dell OptiPlex 7060 i5 8500T Micro Desktop Full Set - Windows 11",
     "image": null,
@@ -60,6 +65,11 @@
     "name": "Upgraded Dell Latitude 5590 i7 8650U - Windows 11",
     "image": null,
     "firstSeen": "2026-09-11T16:59:06.280Z"
+  },
+  "41287": {
+    "name": "HP EliteBook 840 G8 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-12T00:05:48.005Z"
   },
   "43437": {
     "name": "Dell OptiPlex 3060 i5 8500T Mini Desktop Full Set  - Windows 11",
@@ -996,6 +1006,11 @@
     "image": null,
     "firstSeen": "2026-09-01T23:18:49.803Z"
   },
+  "80792": {
+    "name": "Touchscreen Dell Latitude 5430 i5 1235U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-12T00:05:48.005Z"
+  },
   "80807": {
     "name": "Microsoft Surface Laptop 3 i7 1065G7 - Windows 11",
     "image": null,
@@ -1085,5 +1100,15 @@
     "name": "Lenovo ThinkCentre M75s AMD Ryzen 5 Pro 4650G",
     "image": null,
     "firstSeen": "2026-09-11T21:57:43.412Z"
+  },
+  "81210": {
+    "name": "Upgraded Microsoft Surface Laptop Go 1st Gen i5 1035G1 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-12T00:05:48.005Z"
+  },
+  "81211": {
+    "name": "HP MT46 Mobile Thin Client Ryzen 3 Pro 4450U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-12T00:05:48.005Z"
   }
 }
