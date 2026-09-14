@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-09-14T20:36:32.803Z",
-    "finishedAt": "2026-09-14T20:36:33.763Z",
+    "startedAt": "2026-09-14T23:30:02.386Z",
+    "finishedAt": "2026-09-14T23:30:02.978Z",
     "durationSeconds": 1,
-    "totalFound": 11,
+    "totalFound": 8,
     "newFound": 1,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
+        "price": "$175.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=79100",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-09-11",
+    "date": "2026-09-14",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-09-14T23:30:12.501Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
+    },
+    {
+      "ts": "2026-09-14T23:30:02.978Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11"
+    },
+    {
+      "ts": "2026-09-14T23:30:02.978Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 8 מחשבים (1 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-09-14T20:36:33.763Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-09-11T19:33:37.651Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-11T16:59:11.175Z",
-      "type": "notification_sent",
-      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח, פוש-אפל: הצליח)"
-    },
-    {
-      "ts": "2026-09-11T16:59:06.281Z",
-      "type": "new_deal",
-      "message": "נמצאה התאמה: Apple MacBook Pro 16\" (2019) | i7-9700H | 32GB RAM | 1TB SSD | Space Gray"
-    },
-    {
-      "ts": "2026-09-11T16:59:06.281Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 10 מחשבים (2 חדשים) תוך 0 שניות"
     }
   ]
 }
