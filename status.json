@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-09-15T20:26:42.938Z",
-    "finishedAt": "2026-09-15T20:26:43.674Z",
+    "startedAt": "2026-09-15T23:05:58.825Z",
+    "finishedAt": "2026-09-15T23:05:59.903Z",
     "durationSeconds": 1,
-    "totalFound": 9,
-    "newFound": 1,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 17,
+    "newFound": 5,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Apple MacBook Pro 16-inch i7 9750H - Tahoe",
+        "price": "$200.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=51916",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-09-14",
+    "date": "2026-09-15",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-09-15T23:06:04.414Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח, פוש-אפל: הצליח)"
+    },
+    {
+      "ts": "2026-09-15T23:05:59.903Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Apple MacBook Pro 16-inch i7 9750H - Tahoe"
+    },
+    {
+      "ts": "2026-09-15T23:05:59.903Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 17 מחשבים (5 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-09-15T20:26:43.674Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-09-12T20:34:44.117Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 12 מחשבים (0 חדשים) תוך 0 שניות"
-    },
-    {
-      "ts": "2026-09-12T18:11:03.405Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 13 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-12T15:51:14.661Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 13 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-12T12:41:50.819Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 15 מחשבים (0 חדשים) תוך 1 שניות"
     }
   ]
 }

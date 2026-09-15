@@ -86,6 +86,11 @@
     "image": null,
     "firstSeen": "2026-09-09T23:52:38.257Z"
   },
+  "45873": {
+    "name": "Lenovo ThinkCentre M920q i5 8500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-15T23:05:59.597Z"
+  },
   "49187": {
     "name": "HP EliteDesk 800 G5 i5 9500T Mini Desktop Full Set - Windows 11",
     "image": null,
@@ -110,6 +115,11 @@
     "name": "Upgraded HP EliteDesk 800 G6 i5 10500 Small (SFF) Desktop Full Set",
     "image": null,
     "firstSeen": "2026-08-25T21:29:14.321Z"
+  },
+  "51916": {
+    "name": "Apple MacBook Pro 16-inch i7 9750H - Tahoe",
+    "image": null,
+    "firstSeen": "2026-09-15T23:05:59.901Z"
   },
   "51999": {
     "name": "Upgraded Dell Latitude 5420 i5 1145G7 - Windows 11",
@@ -1130,5 +1140,20 @@
     "name": "Dell Latitude 5431 i5 1250P - Windows 11",
     "image": null,
     "firstSeen": "2026-09-15T20:26:43.673Z"
+  },
+  "81316": {
+    "name": "Upgraded Lenovo ThinkBook 15 G2 ITL i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-15T23:05:59.902Z"
+  },
+  "81318": {
+    "name": "Microsoft Surface Laptop 2 i5 8350U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-15T23:05:59.902Z"
+  },
+  "81319": {
+    "name": "Upgraded Lenovo ThinkPad P1 Gen 3 i7 10850H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-15T23:05:59.902Z"
   }
 }
