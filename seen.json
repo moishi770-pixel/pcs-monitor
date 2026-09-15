@@ -1125,5 +1125,10 @@
     "name": "HP MT46 Mobile Thin Client Ryzen 3 Pro 4450U - Windows 11",
     "image": null,
     "firstSeen": "2026-09-12T00:05:48.005Z"
+  },
+  "81306": {
+    "name": "Dell Latitude 5431 i5 1250P - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-15T20:26:43.673Z"
   }
 }
