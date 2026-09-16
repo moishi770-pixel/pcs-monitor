@@ -555,6 +555,11 @@
     "image": null,
     "firstSeen": "2026-08-25T14:04:24.030Z"
   },
+  "76970": {
+    "name": "Upgraded HP EliteBook 840 G11 Ultra 5 135U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-16T19:55:40.094Z"
+  },
   "77008": {
     "name": "Upgraded Intel NUC11TNKv5 i5 1145G7 Mini Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T17:34:47.078Z"
@@ -1160,5 +1165,15 @@
     "name": "Dell Latitude 5521 i7 11850H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-16T16:56:31.817Z"
+  },
+  "81342": {
+    "name": "Upgraded Lenovo ThinkPad T14 Gen 1 i5 10310U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-16T19:55:40.095Z"
+  },
+  "81345": {
+    "name": "Upgraded Lenovo ThinkPad P1 Gen 4 i7 11800H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-16T19:55:40.095Z"
   }
 }
