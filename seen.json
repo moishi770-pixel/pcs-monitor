@@ -1155,5 +1155,10 @@
     "name": "Upgraded Lenovo ThinkPad P1 Gen 3 i7 10850H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-15T23:05:59.902Z"
+  },
+  "81328": {
+    "name": "Dell Latitude 5521 i7 11850H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-16T16:56:31.817Z"
   }
 }
