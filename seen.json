@@ -81,6 +81,11 @@
     "image": null,
     "firstSeen": "2026-07-17T22:32:17.217Z"
   },
+  "44189": {
+    "name": "Dell Latitude 5521 | i5-11500H",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
+  },
   "45872": {
     "name": "Lenovo ThinkCentre M720s i3 8100 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -135,6 +140,16 @@
     "name": "Upgraded HP EliteBook 840 G8 | i7-1165G7 | 500GB SSD",
     "image": null,
     "firstSeen": "2026-08-29T11:06:05.224Z"
+  },
+  "52267": {
+    "name": "Upgraded Lenovo IdeaPad 5-15IIL05 | Touch | i7-1065G7 | 12GB RAM| 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
+  },
+  "52295": {
+    "name": "Upgraded Lenovo ThinkPad X1 Yoga Gen 4 2-in-1 | Touch | i7-8665U | 16GB RAM",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
   },
   "52306": {
     "name": "Upgraded Dell Latitude 7490 | i5-8350U | 16GB RAM",
@@ -195,6 +210,11 @@
     "name": "HP Elitebook 840 G5 i5 8250U - Windows 11",
     "image": null,
     "firstSeen": "2026-08-07T22:06:37.155Z"
+  },
+  "58458": {
+    "name": "Upgraded Lenovo ThinkPad T14 Gen 1 | Touch | Ryzen 5 4650U | 24GB RAM",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
   },
   "58663": {
     "name": "Upgraded Dell Latitude 5591 i7 8850H - Windows 11",
@@ -1065,6 +1085,21 @@
     "name": "Dell OptiPlex 5070 i5 8500 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-09-01T00:05:50.314Z"
+  },
+  "80872": {
+    "name": "Dell Latitude 5530 | i5-1235U",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
+  },
+  "80873": {
+    "name": "Upgraded Dell Latitude 5511 | i5-10300H | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
+  },
+  "80910": {
+    "name": "Lenovo IdeaPad 3 15IIL05 | Touch | i3-1005G1",
+    "image": null,
+    "firstSeen": "2026-09-17T15:33:33.505Z"
   },
   "80929": {
     "name": "Touchscreen Lenovo Thinkpad X1 Yoga Gen 6 i7 1185G7 - Windows 11",
