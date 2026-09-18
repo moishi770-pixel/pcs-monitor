@@ -1215,5 +1215,10 @@
     "name": "Upgraded Lenovo ThinkPad P1 Gen 4 i7 11800H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-16T19:55:40.095Z"
+  },
+  "81403": {
+    "name": "Dell Latitude 7490 i5 8250U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-18T00:39:06.359Z"
   }
 }
