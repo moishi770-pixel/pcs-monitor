@@ -1,9 +1,9 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-09-19T13:26:18.531Z",
-    "finishedAt": "2026-09-19T13:26:19.154Z",
-    "durationSeconds": 1,
+    "startedAt": "2026-09-19T16:41:54.002Z",
+    "finishedAt": "2026-09-19T16:41:55.884Z",
+    "durationSeconds": 2,
     "totalFound": 8,
     "newFound": 0,
     "goodDeals": 0,
@@ -14,6 +14,11 @@
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-09-19T16:41:55.884Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 2 שניות"
+    },
     {
       "ts": "2026-09-19T13:26:19.154Z",
       "type": "scan_complete",
@@ -133,11 +138,6 @@
       "ts": "2026-09-15T23:06:04.414Z",
       "type": "notification_sent",
       "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח, פוש-אפל: הצליח)"
-    },
-    {
-      "ts": "2026-09-15T23:05:59.903Z",
-      "type": "new_deal",
-      "message": "נמצאה התאמה: Apple MacBook Pro 16-inch i7 9750H - Tahoe"
     }
   ]
 }
