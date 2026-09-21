@@ -9,6 +9,11 @@
     "image": null,
     "firstSeen": "2026-09-03T21:22:31.887Z"
   },
+  "31690": {
+    "name": "HP ProBook 450 G5 i5 8250U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.676Z"
+  },
   "34737": {
     "name": "Upgraded Dell Latitude 5590 i7 8650U - Windows 11",
     "image": null,
@@ -18,6 +23,11 @@
     "name": "Dell OptiPlex 3070 i5 9500T Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-08-03T23:49:33.898Z"
+  },
+  "35573": {
+    "name": "HP ProBook 450 G6 i5 8265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
   },
   "35585": {
     "name": "HP EliteDesk 800 G4 DM 35W i5 8500T Mini Desktop Full Set - Windows 11",
@@ -431,6 +441,16 @@
     "image": null,
     "firstSeen": "2026-08-10T22:48:59.173Z"
   },
+  "70813": {
+    "name": "Lenovo Thinkpad X1 Yoga Gen 5 i7 10510U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "70814": {
+    "name": "Upgraded Lenovo Thinkpad X1 Yoga Gen 5 i7 10610U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
   "70816": {
     "name": "Upgraded Lenovo ThinkPad E14 i5 1135G7 - Windows 11",
     "image": null,
@@ -509,6 +529,11 @@
     "name": "Upgraded Dell Latitude 5520 | i5-1145G7 | 500GB SSD | Windows 11",
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
+  },
+  "73739": {
+    "name": "Touchscreen Dell Latitude 5420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
   },
   "73745": {
     "name": "Apple MacBook Pro 14-inch M1 Pro - Tahoe",
@@ -1240,5 +1265,60 @@
     "name": "Dell Latitude 7490 i5 8250U - Windows 11",
     "image": null,
     "firstSeen": "2026-09-18T00:39:06.359Z"
+  },
+  "81469": {
+    "name": "Upgraded 13.5\" MS Surface Laptop 5 | Touch | i5 1245U | 500GB SSD | Black",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81474": {
+    "name": "Dell Latitude 7420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81475": {
+    "name": "Dell Latitude 7430 i5 1235U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81482": {
+    "name": "HP ProBook 455 G7 Ryzen 5 4500U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81484": {
+    "name": "HP ProBook 650 G8 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81488": {
+    "name": "HP EliteBook 840 G8 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81489": {
+    "name": "HP EliteBook 840 G8 i5 1145G7 - 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81490": {
+    "name": "Upgraded HP ProBook 450 G6 i7 8565U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81494": {
+    "name": "13.5\" MS Surface Laptop 4 | Touch | Ryzen 5 (R) Surface Edition | Platinum",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81495": {
+    "name": "Upgraded Lenovo ThinkPad X1 Yoga Gen 6 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81496": {
+    "name": "Dell Latitude 5421 i5 11500H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T18:54:49.677Z"
   }
 }
