@@ -231,6 +231,11 @@
     "image": null,
     "firstSeen": "2026-08-07T22:06:37.155Z"
   },
+  "57827": {
+    "name": "Upgraded Lenovo ThinkCentre M720s SFF Tower | i5-9400 | 16GB RAM |500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-21T22:29:05.004Z"
+  },
   "58458": {
     "name": "Upgraded Lenovo ThinkPad T14 Gen 1 | Touch | Ryzen 5 4650U | 24GB RAM",
     "image": null,
@@ -265,6 +270,11 @@
     "name": "HP EliteBook 840 G8 | i5-1145G7",
     "image": null,
     "firstSeen": "2026-07-24T18:25:04.567Z"
+  },
+  "61829": {
+    "name": "Upgraded Dell Latitude 7420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T22:29:05.207Z"
   },
   "61891": {
     "name": "Upgraded Dell Latitude 5320 i7 1185G7 - Windows 11",
@@ -305,6 +315,11 @@
     "name": "Upgraded Dell OptiPlex 5070 SFF Tower | i5-8400 | 240GB SSD",
     "image": null,
     "firstSeen": "2026-09-03T21:22:31.888Z"
+  },
+  "64300": {
+    "name": "Upgraded Lenovo Thinkbook 15 G4 i7 1255U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-21T22:29:05.207Z"
   },
   "64302": {
     "name": "Upgraded Microsoft Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Blue",
