@@ -545,6 +545,11 @@
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
   },
+  "73629": {
+    "name": "Upgraded Lenovo Thinkpad T14 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-22T22:47:07.661Z"
+  },
   "73739": {
     "name": "Touchscreen Dell Latitude 5420 i5 1145G7 - Windows 11",
     "image": null,
@@ -1335,5 +1340,30 @@
     "name": "Dell Latitude 5421 i5 11500H - Windows 11",
     "image": null,
     "firstSeen": "2026-09-21T18:54:49.677Z"
+  },
+  "81538": {
+    "name": "Upgraded Lenovo ThinkPad T14 i7 10610U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-22T22:47:07.662Z"
+  },
+  "81540": {
+    "name": "Upgraded Microsoft Surface Book 2 i7 8650U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-22T22:47:07.662Z"
+  },
+  "81542": {
+    "name": "Lenovo ThinkPad T14s Gen 2  i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-22T22:47:07.662Z"
+  },
+  "81544": {
+    "name": "Upgraded ACER TravelMate P215-52 i5 10210U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-22T22:47:07.662Z"
+  },
+  "81553": {
+    "name": "Touchscreen Lenovo Yoga 7 14ITL5 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-22T22:47:07.662Z"
   }
 }

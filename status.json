@@ -1,19 +1,41 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-09-22T19:51:12.264Z",
-    "finishedAt": "2026-09-22T19:51:13.067Z",
+    "startedAt": "2026-09-22T22:47:06.912Z",
+    "finishedAt": "2026-09-22T22:47:07.663Z",
     "durationSeconds": 1,
-    "totalFound": 16,
-    "newFound": 0,
-    "goodDeals": 0,
-    "sampleDeals": []
+    "totalFound": 25,
+    "newFound": 6,
+    "goodDeals": 1,
+    "sampleDeals": [
+      {
+        "name": "Upgraded Microsoft Surface Book 2 i7 8650U - Windows 11",
+        "price": "$175.00",
+        "url": "https://pcsrefurbished.com/sales/productPage?productID=81540",
+        "image": null
+      }
+    ]
   },
   "notificationsToday": {
-    "date": "2026-09-15",
+    "date": "2026-09-22",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-09-22T22:47:10.892Z",
+      "type": "notification_sent",
+      "message": "נשלחה התראה (מייל: הצליח, ווטסאפ: הצליח)"
+    },
+    {
+      "ts": "2026-09-22T22:47:07.663Z",
+      "type": "new_deal",
+      "message": "נמצאה התאמה: Upgraded Microsoft Surface Book 2 i7 8650U - Windows 11"
+    },
+    {
+      "ts": "2026-09-22T22:47:07.663Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 25 מחשבים (6 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-09-22T19:51:13.067Z",
       "type": "scan_complete",
@@ -123,21 +145,6 @@
       "ts": "2026-09-19T13:26:19.154Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-19T09:31:43.786Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 8 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-19T05:06:40.911Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 9 מחשבים (0 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-09-19T00:32:56.211Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 10 מחשבים (1 חדשים) תוך 1 שניות"
     }
   ]
 }
