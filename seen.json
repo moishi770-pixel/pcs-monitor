@@ -72,6 +72,11 @@
     "name": "Dell OptiPlex 3070 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T16:01:05.868Z"
   },
+  "37748": {
+    "name": "Dell OptiPlex 5070 i5 9500 SFF Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-23T22:46:57.847Z"
+  },
   "38565": {
     "name": "Dell Latitude 3420 | i5-1135G7",
     "image": null,
@@ -575,6 +580,11 @@
     "image": null,
     "firstSeen": "2026-08-10T21:58:36.565Z"
   },
+  "74215": {
+    "name": "Lenovo ThinkCentre M80q i5 10500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-23T22:46:57.847Z"
+  },
   "74295": {
     "name": "Dell Latitude 7420 i5 1145G7 - Windows 11",
     "image": null,
@@ -619,6 +629,11 @@
     "name": "Upgraded HP ProDesk 600 G4 Tower | i5-8600T | 240GB SSD",
     "image": null,
     "firstSeen": "2026-09-01T23:18:49.499Z"
+  },
+  "76058": {
+    "name": "Dell OptiPlex 3070 i5 9500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-23T22:46:57.847Z"
   },
   "76490": {
     "name": "Microsoft Surface Laptop 5 i5 1245U - Windows 11",
@@ -1380,5 +1395,15 @@
     "name": "Upgraded Dell Precision 5560 | i7 11850H | RTX A2000 | 500GB SSD",
     "image": null,
     "firstSeen": "2026-09-23T19:52:17.144Z"
+  },
+  "81586": {
+    "name": "Upgraded Dell Latitude 7400 i5 8365U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-23T22:46:57.934Z"
+  },
+  "81589": {
+    "name": "HP ProDesk 600 G5 i5 9500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-23T22:46:57.847Z"
   }
 }
