@@ -311,6 +311,11 @@
     "image": null,
     "firstSeen": "2026-08-04T20:43:52.579Z"
   },
+  "63190": {
+    "name": "HP ProBook 430 G6 i5 8365U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-24T16:41:13.585Z"
+  },
   "63494": {
     "name": "Upgraded 13.5\" MS Surface Laptop 4 | Touch | i7-1185G7 | 500GB SSD | Black",
     "image": null,
@@ -531,6 +536,11 @@
     "image": null,
     "firstSeen": "2026-07-31T00:03:59.538Z"
   },
+  "71796": {
+    "name": "Upgraded Dell Precision 5550 | i7 10875H | NVIDIA Quadro T2000 | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-09-24T16:41:13.585Z"
+  },
   "71802": {
     "name": "Upgraded Dell Precision 3530 | i7-8850H | Quadro P600 | 16GB RAM| 500GB SSD",
     "image": null,
@@ -604,6 +614,11 @@
     "name": "Upgraded Dell Latitude 7420 | i5-1145G7 | 500GB SSD | Carbon Fiber",
     "image": null,
     "firstSeen": "2026-09-01T23:18:49.803Z"
+  },
+  "74660": {
+    "name": "Dell Latitude 7420 | Carbon Fiber | i5-1145G7",
+    "image": null,
+    "firstSeen": "2026-09-24T16:41:13.585Z"
   },
   "74662": {
     "name": "Upgraded Dell Latitude 7420 2-in-1 | Touch | i7-1185G7 | 1TB SSD",
@@ -1405,5 +1420,20 @@
     "name": "HP ProDesk 600 G5 i5 9500T Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-09-23T22:46:57.847Z"
+  },
+  "81602": {
+    "name": "Lenovo Thinkpad X1 Yoga Gen 5 i7 10610U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-24T16:41:13.585Z"
+  },
+  "81604": {
+    "name": "Upgraded Dell Latitude 5400 i5 8365U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-24T16:41:13.585Z"
+  },
+  "81606": {
+    "name": "HP ProBook 430 G6 i5 8265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-09-24T16:41:13.585Z"
   }
 }
