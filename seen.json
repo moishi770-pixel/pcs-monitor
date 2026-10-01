@@ -1525,5 +1525,15 @@
     "name": "Lenovo ThinkCentre M75q Gen 2 Ryzen 5 4650GE Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-09-29T22:58:11.113Z"
+  },
+  "81995": {
+    "name": "Dell OptiPlex XE3 i5 8500 SFF Tower Only",
+    "image": null,
+    "firstSeen": "2026-10-01T21:56:18.008Z"
+  },
+  "82036": {
+    "name": "Lenovo ThinkCentre M75q-1 Ryzen 5 Pro 3400GE Mini Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-01T21:56:18.008Z"
   }
 }
