@@ -106,6 +106,11 @@
     "image": null,
     "firstSeen": "2026-09-17T15:33:33.505Z"
   },
+  "44735": {
+    "name": "Microsoft Surface Pro 7 i5-1035G4",
+    "image": null,
+    "firstSeen": "2026-10-02T19:19:31.381Z"
+  },
   "45872": {
     "name": "Lenovo ThinkCentre M720s i3 8100 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -571,6 +576,11 @@
     "image": null,
     "firstSeen": "2026-08-14T19:37:39.852Z"
   },
+  "72216": {
+    "name": "Upgraded Dell Latitude 5430 | i5-1235U | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-10-02T19:19:31.382Z"
+  },
   "72635": {
     "name": "Upgraded Dell Precision 5560 i7 11850H - Windows 11",
     "image": null,
@@ -709,6 +719,11 @@
     "name": "Upgraded HP ProBook 445 G8 Ryzen 7 5800U - Windows 11",
     "image": null,
     "firstSeen": "2026-09-04T14:57:38.399Z"
+  },
+  "76803": {
+    "name": "HP EliteBook 850 G7 | i7 10510U",
+    "image": null,
+    "firstSeen": "2026-10-02T19:19:31.382Z"
   },
   "76915": {
     "name": "Microsoft Surface Pro 7+ i7 1165G7 - Windows 11",
@@ -1540,5 +1555,15 @@
     "name": "Lenovo ThinkPad T480 i5 8350U - Windows 11",
     "image": null,
     "firstSeen": "2026-10-02T01:27:15.278Z"
+  },
+  "82058": {
+    "name": "Upgraded Lenovo ThinkPad T14 i7-10510U",
+    "image": null,
+    "firstSeen": "2026-10-02T19:19:31.382Z"
+  },
+  "82059": {
+    "name": "Upgraded Dell Latitude 5420 | i5 1135G7 | 32GB RAM",
+    "image": null,
+    "firstSeen": "2026-10-02T19:19:31.382Z"
   }
 }
