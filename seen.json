@@ -1600,5 +1600,10 @@
     "name": "Lenovo ThinkPad E15 Gen 2 Ryzen 5 4500U - Windows 11",
     "image": null,
     "firstSeen": "2026-10-06T20:49:23.651Z"
+  },
+  "82265": {
+    "name": "HP EliteBook 850 G8 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-07T23:50:28.169Z"
   }
 }
