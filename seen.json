@@ -72,6 +72,11 @@
     "name": "Dell OptiPlex 3070 i5 9500 Small (SFF) Desktop Full Set - Windows 11",
     "firstSeen": "2026-07-14T16:01:05.868Z"
   },
+  "37498": {
+    "name": "Dell OptiPlex 3060 i5 8500 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-07T19:34:21.559Z"
+  },
   "37748": {
     "name": "Dell OptiPlex 5070 i5 9500 SFF Tower Only - Windows 11",
     "image": null,
@@ -121,6 +126,11 @@
     "image": null,
     "firstSeen": "2026-09-15T23:05:59.597Z"
   },
+  "47740": {
+    "name": "Dell Latitude 5431 | Touch | i5 1250P",
+    "image": null,
+    "firstSeen": "2026-10-07T19:34:21.694Z"
+  },
   "49187": {
     "name": "HP EliteDesk 800 G5 i5 9500T Mini Desktop Full Set - Windows 11",
     "image": null,
@@ -130,6 +140,11 @@
     "name": "Upgraded Touchscreen Dell Latitude 5300 2 in 1 i7 8665U - Windows 11",
     "image": null,
     "firstSeen": "2026-07-28T22:05:25.325Z"
+  },
+  "50269": {
+    "name": "Lenovo ThinkCentre M920q i5 8500T Mini Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-07T19:34:21.559Z"
   },
   "50437": {
     "name": "Upgraded HP EliteDesk 800 G5 SFF Tower | i7-9700 | 16GB RAM | 500GB SSD",
@@ -440,6 +455,11 @@
     "name": "Upgraded 15\" Microsoft Surface Laptop 4 | Touch | i7-1185 | 500GB SSD | Blk",
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-22T18:08:31.646Z"
+  },
+  "67512": {
+    "name": "Upgraded Dell OptiPlex 5080 SFF Tower | i5-10500 | 240GB SSD",
+    "image": null,
+    "firstSeen": "2026-10-07T19:34:21.559Z"
   },
   "68267": {
     "name": "Upgraded HP EliteBook 840 G8 i5 1145G7 - Windows 11",
