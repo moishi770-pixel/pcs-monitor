@@ -366,6 +366,11 @@
     "image": "https://pcsrefurbished.com/img/en-us.svg",
     "firstSeen": "2026-07-16T15:13:42.594Z"
   },
+  "64305": {
+    "name": "Upgraded HP EliteDesk 800 G5 SFF Tower | i5 9500 | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-10-08T18:51:14.610Z"
+  },
   "64310": {
     "name": "Upgraded Dell Latitude 5520 | i7-1185G7 | 500GB SSD",
     "image": null,
@@ -601,6 +606,11 @@
     "image": null,
     "firstSeen": "2026-10-02T19:19:31.382Z"
   },
+  "72227": {
+    "name": "Upgraded Dell Latitude 5400 | i5 8365U | 240GB SSD",
+    "image": null,
+    "firstSeen": "2026-10-08T18:51:14.784Z"
+  },
   "72635": {
     "name": "Upgraded Dell Precision 5560 i7 11850H - Windows 11",
     "image": null,
@@ -827,6 +837,11 @@
     "name": "Upgraded Lenovo ThinkPad T14 Gen 3 i5 1235U - Windows 11",
     "image": null,
     "firstSeen": "2026-07-31T20:43:25.390Z"
+  },
+  "78600": {
+    "name": "Upgraded Dell Latitude 5400 | i7 8665U | 32GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-10-08T18:51:14.785Z"
   },
   "78643": {
     "name": "Upgraded Dell OptiPlex 3080 Micro Tower | i5-10500T | 16GB RAM",
@@ -1605,5 +1620,15 @@
     "name": "HP EliteBook 850 G8 i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-10-07T23:50:28.169Z"
+  },
+  "82287": {
+    "name": "Upgraded Dell Latitude 5401 | i5 9400H | 16GB RAM | 240GB SSD",
+    "image": null,
+    "firstSeen": "2026-10-08T18:51:14.785Z"
+  },
+  "82289": {
+    "name": "Upgraded Dell Latitude 7410 | i5 10310U | 16GB RAM",
+    "image": null,
+    "firstSeen": "2026-10-08T18:51:14.785Z"
   }
 }
