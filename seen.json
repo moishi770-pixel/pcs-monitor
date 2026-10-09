@@ -1621,6 +1621,11 @@
     "image": null,
     "firstSeen": "2026-10-06T20:49:23.651Z"
   },
+  "82236": {
+    "name": "Touchscreen Lenovo Thinkpad X1 Yoga Gen 6 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-09T17:11:46.170Z"
+  },
   "82265": {
     "name": "HP EliteBook 850 G8 i5 1145G7 - Windows 11",
     "image": null,
@@ -1635,5 +1640,10 @@
     "name": "Upgraded Dell Latitude 7410 | i5 10310U | 16GB RAM",
     "image": null,
     "firstSeen": "2026-10-08T18:51:14.785Z"
+  },
+  "82471": {
+    "name": "Lenovo ThinkPad L14 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-09T17:11:46.171Z"
   }
 }
