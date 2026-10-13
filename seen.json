@@ -710,6 +710,11 @@
     "image": null,
     "firstSeen": "2026-07-21T23:14:15.096Z"
   },
+  "75040": {
+    "name": "HP ZBook Firefly G9 i7-1255U",
+    "image": null,
+    "firstSeen": "2026-10-13T00:19:48.650Z"
+  },
   "75172": {
     "name": "Touchscreen Dell Latitude 5421 i5 11500H - Windows 11",
     "image": null,
@@ -1665,5 +1670,10 @@
     "name": "Upgraded Touchscreen Lenovo ThinkPad T14s Ryzen 7 5850U - Windows 11",
     "image": null,
     "firstSeen": "2026-10-09T21:42:21.547Z"
+  },
+  "82480": {
+    "name": "Upgraded Lenovo ThinkCentre M70q i5 11400T Mini Desktop",
+    "image": null,
+    "firstSeen": "2026-10-13T00:19:48.435Z"
   }
 }
