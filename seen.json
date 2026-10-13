@@ -1441,6 +1441,11 @@
     "image": null,
     "firstSeen": "2026-09-18T00:39:06.359Z"
   },
+  "81451": {
+    "name": "Upgraded Touchscreen Lenovo Thinkpad X1 Yoga Gen 7 i7 1270P - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-13T23:55:39.663Z"
+  },
   "81469": {
     "name": "Upgraded 13.5\" MS Surface Laptop 5 | Touch | i5 1245U | 500GB SSD | Black",
     "image": null,
@@ -1700,5 +1705,10 @@
     "name": "Upgraded HP EliteDesk 805 G6 Ryzen 5 4650G Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-10-13T20:34:07.530Z"
+  },
+  "82484": {
+    "name": "Dell OptiPlex 7090 i5 10500T Mini Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-13T23:55:39.453Z"
   }
 }
