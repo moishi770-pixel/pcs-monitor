@@ -1725,5 +1725,15 @@
     "name": "Dell OptiPlex 7090 i5 10500T Mini Tower Only - Windows 11",
     "image": null,
     "firstSeen": "2026-10-13T23:55:39.453Z"
+  },
+  "82487": {
+    "name": "HP EliteBook 840 G8 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-15T22:19:31.835Z"
+  },
+  "82488": {
+    "name": "Upgraded HP ProBook 440 G8 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-15T22:19:31.836Z"
   }
 }
