@@ -1740,5 +1740,10 @@
     "name": "Upgraded HP ProBook 440 G8 i5 1135G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-10-15T22:19:31.836Z"
+  },
+  "82489": {
+    "name": "Upgraded Lenovo ThinkCentre M75q AMD Ryzen 5 4650GE Mini Desktop",
+    "image": null,
+    "firstSeen": "2026-10-16T21:33:06.551Z"
   }
 }
