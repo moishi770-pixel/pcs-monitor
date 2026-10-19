@@ -1755,5 +1755,10 @@
     "name": "Upgraded Lenovo ThinkPad X1 Carbon 10th Generation i7 1270P - Windows 11",
     "image": null,
     "firstSeen": "2026-10-16T23:54:16.185Z"
+  },
+  "82493": {
+    "name": "Lenovo ThinkPad E14 Gen 4 Ryzen 5 5625U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-19T23:52:34.546Z"
   }
 }
