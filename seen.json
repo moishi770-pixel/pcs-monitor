@@ -834,6 +834,11 @@
     "image": null,
     "firstSeen": "2026-08-14T19:37:39.852Z"
   },
+  "77956": {
+    "name": "HP ProDesk 400 G4 DM i5 8500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-20T18:37:08.198Z"
+  },
   "78163": {
     "name": "Lenovo ThinkCentre M70q i5 11400T Mini Desktop Full Set - Windows 11",
     "image": null,
@@ -1760,5 +1765,20 @@
     "name": "Lenovo ThinkPad E14 Gen 4 Ryzen 5 5625U - Windows 11",
     "image": null,
     "firstSeen": "2026-10-19T23:52:34.546Z"
+  },
+  "82497": {
+    "name": "HP EliteDesk 800 G4 i7 8700 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-20T18:37:08.199Z"
+  },
+  "82498": {
+    "name": "Dell Latitude 5440 | i5-1335U",
+    "image": null,
+    "firstSeen": "2026-10-20T18:37:08.435Z"
+  },
+  "82499": {
+    "name": "Dell Precision 5550 | i7-10750H | Quadro T1000",
+    "image": null,
+    "firstSeen": "2026-10-20T18:37:08.435Z"
   }
 }
