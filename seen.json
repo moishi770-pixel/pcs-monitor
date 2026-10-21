@@ -640,6 +640,11 @@
     "image": null,
     "firstSeen": "2026-07-15T20:11:00.996Z"
   },
+  "73563": {
+    "name": "Upgraded Dell OptiPlex 7010 i5 13500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-21T00:24:23.602Z"
+  },
   "73629": {
     "name": "Upgraded Lenovo Thinkpad T14 i7 1185G7 - Windows 11",
     "image": null,
@@ -1780,5 +1785,10 @@
     "name": "Dell Precision 5550 | i7-10750H | Quadro T1000",
     "image": null,
     "firstSeen": "2026-10-20T18:37:08.435Z"
+  },
+  "82500": {
+    "name": "Upgraded Dell OptiPlex 7000 i5 12500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-21T00:24:23.602Z"
   }
 }
