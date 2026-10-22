@@ -136,6 +136,11 @@
     "image": null,
     "firstSeen": "2026-09-15T23:05:59.597Z"
   },
+  "47399": {
+    "name": "Upgraded HP EliteDesk 800 G5 i7 9700 Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-22T23:09:50.173Z"
+  },
   "47740": {
     "name": "Dell Latitude 5431 | Touch | i5 1250P",
     "image": null,
@@ -1186,6 +1191,11 @@
     "image": null,
     "firstSeen": "2026-08-06T15:45:05.323Z"
   },
+  "79842": {
+    "name": "HP EliteBook 840 G8 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-22T23:09:50.339Z"
+  },
   "79843": {
     "name": "Lenovo ThinkPad T14 Gen 3 i5 1245U - Windows 11",
     "image": null,
@@ -1805,5 +1815,20 @@
     "name": "Lenovo ThinkPad T14 Gen 2 i7 1165G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-10-22T00:54:56.305Z"
+  },
+  "82502": {
+    "name": "Upgraded HP Elite Dragonfly Max Notebook i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-22T23:09:50.339Z"
+  },
+  "82504": {
+    "name": "Upgraded HP Elite Dragonfly 13.5 Notebook i7 1265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-22T23:09:50.339Z"
+  },
+  "82505": {
+    "name": "Upgraded HP EliteDesk 705 G5 Ryzen 5 3400G Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-22T23:09:50.173Z"
   }
 }
