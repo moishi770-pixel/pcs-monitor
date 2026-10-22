@@ -1800,5 +1800,10 @@
     "name": "Upgraded Dell OptiPlex 7000 i5 12500T Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-10-21T00:24:23.602Z"
+  },
+  "82501": {
+    "name": "Lenovo ThinkPad T14 Gen 2 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-22T00:54:56.305Z"
   }
 }
