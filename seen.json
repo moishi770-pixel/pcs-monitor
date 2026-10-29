@@ -301,6 +301,11 @@
     "image": null,
     "firstSeen": "2026-09-09T21:50:32.655Z"
   },
+  "59564": {
+    "name": "Upgraded Lenovo Thinkpad X1 Yoga 4th Gen i7 8665U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-10-29T15:34:25.869Z"
+  },
   "59694": {
     "name": "Upgraded Dell Latitude 5420 | Touch | i7-1185G7 | 32GB RAM | 500GB SSD",
     "image": null,
@@ -729,6 +734,11 @@
     "name": "Upgraded Dell Latitude 7420 2-in-1 | Touch | i7-1185G7 | 1TB SSD",
     "image": null,
     "firstSeen": "2026-08-04T20:43:52.580Z"
+  },
+  "74797": {
+    "name": "HP ProBook 450 G8 | i5-1135G7",
+    "image": null,
+    "firstSeen": "2026-10-29T15:34:25.870Z"
   },
   "74848": {
     "name": "Upgraded Dell Latitude 7320 | i5 1145G7 | 500GB SSD",
@@ -1665,6 +1675,11 @@
     "name": "Upgraded Dell Precision 5570 i7 12800H - Windows 11",
     "image": null,
     "firstSeen": "2026-10-16T14:37:05.156Z"
+  },
+  "82044": {
+    "name": "15\" MS Surface Laptop 5 | Touch | i7 1265U | Black",
+    "image": null,
+    "firstSeen": "2026-10-29T15:34:25.870Z"
   },
   "82058": {
     "name": "Upgraded Lenovo ThinkPad T14 i7-10510U",
