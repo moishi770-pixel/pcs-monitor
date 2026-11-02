@@ -171,6 +171,11 @@
     "image": null,
     "firstSeen": "2026-07-21T23:14:15.096Z"
   },
+  "51352": {
+    "name": "Upgraded Dell Latitude 3420 | i5-1135G7 | GeForce MX450 | 16GB RAM",
+    "image": null,
+    "firstSeen": "2026-11-02T20:01:09.625Z"
+  },
   "51747": {
     "name": "Upgraded HP EliteDesk 800 G6 i5 10500 Small (SFF) Desktop Full Set",
     "image": null,
@@ -636,6 +641,11 @@
     "image": null,
     "firstSeen": "2026-10-02T19:19:31.382Z"
   },
+  "72220": {
+    "name": "Upgraded Dell ThinkPad T490 | Touch | i7-10510U | 16GB RAM | 500GB SSD",
+    "image": null,
+    "firstSeen": "2026-11-02T20:01:09.626Z"
+  },
   "72227": {
     "name": "Upgraded Dell Latitude 5400 | i5 8365U | 240GB SSD",
     "image": null,
@@ -794,6 +804,11 @@
     "name": "Microsoft Surface Laptop 4 i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-08-31T14:54:20.096Z"
+  },
+  "76659": {
+    "name": "Lenovo ThinkBook 14s Yoga ITL 2-in-1 | Touch | i7-1165G7",
+    "image": null,
+    "firstSeen": "2026-11-02T20:01:09.626Z"
   },
   "76707": {
     "name": "Upgraded Dell Latitude 7430 i5 1245U - Windows 11",
@@ -1845,5 +1860,10 @@
     "name": "Upgraded HP EliteDesk 705 G5 Ryzen 5 3400G Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-10-22T23:09:50.173Z"
+  },
+  "82658": {
+    "name": "Upgraded Lenovo ThinkPad P15v Gen 2 i7 11800H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-02T20:01:09.626Z"
   }
 }
