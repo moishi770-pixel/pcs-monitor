@@ -1865,5 +1865,10 @@
     "name": "Upgraded Lenovo ThinkPad P15v Gen 2 i7 11800H - Windows 11",
     "image": null,
     "firstSeen": "2026-11-02T20:01:09.626Z"
+  },
+  "82659": {
+    "name": "Touchscreen Dell Latitude 5430 Rugged i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-03T02:18:57.669Z"
   }
 }
