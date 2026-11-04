@@ -436,6 +436,11 @@
     "image": null,
     "firstSeen": "2026-07-21T23:14:15.096Z"
   },
+  "65786": {
+    "name": "HP ProDesk 400 G5 i5 8500 Small (SFF) Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-04T23:19:14.620Z"
+  },
   "65881": {
     "name": "Upgraded Lenovo ThinkPad X1 Carbon 10th Generation i7 1260P - Windows 11",
     "image": null,
@@ -1880,5 +1885,15 @@
     "name": "Touchscreen Dell Latitude 5430 Rugged i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-11-03T02:18:57.669Z"
+  },
+  "82662": {
+    "name": "Dell Latitude 5420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-04T23:19:14.851Z"
+  },
+  "82663": {
+    "name": "Upgraded Dell Latitude 7420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-04T23:19:14.851Z"
   }
 }
