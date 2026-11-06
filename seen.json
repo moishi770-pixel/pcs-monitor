@@ -1905,5 +1905,10 @@
     "name": "Upgraded Dell Latitude 7420 i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-11-04T23:19:14.851Z"
+  },
+  "82667": {
+    "name": "HP EliteBook 840 G6 i7 8565U Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-06T20:42:46.189Z"
   }
 }
