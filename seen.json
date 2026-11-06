@@ -661,6 +661,11 @@
     "image": null,
     "firstSeen": "2026-10-08T18:51:14.784Z"
   },
+  "72516": {
+    "name": "Upgraded Touchscreen Dell Precision 5570 i7 12700H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-06T00:04:33.267Z"
+  },
   "72635": {
     "name": "Upgraded Dell Precision 5560 i7 11850H - Windows 11",
     "image": null,
@@ -1885,6 +1890,11 @@
     "name": "Touchscreen Dell Latitude 5430 Rugged i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-11-03T02:18:57.669Z"
+  },
+  "82660": {
+    "name": "HP EliteBook 840 G9 i7 1255U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-06T00:04:33.267Z"
   },
   "82662": {
     "name": "Dell Latitude 5420 i5 1145G7 - Windows 11",
