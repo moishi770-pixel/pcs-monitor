@@ -1896,6 +1896,11 @@
     "image": null,
     "firstSeen": "2026-11-06T00:04:33.267Z"
   },
+  "82661": {
+    "name": "Upgraded Dell Precision 3590 Ultra 5 125H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-07T00:23:36.884Z"
+  },
   "82662": {
     "name": "Dell Latitude 5420 i5 1145G7 - Windows 11",
     "image": null,
@@ -1910,5 +1915,15 @@
     "name": "HP EliteBook 840 G6 i7 8565U Windows 11",
     "image": null,
     "firstSeen": "2026-11-06T20:42:46.189Z"
+  },
+  "82670": {
+    "name": "HP ProBook 450 G9 i5 1235U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-07T00:23:36.884Z"
+  },
+  "82672": {
+    "name": "Lenovo ThinkCentre M920s i5 8500 Small (SFF) Desktop Full Set",
+    "image": null,
+    "firstSeen": "2026-11-07T00:23:36.729Z"
   }
 }
