@@ -371,6 +371,11 @@
     "image": null,
     "firstSeen": "2026-09-01T23:18:49.803Z"
   },
+  "62911": {
+    "name": "Upgraded Microsoft Surface Pro 7 i5 1035G4 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-10T23:44:22.212Z"
+  },
   "62931": {
     "name": "Upgraded Dell Precision 7560 i7 11850H - Windows 11",
     "image": null,
@@ -1940,5 +1945,10 @@
     "name": "Upgraded Apple MacBook Air i5 8210Y - Sonoma",
     "image": null,
     "firstSeen": "2026-11-09T20:44:50.757Z"
+  },
+  "82676": {
+    "name": "Upgraded Dell Precision 3580 i5 1350P - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-10T23:44:22.213Z"
   }
 }
