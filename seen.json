@@ -1955,5 +1955,10 @@
     "name": "Upgraded Dell Precision 3580 i5 1350P - Windows 11",
     "image": null,
     "firstSeen": "2026-11-10T23:44:22.213Z"
+  },
+  "82677": {
+    "name": "Upgraded HP Pavilion 15-eg2xxx i7-1260P",
+    "image": null,
+    "firstSeen": "2026-11-12T22:40:16.143Z"
   }
 }
