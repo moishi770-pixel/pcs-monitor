@@ -291,6 +291,11 @@
     "image": null,
     "firstSeen": "2026-07-27T16:22:10.729Z"
   },
+  "56626": {
+    "name": "HP EliteBook 840 G9 i5 1245U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-13T23:34:54.310Z"
+  },
   "56854": {
     "name": "Upgraded Dell Latitude 5500 i7 8665U - Windows 11",
     "image": null,
@@ -380,6 +385,11 @@
     "name": "Upgraded Microsoft Surface Pro 7 i5 1035G4 - Windows 11",
     "image": null,
     "firstSeen": "2026-11-10T23:44:22.212Z"
+  },
+  "62912": {
+    "name": "Upgraded Lenovo ThinkPad P1 Gen 4 i7 11800H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-13T23:34:54.310Z"
   },
   "62931": {
     "name": "Upgraded Dell Precision 7560 i7 11850H - Windows 11",
@@ -525,6 +535,11 @@
     "name": "Upgraded HP EliteBook 840 G8 i5 1145G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-08-31T20:41:38.482Z"
+  },
+  "68269": {
+    "name": "Upgraded Dell Latitude 5420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-13T23:34:54.310Z"
   },
   "68402": {
     "name": "HP EliteDesk 800 G6 Desktop Mini Tower | i5-10500T",
@@ -1970,5 +1985,15 @@
     "name": "Dell Latitude 7330 i5 1245U - Windows 11",
     "image": null,
     "firstSeen": "2026-11-13T02:55:54.214Z"
+  },
+  "82679": {
+    "name": "Dell Latitude 7420 i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-13T23:34:54.310Z"
+  },
+  "82680": {
+    "name": "Upgraded Dell Latitude 7530 i7 1265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-13T23:34:54.310Z"
   }
 }
