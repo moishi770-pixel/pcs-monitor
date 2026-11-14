@@ -1995,5 +1995,10 @@
     "name": "Upgraded Dell Latitude 7530 i7 1265U - Windows 11",
     "image": null,
     "firstSeen": "2026-11-13T23:34:54.310Z"
+  },
+  "82681": {
+    "name": "Lenovo ThinkStation P340 i5 10500 Mini Deskyop",
+    "image": null,
+    "firstSeen": "2026-11-14T03:36:11.019Z"
   }
 }
