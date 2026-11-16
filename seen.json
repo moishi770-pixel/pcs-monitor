@@ -705,6 +705,11 @@
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
     "firstSeen": "2026-07-14T01:42:51.273Z"
   },
+  "73015": {
+    "name": "Dell Latitude 7420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-16T17:01:31.661Z"
+  },
   "73121": {
     "name": "Lenovo ThinkPad P1 Gen 5 i7 12700H - Windows 11",
     "image": null,
