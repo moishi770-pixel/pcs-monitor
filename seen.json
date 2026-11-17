@@ -316,6 +316,11 @@
     "image": null,
     "firstSeen": "2026-09-21T22:29:05.004Z"
   },
+  "58400": {
+    "name": "Lenovo ThinkPad T590 i5 8265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-17T18:15:01.327Z"
+  },
   "58458": {
     "name": "Upgraded Lenovo ThinkPad T14 Gen 1 | Touch | Ryzen 5 4650U | 24GB RAM",
     "image": null,
@@ -2030,5 +2035,15 @@
     "name": "Upgraded Lenovo ThinkPad T14 Gen 3 i5 1245U - Windows 11",
     "image": null,
     "firstSeen": "2026-11-17T00:48:06.259Z"
+  },
+  "82691": {
+    "name": "Dell Latitude 7300 i5 8265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-17T18:15:01.327Z"
+  },
+  "82692": {
+    "name": "Upgraded Lenovo ThinkPad T590 i5 8265U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-17T18:15:01.327Z"
   }
 }
