@@ -2060,5 +2060,10 @@
     "name": "HP ProDesk 400 G7 i5 10500 SFF - Windows 11",
     "image": null,
     "firstSeen": "2026-11-18T01:01:06.999Z"
+  },
+  "82698": {
+    "name": "Lenovo ThinkPad T15 Gen 2 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-18T17:34:43.549Z"
   }
 }
