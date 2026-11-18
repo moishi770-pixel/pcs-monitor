@@ -2045,5 +2045,20 @@
     "name": "Upgraded Lenovo ThinkPad T590 i5 8265U - Windows 11",
     "image": null,
     "firstSeen": "2026-11-17T18:15:01.327Z"
+  },
+  "82693": {
+    "name": "Lenovo ThinkBook 15 i5 10210U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-18T01:01:07.106Z"
+  },
+  "82696": {
+    "name": "Dell OptiPlex 7080 i5 10500T Mini Desktop",
+    "image": null,
+    "firstSeen": "2026-11-18T01:01:06.999Z"
+  },
+  "82697": {
+    "name": "HP ProDesk 400 G7 i5 10500 SFF - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-18T01:01:06.999Z"
   }
 }
