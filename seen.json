@@ -596,6 +596,11 @@
     "image": null,
     "firstSeen": "2026-08-25T14:04:24.030Z"
   },
+  "70097": {
+    "name": "Lenovo ThinkPad T14s i5 10210U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-20T02:59:59.016Z"
+  },
   "70103": {
     "name": "Dell OptiPlex 3080 i5 10500 Small (SFF) Desktop Full Set",
     "image": null,
@@ -650,6 +655,11 @@
     "name": "Upgraded Lenovo ThinkPad T14 i7 1165G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-08-25T14:04:24.030Z"
+  },
+  "70896": {
+    "name": "Lenovo ThinkPad T14 Gen 3 i5 1235U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-20T02:59:59.017Z"
   },
   "70907": {
     "name": "Microsoft Surface Laptop 4 15\" i7 1185G7 - Windows 11",
@@ -2100,5 +2110,25 @@
     "name": "Apple MacBook Pro 13-inch i5 1038NG7- Tahoe",
     "image": null,
     "firstSeen": "2026-11-19T22:00:10.059Z"
+  },
+  "82858": {
+    "name": "Upgraded Lenovo ThinkPad T14 Gen 2 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-20T02:59:59.017Z"
+  },
+  "82859": {
+    "name": "Lenovo ThinkPad T14 i5 10210U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-20T02:59:59.017Z"
+  },
+  "82860": {
+    "name": "Lenovo ThinkPad T14 Gen 2 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-20T02:59:59.017Z"
+  },
+  "82862": {
+    "name": "Upgraded HP EliteBook 840 G6 i5 8365U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-20T02:59:59.017Z"
   }
 }
