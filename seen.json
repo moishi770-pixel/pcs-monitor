@@ -561,6 +561,11 @@
     "image": null,
     "firstSeen": "2026-10-07T19:34:21.559Z"
   },
+  "67800": {
+    "name": "Dell Latitude 5521 i5 11500H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-22T08:52:04.477Z"
+  },
   "68263": {
     "name": "Upgraded Lenovo ThinkPad T14 i5 10310U - Windows 11",
     "image": null,
@@ -2190,5 +2195,20 @@
     "name": "Upgraded Dell Latitude 5501 i5 9300H - Windows 11",
     "image": null,
     "firstSeen": "2026-11-21T00:49:52.338Z"
+  },
+  "82872": {
+    "name": "Upgraded Dell Latitude 5540 i7 1370P - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-22T08:52:04.477Z"
+  },
+  "82873": {
+    "name": "Dell Latitude 7420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-22T08:52:04.477Z"
+  },
+  "82874": {
+    "name": "Dell XPS 13 9305 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-22T08:52:04.477Z"
   }
 }
