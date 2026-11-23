@@ -959,6 +959,11 @@
     "image": null,
     "firstSeen": "2026-07-24T15:07:05.257Z"
   },
+  "77132": {
+    "name": "Microsoft Surface Pro 7+ i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-23T23:57:11.757Z"
+  },
   "77208": {
     "name": "Dell OptiPlex 3070 i5 9500T Micro Tower Only- Windows 11",
     "image": null,
@@ -2225,5 +2230,30 @@
     "name": "Upgraded Dell Precision 3551 i5 10400H - Windows 11",
     "image": null,
     "firstSeen": "2026-11-23T12:12:12.694Z"
+  },
+  "82881": {
+    "name": "Microsoft Surface Pro 7+ i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-23T23:57:11.758Z"
+  },
+  "82882": {
+    "name": "Upgraded Dell Latitude 5420 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-23T23:57:11.758Z"
+  },
+  "82883": {
+    "name": "Dell Latitude 3420 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-23T23:57:11.758Z"
+  },
+  "82884": {
+    "name": "Upgraded HP ProBook 450 G7 i7 10510U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-23T23:57:11.758Z"
+  },
+  "82885": {
+    "name": "Upgraded Lenovo IdeaPad Flex 5  i7 1065G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-23T23:57:11.758Z"
   }
 }
