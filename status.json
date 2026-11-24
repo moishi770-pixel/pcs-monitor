@@ -1,26 +1,24 @@
 {
   "agentStatus": "active",
   "lastScan": {
-    "startedAt": "2026-11-23T23:57:10.757Z",
-    "finishedAt": "2026-11-23T23:57:11.759Z",
+    "startedAt": "2026-11-24T09:34:24.011Z",
+    "finishedAt": "2026-11-24T09:34:24.959Z",
     "durationSeconds": 1,
-    "totalFound": 19,
-    "newFound": 6,
-    "goodDeals": 1,
-    "sampleDeals": [
-      {
-        "name": "Microsoft Surface Pro 7+ i7 1165G7 - Windows 11",
-        "price": "$175.00",
-        "url": "https://pcsrefurbished.com/sales/productPage?productID=77132",
-        "image": null
-      }
-    ]
+    "totalFound": 13,
+    "newFound": 0,
+    "goodDeals": 0,
+    "sampleDeals": []
   },
   "notificationsToday": {
     "date": "2026-11-23",
     "count": 1
   },
   "activityLog": [
+    {
+      "ts": "2026-11-24T09:34:24.959Z",
+      "type": "scan_complete",
+      "message": "סריקה הושלמה: נמצאו 13 מחשבים (0 חדשים) תוך 1 שניות"
+    },
     {
       "ts": "2026-11-23T23:57:14.740Z",
       "type": "notification_sent",
@@ -140,11 +138,6 @@
       "ts": "2026-11-17T18:15:01.328Z",
       "type": "scan_complete",
       "message": "סריקה הושלמה: נמצאו 10 מחשבים (3 חדשים) תוך 1 שניות"
-    },
-    {
-      "ts": "2026-11-17T08:52:56.441Z",
-      "type": "scan_complete",
-      "message": "סריקה הושלמה: נמצאו 9 מחשבים (0 חדשים) תוך 0 שניות"
     }
   ]
 }
