@@ -761,6 +761,11 @@
     "image": null,
     "firstSeen": "2026-09-18T22:28:54.629Z"
   },
+  "72708": {
+    "name": "Upgraded Dell Latitude 5410 i7 10610U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.519Z"
+  },
   "72714": {
     "name": "Dell OptiPlex 3070 Micro Tower | i5-9500T | Windows 11",
     "firstSeen": "2026-07-14T01:42:51.273Z"
@@ -2255,5 +2260,45 @@
     "name": "Upgraded Lenovo IdeaPad Flex 5  i7 1065G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-11-23T23:57:11.758Z"
+  },
+  "82886": {
+    "name": "Dell Latitude 5440 i7 1355U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82888": {
+    "name": "Upgraded HP ProBook 4 G1i Ultra 5 225U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82889": {
+    "name": "HP EliteBook 850 G8 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82890": {
+    "name": "Touchscreen HP Envy x360 Convertible 15m-ed1013x i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82891": {
+    "name": "HP EliteBook 840 G8 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82893": {
+    "name": "HP ZBook Firefly G8 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82894": {
+    "name": "Upgraded Dell Latitude 7330 i5 1245U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82895": {
+    "name": "Upgraded Touchscreen Samsung Galaxy Book 950QCG i7 1065G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T03:39:48.520Z"
   }
 }
