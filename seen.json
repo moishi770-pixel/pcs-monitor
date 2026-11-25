@@ -466,6 +466,11 @@
     "image": null,
     "firstSeen": "2026-08-25T14:04:24.030Z"
   },
+  "65005": {
+    "name": "Upgraded Lenovo ThinkPad X1 Carbon 9th Generation i7 1165G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
   "65393": {
     "name": "Dell OptiPlex 5070 Micro | i7-9700T | Windows 11",
     "image": null,
@@ -2300,5 +2305,75 @@
     "name": "Upgraded Touchscreen Samsung Galaxy Book 950QCG i7 1065G7 - Windows 11",
     "image": null,
     "firstSeen": "2026-11-25T03:39:48.520Z"
+  },
+  "82896": {
+    "name": "HP ZBook Firefly 15 G8 i7 1185G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82898": {
+    "name": "Lenovo ThinkPad E15 Gen 4 i7 1255U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82899": {
+    "name": "HP EliteBook 840 G8 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82900": {
+    "name": "Upgraded HP EliteBook 850 G7 i5 10210U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82901": {
+    "name": "Lenovo ThinkPad E15 Gen 2 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82903": {
+    "name": "Upgraded Dell Latitude 5421 i5 11500H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82904": {
+    "name": "Upgraded Dell Latitude 5421 i5 11400H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82905": {
+    "name": "Upgraded Dell Latitude 5410 i7 10810U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82906": {
+    "name": "Dell Latitude 5421 i5 11400H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82907": {
+    "name": "Dell OptiPlex 7070 i7 9700 Micro Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.540Z"
+  },
+  "82908": {
+    "name": "Dell OptiPlex 7070 i7 9700T Micro Tower Only - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.540Z"
+  },
+  "82909": {
+    "name": "Upgraded Dell Latitude 5540 i5 1345U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82910": {
+    "name": "Upgraded Dell Inspiron 15 3535 Ryzen 3 7320U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.934Z"
+  },
+  "82911": {
+    "name": "Upgraded Dell OptiPlex 7090 i5 11500T Mini Desktop Full Set - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-25T22:47:55.540Z"
   }
 }
