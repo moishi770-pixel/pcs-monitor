@@ -126,6 +126,11 @@
     "image": null,
     "firstSeen": "2026-09-17T15:33:33.505Z"
   },
+  "44443": {
+    "name": "Dell Latitude 5420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-26T23:19:30.565Z"
+  },
   "44735": {
     "name": "Microsoft Surface Pro 7 i5-1035G4",
     "image": null,
@@ -2375,5 +2380,10 @@
     "name": "Upgraded Dell OptiPlex 7090 i5 11500T Mini Desktop Full Set - Windows 11",
     "image": null,
     "firstSeen": "2026-11-25T22:47:55.540Z"
+  },
+  "82912": {
+    "name": "Upgraded Dell Precision 3541 i7 9750H - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-26T23:19:30.565Z"
   }
 }
