@@ -1961,6 +1961,11 @@
     "image": null,
     "firstSeen": "2026-10-19T23:52:34.546Z"
   },
+  "82495": {
+    "name": "Lenovo ThinkPad T14 Gen 2 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-27T23:38:52.535Z"
+  },
   "82497": {
     "name": "HP EliteDesk 800 G4 i7 8700 Small (SFF) Desktop Full Set - Windows 11",
     "image": null,
@@ -2385,5 +2390,20 @@
     "name": "Upgraded Dell Precision 3541 i7 9750H - Windows 11",
     "image": null,
     "firstSeen": "2026-11-26T23:19:30.565Z"
+  },
+  "82914": {
+    "name": "Lenovo IdeaPad 5 15ITL05 i5 1135G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-27T23:38:52.535Z"
+  },
+  "82915": {
+    "name": "Upgraded Dell Latitude 5410 i5 10310U - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-27T23:38:52.535Z"
+  },
+  "82916": {
+    "name": "Upgraded Dell Latitude 5420 i5 1145G7 - Windows 11",
+    "image": null,
+    "firstSeen": "2026-11-27T23:38:52.535Z"
   }
 }
